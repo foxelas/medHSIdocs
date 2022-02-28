@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['readdataset_0',['ReadDataset',['../_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e',1,'ReadDataset.m']]],
+  ['readdataset_2em_1',['ReadDataset.m',['../_read_dataset_8m.html',1,'']]],
+  ['readdiagnosis_2',['ReadDiagnosis',['../classhsi_info.html#a0b4286091d7b9b1da1b3f550a4a12e25',1,'hsiInfo']]],
+  ['readh5_3',['ReadH5',['../classhsi_utility.html#a0a3aaf34f5078a9bb8f6a803eed38137',1,'hsiUtility']]],
+  ['readhsiinfo_4',['ReadHsiInfo',['../classhsi_info.html#a32646c21c64df02c89f06f04553660fd',1,'hsiInfo']]],
+  ['readhsiinfofromhsi_5',['ReadHsiInfoFromHsi',['../classhsi_info.html#afe6fe108de808e42b0b1a4178d7f3254',1,'hsiInfo']]],
+  ['readlabel_6',['ReadLabel',['../classhsi_info.html#af122e43a01f07b0548b9343b20a14518',1,'hsiInfo']]],
+  ['readlabelfromhsi_7',['ReadLabelFromHsi',['../classhsi_info.html#a54a484c7cf4bbb45999bdb25644e6cf4',1,'hsiInfo']]],
+  ['readtriplet_8',['ReadTriplet',['../classhsi_utility.html#a149b306c9267ea9b0993d3eb50d8e9d4',1,'hsiUtility']]],
+  ['readtripletinternal_9',['ReadTripletInternal',['../_read_triplet_internal_8m.html#af9423d2c75c34bca4196199fd0f9d24a',1,'ReadTripletInternal.m']]],
+  ['readtripletinternal_2em_10',['ReadTripletInternal.m',['../_read_triplet_internal_8m.html',1,'']]],
+  ['reconstructsolaxioilluminationspectrum_11',['ReconstructSolaxIoIlluminationSpectrum',['../_get_solax_spectra_8m.html#a16fe2823df8f10cec45ac476a851cca7',1,'GetSolaxSpectra.m']]],
+  ['recoveroriginaldimensionsinternal_12',['RecoverOriginalDimensionsInternal',['../_recover_original_dimensions_internal_8m.html#a7cdde57e60b8671835b39aa94fb19acf',1,'RecoverOriginalDimensionsInternal.m']]],
+  ['recoveroriginaldimensionsinternal_2em_13',['RecoverOriginalDimensionsInternal.m',['../_recover_original_dimensions_internal_8m.html',1,'']]],
+  ['recoverspatialdimensions_14',['RecoverSpatialDimensions',['../classhsi.html#aef1351fe183956ceaa0bae4a0dc8f7eb',1,'hsi']]],
+  ['referencelibrary_15',['ReferenceLibrary',['../classplots.html#ac0fb59474398ca03e42b1407b96702d8',1,'plots']]],
+  ['removebackgroundinternal_16',['RemoveBackgroundInternal',['../_remove_background_internal_8m.html#a82ff1f83d3ddbed50d3324bf85a31ece',1,'RemoveBackgroundInternal.m']]],
+  ['removebackgroundinternal_2em_17',['RemoveBackgroundInternal.m',['../_remove_background_internal_8m.html',1,'']]],
+  ['rmse_18',['Rmse',['../classcommon_utility.html#a4cc90930911ecaeea65e3406b758a9d0',1,'commonUtility']]],
+  ['rowfunc_19',['RowFunc',['../classapply.html#aa82d2161fa5faec79e8309cdc6cd3aae',1,'apply']]],
+  ['runkfoldvalidation_20',['RunKfoldValidation',['../classtrain_utility.html#aa7f9e8f23183c9187f46edfc6b557f14',1,'trainUtility']]],
+  ['runsvm_21',['RunSVM',['../classtrain_utility.html#a72056a2f06372f368414165ef4d50a1f',1,'trainUtility']]]
+];
