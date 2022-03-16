@@ -10,10 +10,11 @@ var searchData=
   ['plotsolaxspectra_7',['PlotSolaxSpectra',['../_get_solax_spectra_8m.html#a8feab7963cde419cf60ad06044636092',1,'GetSolaxSpectra.m']]],
   ['plotspectra_8',['PlotSpectra',['../_plot_spectra_8m.html#ae23516ffbbf654a460b5a5913ee2108e',1,'PlotSpectra.m']]],
   ['plotsuperpixels_9',['PlotSuperpixels',['../_plot_superpixels_8m.html#a8d13b31c6ddd582858c99dab93b7dbab',1,'PlotSuperpixels.m']]],
-  ['plus_10',['Plus',['../classhsi.html#aa9fe322aba57a60e132f998f9c8b9de8',1,'hsi']]],
-  ['preparedataset_11',['PrepareDataset',['../classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1',1,'hsiUtility']]],
-  ['prepareparams_12',['PrepareParams',['../_get_display_image_internal_8m.html#a8a48c91422d4219e303cad0cb73c17d6',1,'GetDisplayImageInternal.m']]],
-  ['preparereferencelibrary_13',['PrepareReferenceLibrary',['../classhsi_utility.html#a38a46d4e980e817be78b62dfddebc66b',1,'hsiUtility']]],
-  ['preprocess_14',['Preprocess',['../classhsi.html#aecb71389caa590834751390e1b5701f8',1,'hsi']]],
-  ['preprocessing_15',['Preprocessing',['../_preprocessing_8m.html#a561d2579ff9f332a4154c9a03d3b0676',1,'Preprocessing.m']]]
+  ['plottwoaxes_10',['plotTwoAxes',['../t20220121___dimred_8m.html#a2f539defa3bf4c23028671c9c326913f',1,'t20220121_Dimred.m']]],
+  ['plus_11',['Plus',['../classhsi.html#aa9fe322aba57a60e132f998f9c8b9de8',1,'hsi']]],
+  ['preparedataset_12',['PrepareDataset',['../classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1',1,'hsiUtility']]],
+  ['prepareparams_13',['PrepareParams',['../_get_display_image_internal_8m.html#a8a48c91422d4219e303cad0cb73c17d6',1,'GetDisplayImageInternal.m']]],
+  ['preparereferencelibrary_14',['PrepareReferenceLibrary',['../classhsi_utility.html#a38a46d4e980e817be78b62dfddebc66b',1,'hsiUtility']]],
+  ['preprocess_15',['Preprocess',['../classhsi.html#aecb71389caa590834751390e1b5701f8',1,'hsi']]],
+  ['preprocessing_16',['Preprocessing',['../_preprocessing_8m.html#a561d2579ff9f332a4154c9a03d3b0676',1,'Preprocessing.m']]]
 ];

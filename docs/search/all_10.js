@@ -19,7 +19,7 @@ var searchData=
   ['removebackgroundinternal_16',['RemoveBackgroundInternal',['../_remove_background_internal_8m.html#a82ff1f83d3ddbed50d3324bf85a31ece',1,'RemoveBackgroundInternal.m']]],
   ['removebackgroundinternal_2em_17',['RemoveBackgroundInternal.m',['../_remove_background_internal_8m.html',1,'']]],
   ['rmse_18',['Rmse',['../classcommon_utility.html#a4cc90930911ecaeea65e3406b758a9d0',1,'commonUtility']]],
-  ['rowfunc_19',['RowFunc',['../classapply.html#aa82d2161fa5faec79e8309cdc6cd3aae',1,'apply']]],
+  ['rowfunc_19',['RowFunc',['../classapply.html#a38f3e3bb1d2c681cd4a45dcf5a1ecb39',1,'apply']]],
   ['runkfoldvalidation_20',['RunKfoldValidation',['../classtrain_utility.html#aa7f9e8f23183c9187f46edfc6b557f14',1,'trainUtility']]],
   ['runsvm_21',['RunSVM',['../classtrain_utility.html#a72056a2f06372f368414165ef4d50a1f',1,'trainUtility']]]
 ];

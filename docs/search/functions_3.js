@@ -5,6 +5,6 @@ var searchData=
   ['dimredandtrain_2',['DimredAndTrain',['../classtrain_utility.html#aea8c77fc806f582503c746f592660536',1,'trainUtility']]],
   ['dimredinternal_3',['DimredInternal',['../_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be',1,'DimredInternal.m']]],
   ['dirmake_4',['DirMake',['../classconfig.html#a2d898b5482a50061d9db04c6d585c642',1,'config']]],
-  ['disablefigures_5',['DisableFigures',['../classapply.html#ab71d35688f004180ec96bb85035a255c',1,'apply']]],
-  ['disablesavefigures_6',['DisableSaveFigures',['../classapply.html#a9b995e66c491dfdf9da3ea45e5d43f94',1,'apply']]]
+  ['disablefigures_5',['DisableFigures',['../classapply.html#ad42507c60d96f4319e844b977bf6521c',1,'apply']]],
+  ['disablesavefigures_6',['DisableSaveFigures',['../classapply.html#a4ae6c28434c5ab5ed4587d83931be1e4',1,'apply']]]
 ];

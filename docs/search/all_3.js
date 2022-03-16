@@ -11,7 +11,7 @@ var searchData=
   ['dimredinternal_8',['DimredInternal',['../_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be',1,'DimredInternal.m']]],
   ['dimredinternal_2em_9',['DimredInternal.m',['../_dimred_internal_8m.html',1,'']]],
   ['dirmake_10',['DirMake',['../classconfig.html#a2d898b5482a50061d9db04c6d585c642',1,'config']]],
-  ['disablefigures_11',['DisableFigures',['../classapply.html#ab71d35688f004180ec96bb85035a255c',1,'apply']]],
-  ['disablesavefigures_12',['DisableSaveFigures',['../classapply.html#a9b995e66c491dfdf9da3ea45e5d43f94',1,'apply']]],
+  ['disablefigures_11',['DisableFigures',['../classapply.html#ad42507c60d96f4319e844b977bf6521c',1,'apply']]],
+  ['disablesavefigures_12',['DisableSaveFigures',['../classapply.html#a4ae6c28434c5ab5ed4587d83931be1e4',1,'apply']]],
   ['documentation_20guidelines_13',['Documentation guidelines',['../index.html',1,'']]]
 ];
