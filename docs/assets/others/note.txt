@@ -1,0 +1,19 @@
+1) Make sure the correct version of Perl is associated 
+C:\Program Files\MATLAB\R2020b\sys\perl\win32\bin\perl.exe
+
+2) Open new directory in Doxywizard 
+D:\elena\matlab\toolbox\DoxygenMatlab
+
+* Read from a dir without JP characters or Doxywizard will fail
+* When Name() functions appear in documentation, remove "functionName(X(rows, :))" from code
+replace with funcHandle etc
+
+
+* To custom header file: 
+1) run with arguments 
+-w html headerFile footerFile styleSheetFile
+2) Error for missing -b might appear
+3) Edit the header file 
+4) In HTML Settings tab set
+HTML_HEADER
+HTML_EXTRA_FILES
