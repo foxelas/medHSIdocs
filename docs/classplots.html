@@ -117,6 +117,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ace481b0c680a90960c5a3756fb8cdecf"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplots.html#ace481b0c680a90960c5a3756fb8cdecf">NormalizationCheck</a> (in fig, in varargin)</td></tr>
 <tr class="memdesc:ace481b0c680a90960c5a3756fb8cdecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">NormalizationCheck plots the values recovered after normalization.  <a href="classplots.html#ace481b0c680a90960c5a3756fb8cdecf">More...</a><br /></td></tr>
 <tr class="separator:ace481b0c680a90960c5a3756fb8cdecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0af7792e259cd90df4043068a4951bf"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplots.html#ae0af7792e259cd90df4043068a4951bf">Montage</a> (in figNum, in img, in names, in plotName)</td></tr>
+<tr class="memdesc:ae0af7792e259cd90df4043068a4951bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Montage plots the montage of an image list.  <a href="classplots.html#ae0af7792e259cd90df4043068a4951bf">More...</a><br /></td></tr>
+<tr class="separator:ae0af7792e259cd90df4043068a4951bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b4a116c50642ebee969e9df3489d494"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplots.html#a0b4a116c50642ebee969e9df3489d494">MontageCmap</a> (in figNum, in img, in names, in plotName)</td></tr>
+<tr class="memdesc:a0b4a116c50642ebee969e9df3489d494"><td class="mdescLeft">&#160;</td><td class="mdescRight">MontageCmap plots the heat map montage of an image list.  <a href="classplots.html#a0b4a116c50642ebee969e9df3489d494">More...</a><br /></td></tr>
+<tr class="separator:a0b4a116c50642ebee969e9df3489d494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0fb59474398ca03e42b1407b96702d8"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplots.html#ac0fb59474398ca03e42b1407b96702d8">ReferenceLibrary</a> (in fig, in refLib)</td></tr>
 <tr class="memdesc:ac0fb59474398ca03e42b1407b96702d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ReferenceLibrary plots the reference spectra in the library.  <a href="classplots.html#ac0fb59474398ca03e42b1407b96702d8">More...</a><br /></td></tr>
 <tr class="separator:ac0fb59474398ca03e42b1407b96702d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,8 +138,6 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >plots is a class that holds all functions for figure plotting. </p>
-
-<p class="definition">Definition at line <a class="el" href="plots_8m_source.html#l00005">5</a> of file <a class="el" href="plots_8m_source.html">plots.m</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a57a848dca2d662e559d287f165a296e1" name="a57a848dca2d662e559d287f165a296e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57a848dca2d662e559d287f165a296e1">&#9670;&nbsp;</a></span>Apply()</h2>
@@ -180,7 +184,7 @@ Static Public Member Functions</h2></td></tr>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">[varargout] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a57a848dca2d662e559d287f165a296e1">Apply</a>(1, @<a class="code hl_function" href="_plot_spectra_8m.html#ae23516ffbbf654a460b5a5913ee2108e">PlotSpectra</a>, spectra);</div>
 <div class="ttc" id="a_plot_spectra_8m_html_ae23516ffbbf654a460b5a5913ee2108e"><div class="ttname"><a href="_plot_spectra_8m.html#ae23516ffbbf654a460b5a5913ee2108e">PlotSpectra</a></div><div class="ttdeci">function PlotSpectra(in spectra, in wavelengths, in names, in figTitle, in markers, in fig)</div><div class="ttdoc">PlotSpectra plots multiple spectra together.</div></div>
-<div class="ttc" id="aclassplots_html"><div class="ttname"><a href="classplots.html">plots</a></div><div class="ttdoc">plots is a class that holds all functions for figure plotting.</div><div class="ttdef"><b>Definition:</b> <a href="plots_8m_source.html#l00005">plots.m:5</a></div></div>
+<div class="ttc" id="aclassplots_html"><div class="ttname"><a href="classplots.html">plots</a></div><div class="ttdoc">plots is a class that holds all functions for figure plotting.</div><div class="ttdef"><b>Definition:</b> plots.m:5</div></div>
 <div class="ttc" id="aclassplots_html_a57a848dca2d662e559d287f165a296e1"><div class="ttname"><a href="classplots.html#a57a848dca2d662e559d287f165a296e1">plots::Apply</a></div><div class="ttdeci">static function Apply(in fig, in funcHandle, in varargin)</div><div class="ttdoc">Apply runs a plotting function.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -238,7 +242,7 @@ Static Public Member Functions</h2></td></tr>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>(<span class="stringliteral">&#39;saveFolder&#39;</span>, <span class="stringliteral">&#39;Spectra-Example&#39;</span>);</div>
 <div class="line"><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a920206d7e04a5501c9352ef7616210e8">AverageSpectrum</a>(fig, hsIm, figTitle);</div>
-<div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> <a href="config_8m_source.html#l00009">config.m:9</a></div></div>
+<div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> config.m:9</div></div>
 <div class="ttc" id="aclassconfig_html_a1450029ed6a15647ac90d8a9002d9572"><div class="ttname"><a href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">config::SetSetting</a></div><div class="ttdeci">static function SetSetting(in parameter, in value)</div><div class="ttdoc">SetSetting sets a value in the config structure.</div></div>
 <div class="ttc" id="aclassplots_html_a920206d7e04a5501c9352ef7616210e8"><div class="ttname"><a href="classplots.html#a920206d7e04a5501c9352ef7616210e8">plots::AverageSpectrum</a></div><div class="ttdeci">static function AverageSpectrum(in fig, in varargin)</div><div class="ttdoc">AverageSpectrum plots average spectra using a promt for custom mask selection.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
@@ -544,6 +548,126 @@ Static Public Member Functions</h2></td></tr>
 <p>Illumination plots the illumination spectrum. </p>
 <p >The name of the illumination source is saved in config::[illuminationSource]. Illumination information is saved in medHSI\config::[paramDir]\displayParam.mat</p>
 <p ><b>Usage</b> <a class="el" href="classplots.html#a9f82675934a0974f7002b91e12c0620c" title="Illumination plots the illumination spectrum.">plots.Illumination()</a>;  </p>
+
+</div>
+</div>
+<a id="ae0af7792e259cd90df4043068a4951bf" name="ae0af7792e259cd90df4043068a4951bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0af7792e259cd90df4043068a4951bf">&#9670;&nbsp;</a></span>Montage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static function Montage </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>figNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>plotName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Montage plots the montage of an image list. </p>
+<p ><b>Usage</b> plots.Montage(1, labels, names, plotName); </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figNum</td><td>[int] | The figure handle </td></tr>
+    <tr><td class="paramname">img</td><td>[cell array] | The list of images </td></tr>
+    <tr><td class="paramname">names</td><td>[cell array] | The list of image names </td></tr>
+    <tr><td class="paramname">plotName</td><td>[char] | The plotName </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0b4a116c50642ebee969e9df3489d494" name="a0b4a116c50642ebee969e9df3489d494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b4a116c50642ebee969e9df3489d494">&#9670;&nbsp;</a></span>MontageCmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static function MontageCmap </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>figNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>plotName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MontageCmap plots the heat map montage of an image list. </p>
+<p ><b>Usage</b> plots.MontageCmap(1, labels, names, plotName); </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">figNum</td><td>[int] | The figure handle </td></tr>
+    <tr><td class="paramname">img</td><td>[cell array] | The list of images </td></tr>
+    <tr><td class="paramname">names</td><td>[cell array] | The list of image names </td></tr>
+    <tr><td class="paramname">plotName</td><td>[char] | The plotName </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -899,7 +1023,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/foxel/Desktop/test/tools/plots/<a class="el" href="plots_8m_source.html">plots.m</a></li>
+<li>C:/Users/foxel/Desktop/test/tools/plots/<a class="el" href="plots_8m.html">plots.m</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

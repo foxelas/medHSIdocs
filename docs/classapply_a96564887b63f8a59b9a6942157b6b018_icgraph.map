@@ -1,0 +1,4 @@
+<map id="ToEach" name="ToEach">
+<area shape="rect" id="node1" title="ToEach applies a function on each of the data samples in the dataset." alt="" coords="237,29,301,56"/>
+<area shape="rect" id="node2" href="$_multiscale_superpixel_analysis_8m.html#a0fa11d46db63d3d6e303681ebe174f70" title="MultiscaleSuperpixelAnalysis applies Multiscale SuperPCA to an hsi and visualizes the result." alt="" coords="5,29,189,56"/>
+</map>

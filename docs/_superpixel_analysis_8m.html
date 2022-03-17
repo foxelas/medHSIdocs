@@ -78,76 +78,16 @@ $(function() {
   <div class="headertitle"><div class="title">SuperpixelAnalysis.m File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="_superpixel_analysis_8m_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aaae753657a20353e7f6b88ddf38bc13e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_superpixel_analysis_8m.html#aaae753657a20353e7f6b88ddf38bc13e">SuperpixelAnalysis</a> (in hsIm, in isManual, in pixelNum, in pcNum)</td></tr>
-<tr class="memdesc:aaae753657a20353e7f6b88ddf38bc13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SuperpixelAnalysis applies SuperPCA to an hsi and visualizes the result.  <a href="_superpixel_analysis_8m.html#aaae753657a20353e7f6b88ddf38bc13e">More...</a><br /></td></tr>
-<tr class="separator:aaae753657a20353e7f6b88ddf38bc13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72fcbaff478b85a830572c77c3203688"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_superpixel_analysis_8m.html#a72fcbaff478b85a830572c77c3203688">CleanLabels</a> (in labels, in fgMask, in pixelNum)</td></tr>
-<tr class="memdesc:a72fcbaff478b85a830572c77c3203688"><td class="mdescLeft">&#160;</td><td class="mdescRight">CleanLabels returns superpixel labels that contain tissue pixels.  <a href="_superpixel_analysis_8m.html#a72fcbaff478b85a830572c77c3203688">More...</a><br /></td></tr>
-<tr class="separator:a72fcbaff478b85a830572c77c3203688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64224cab4e177c57576b698df58d6aeb"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_superpixel_analysis_8m.html#a64224cab4e177c57576b698df58d6aeb">SuperpixelAnalysis</a> (in hsIm, in labelInfo, in varargin)</td></tr>
+<tr class="memdesc:a64224cab4e177c57576b698df58d6aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">SuperpixelAnalysis applies SuperPCA to an hsi and visualizes the result.  <a href="_superpixel_analysis_8m.html#a64224cab4e177c57576b698df58d6aeb">More...</a><br /></td></tr>
+<tr class="separator:a64224cab4e177c57576b698df58d6aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a72fcbaff478b85a830572c77c3203688" name="a72fcbaff478b85a830572c77c3203688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72fcbaff478b85a830572c77c3203688">&#9670;&nbsp;</a></span>CleanLabels()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">function CleanLabels </td>
-          <td>(</td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>labels</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>fgMask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>pixelNum</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>CleanLabels returns superpixel labels that contain tissue pixels. </p>
-<p >Keep only pixels that belong to the tissue (Superpixel might assign background pixels also). The last label is background label.</p>
-<p ><b>Usage</b> </p>
-<div class="fragment"><div class="line">[cleanLabels, validLabels] = <a class="code hl_function" href="_superpixel_analysis_8m.html#a72fcbaff478b85a830572c77c3203688">CleanLabels</a>(labels, fgMask, pixelNum);</div>
-<div class="ttc" id="a_superpixel_analysis_8m_html_a72fcbaff478b85a830572c77c3203688"><div class="ttname"><a href="_superpixel_analysis_8m.html#a72fcbaff478b85a830572c77c3203688">CleanLabels</a></div><div class="ttdeci">function CleanLabels(in labels, in fgMask, in pixelNum)</div><div class="ttdoc">CleanLabels returns superpixel labels that contain tissue pixels.</div></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">labels</td><td>[numeric array] | The labels of the superpixels </td></tr>
-    <tr><td class="paramname">fgMask</td><td>[numeric array] | The foreground mask </td></tr>
-    <tr><td class="paramname">pixelNum</td><td>[int] | The number of superpixels.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">cleanLabels</td><td>[numeric array] | The labels of the superpixels </td></tr>
-    <tr><td class="paramname">validLabels</td><td>[numeric array] | The superpixel labels that refer to tissue pixels </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aaae753657a20353e7f6b88ddf38bc13e" name="aaae753657a20353e7f6b88ddf38bc13e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaae753657a20353e7f6b88ddf38bc13e">&#9670;&nbsp;</a></span>SuperpixelAnalysis()</h2>
+<a id="a64224cab4e177c57576b698df58d6aeb" name="a64224cab4e177c57576b698df58d6aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64224cab4e177c57576b698df58d6aeb">&#9670;&nbsp;</a></span>SuperpixelAnalysis()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,19 +102,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>isManual</em>, </td>
+          <td class="paramname"><em>labelInfo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>pixelNum</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>pcNum</em>&#160;</td>
+          <td class="paramname"><em>varargin</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -187,15 +121,16 @@ Functions</h2></td></tr>
 <p>SuperpixelAnalysis applies SuperPCA to an hsi and visualizes the result. </p>
 <p >Need to set config::[saveFolder] for image output.</p>
 <p ><b>Usage</b> </p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="_superpixel_analysis_8m.html#aaae753657a20353e7f6b88ddf38bc13e">SuperpixelAnalysis</a>(hsIm);</div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="_superpixel_analysis_8m.html#a64224cab4e177c57576b698df58d6aeb">SuperpixelAnalysis</a>(hsIm);</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classapply.html">apply</a>.<a class="code hl_function" href="classapply.html#a96564887b63f8a59b9a6942157b6b018">ToEach</a>(@<a class="code hl_function" href="_superpixel_analysis_8m.html#aaae753657a20353e7f6b88ddf38bc13e">SuperpixelAnalysis</a>, <span class="keyword">true</span>, 20, 3);</div>
-<div class="ttc" id="a_superpixel_analysis_8m_html_aaae753657a20353e7f6b88ddf38bc13e"><div class="ttname"><a href="_superpixel_analysis_8m.html#aaae753657a20353e7f6b88ddf38bc13e">SuperpixelAnalysis</a></div><div class="ttdeci">function SuperpixelAnalysis(in hsIm, in isManual, in pixelNum, in pcNum)</div><div class="ttdoc">SuperpixelAnalysis applies SuperPCA to an hsi and visualizes the result.</div></div>
-<div class="ttc" id="aclassapply_html"><div class="ttname"><a href="classapply.html">apply</a></div><div class="ttdoc">A utility class for applying functions to different data samples.</div><div class="ttdef"><b>Definition:</b> <a href="apply_8m_source.html#l00009">apply.m:9</a></div></div>
+<div class="line"><a class="code hl_class" href="classapply.html">apply</a>.<a class="code hl_function" href="classapply.html#a96564887b63f8a59b9a6942157b6b018">ToEach</a>(@<a class="code hl_function" href="_superpixel_analysis_8m.html#a64224cab4e177c57576b698df58d6aeb">SuperpixelAnalysis</a>, <span class="keyword">true</span>, 20, 3);</div>
+<div class="ttc" id="a_superpixel_analysis_8m_html_a64224cab4e177c57576b698df58d6aeb"><div class="ttname"><a href="_superpixel_analysis_8m.html#a64224cab4e177c57576b698df58d6aeb">SuperpixelAnalysis</a></div><div class="ttdeci">function SuperpixelAnalysis(in hsIm, in labelInfo, in varargin)</div><div class="ttdoc">SuperpixelAnalysis applies SuperPCA to an hsi and visualizes the result.</div></div>
+<div class="ttc" id="aclassapply_html"><div class="ttname"><a href="classapply.html">apply</a></div><div class="ttdoc">A utility class for applying functions to different data samples.</div><div class="ttdef"><b>Definition:</b> apply.m:9</div></div>
 <div class="ttc" id="aclassapply_html_a96564887b63f8a59b9a6942157b6b018"><div class="ttname"><a href="classapply.html#a96564887b63f8a59b9a6942157b6b018">apply::ToEach</a></div><div class="ttdeci">static function ToEach(in funcHandle, in varargin)</div><div class="ttdoc">ToEach applies a function on each of the data samples in the dataset.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hsIm</td><td>[hsi] | An instance of the hsi class </td></tr>
+    <tr><td class="paramname">labelInfo</td><td>[<a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a>] | An instance of the <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a> class </td></tr>
     <tr><td class="paramname">isManual</td><td>[boolean] | A flag to show whether is manual (local) implementation or by SuperPCA package. Default: false. </td></tr>
     <tr><td class="paramname">pixelNum</td><td>[int] | The number of superpixels. Default: 20. </td></tr>
     <tr><td class="paramname">pcNum</td><td>[int] | The number of PCA components. Default: 3.</td></tr>
