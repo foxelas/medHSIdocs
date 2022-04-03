@@ -77,57 +77,56 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_plot_components_8m.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>%======================================================================</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>%&gt; @brief <a class="code hl_function" href="_plot_components_8m.html#a96e194637438b683e66d7c4a682634dc">PlotComponents</a> <a class="code hl_class" href="classplots.html">plots</a> the components of a hyperspectral image.</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>%&gt; @brief <a class="code hl_function" href="_plot_components_8m.html#abcc23fcf1c163de547a337cd5b0004b2">PlotComponents</a> <a class="code hl_class" href="classplots.html">plots</a> the components of a hyperspectral image.</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>%&gt;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>%&gt; @b Usage</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>%&gt;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>%&gt; @code</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>%&gt; <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#aa6596fecb786830a6ce1523343a316a3">Components</a>(fig, hsIm, pcNum);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>%&gt; <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#aa6596fecb786830a6ce1523343a316a3">Components</a>(fig, hsIm, pcNum, 1, <span class="stringliteral">&#39;\temp\folder\img&#39;</span>);</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>%&gt; <span class="keyword">@end</span>code</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>%&gt;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>%&gt; @param fig [int] | The figure handle</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>%&gt; @param hsIm [<a class="code hl_class" href="classhsi.html">hsi</a>] | An instance of the <a class="code hl_class" href="classhsi.html">hsi</a> <span class="keyword">class</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>%&gt; @param pcNum [int] | The number of components</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>%======================================================================</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_plot_components_8m.html#a96e194637438b683e66d7c4a682634dc">   14</a></span>function [] = <a class="code hl_function" href="_plot_components_8m.html#a96e194637438b683e66d7c4a682634dc">PlotComponents</a>(hsIm, pcNum, figStart)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>% <a class="code hl_function" href="_plot_components_8m.html#a96e194637438b683e66d7c4a682634dc">PlotComponents</a> <a class="code hl_class" href="classplots.html">plots</a> the components of a hyperspectral image.</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>%</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>% @b Usage</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>%</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>% @code</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>% <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#aa6596fecb786830a6ce1523343a316a3">Components</a>(fig, hsIm, pcNum);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>% <span class="keyword">@end</span>code</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>%</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>% @param fig [int] | The figure handle</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>%&gt; @param hsIm [<a class="code hl_class" href="classhsi.html">hsi</a>] | An instance of the <a class="code hl_class" href="classhsi.html">hsi</a> <span class="keyword">class</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>%&gt; @param pcNum [int] | The number of components</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>%&gt; @param fig [int] | The figure handle</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>%&gt; @param plotBasePath [char] | The base path <span class="keywordflow">for</span> saving plot figures</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>%======================================================================</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_plot_components_8m.html#abcc23fcf1c163de547a337cd5b0004b2">   15</a></span>function [] = <a class="code hl_function" href="_plot_components_8m.html#abcc23fcf1c163de547a337cd5b0004b2">PlotComponents</a>(hsIm, pcNum, figStart, plotBasePath)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>% <a class="code hl_function" href="_plot_components_8m.html#abcc23fcf1c163de547a337cd5b0004b2">PlotComponents</a> <a class="code hl_class" href="classplots.html">plots</a> the components of a hyperspectral image.</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>%</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>% @b Usage</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>%</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>% @code</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>% <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#aa6596fecb786830a6ce1523343a316a3">Components</a>(fig, hsIm, pcNum, 1, <span class="stringliteral">&#39;\temp\folder\img&#39;</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>% <span class="keyword">@end</span>code</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>%</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>% @param hsIm [<a class="code hl_class" href="classhsi.html">hsi</a>] | An instance of the <a class="code hl_class" href="classhsi.html">hsi</a> <span class="keyword">class</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>% @param pcNum [int] | The number of components</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordflow">if</span> nargin &lt; 3</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    figStart = 1;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>end</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>plotName = <a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a06d1be5d4a7532a5be35136c787c1a56">GetSetting</a>(<span class="stringliteral">&#39;plotName&#39;</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordflow">for</span> i = 1:pcNum</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    fig = figStart + i - 1;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    figure(fig);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    img = squeeze(hsIm(:, :, i));</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    mask = (img ~= 0);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    h = imagesc(img, <span class="stringliteral">&#39;AlphaData&#39;</span>, mask);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    title(strcat(<span class="stringliteral">&#39;PC&#39;</span>, num2str(i)));</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    colorbar;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>(<span class="stringliteral">&#39;plotName&#39;</span>, strcat(plotName, num2str(i)));</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#abcbd660b7d9200886d40ccc51e282a91">SavePlot</a>(fig);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>end</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>% @param fig [int] | The figure handle</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>% @param plotBasePath [char] | The base path <span class="keywordflow">for</span> saving plot figures</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordflow">if</span> isempty(figStart)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    figStart = 1;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>end</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordflow">for</span> i = 1:pcNum</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    fig = figStart + i - 1;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    figure(fig);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    img = squeeze(hsIm(:, :, i));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    mask = (img ~= 0);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    h = imagesc(img, <span class="stringliteral">&#39;AlphaData&#39;</span>, mask);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    axis image;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    title(strcat(<span class="stringliteral">&#39;PC&#39;</span>, num2str(i)));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    colorbar;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    plotPath = strcat(plotBasePath, num2str(i));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a3d9acca8512bca7e375a0750ff47e3fc">SavePlot</a>(fig, plotPath);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>end</div>
-<div class="ttc" id="a_plot_components_8m_html_a96e194637438b683e66d7c4a682634dc"><div class="ttname"><a href="_plot_components_8m.html#a96e194637438b683e66d7c4a682634dc">PlotComponents</a></div><div class="ttdeci">function PlotComponents(in hsIm, in pcNum, in figStart)</div><div class="ttdoc">PlotComponents plots the components of a hyperspectral image.</div></div>
-<div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> <a href="config_8m_source.html#l00009">config.m:9</a></div></div>
-<div class="ttc" id="aclassconfig_html_a06d1be5d4a7532a5be35136c787c1a56"><div class="ttname"><a href="classconfig.html#a06d1be5d4a7532a5be35136c787c1a56">config::GetSetting</a></div><div class="ttdeci">static function GetSetting(in parameter)</div><div class="ttdoc">GetSetting gets a setting value from the config structure.</div></div>
-<div class="ttc" id="aclassconfig_html_a1450029ed6a15647ac90d8a9002d9572"><div class="ttname"><a href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">config::SetSetting</a></div><div class="ttdeci">static function SetSetting(in parameter, in value)</div><div class="ttdoc">SetSetting sets a value in the config structure.</div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>end</div>
+<div class="ttc" id="a_plot_components_8m_html_abcc23fcf1c163de547a337cd5b0004b2"><div class="ttname"><a href="_plot_components_8m.html#abcc23fcf1c163de547a337cd5b0004b2">PlotComponents</a></div><div class="ttdeci">function PlotComponents(in hsIm, in pcNum, in figStart, in plotBasePath)</div><div class="ttdoc">PlotComponents plots the components of a hyperspectral image.</div></div>
 <div class="ttc" id="aclasshsi_html"><div class="ttname"><a href="classhsi.html">hsi</a></div><div class="ttdoc">hsi is a class that holds the hyperspectral image.</div><div class="ttdef"><b>Definition:</b> <a href="hsi_8m_source.html#l00008">hsi.m:8</a></div></div>
 <div class="ttc" id="aclassplots_html"><div class="ttname"><a href="classplots.html">plots</a></div><div class="ttdoc">plots is a class that holds all functions for figure plotting.</div><div class="ttdef"><b>Definition:</b> <a href="plots_8m_source.html#l00005">plots.m:5</a></div></div>
+<div class="ttc" id="aclassplots_html_a3d9acca8512bca7e375a0750ff47e3fc"><div class="ttname"><a href="classplots.html#a3d9acca8512bca7e375a0750ff47e3fc">plots::SavePlot</a></div><div class="ttdeci">static function SavePlot(in fig, in plotPath)</div><div class="ttdoc">SavePlot saves a figure plot.</div></div>
 <div class="ttc" id="aclassplots_html_aa6596fecb786830a6ce1523343a316a3"><div class="ttname"><a href="classplots.html#aa6596fecb786830a6ce1523343a316a3">plots::Components</a></div><div class="ttdeci">static function Components(in varargin)</div><div class="ttdoc">Components plots the components of a hyperspectral image.</div></div>
-<div class="ttc" id="aclassplots_html_abcbd660b7d9200886d40ccc51e282a91"><div class="ttname"><a href="classplots.html#abcbd660b7d9200886d40ccc51e282a91">plots::SavePlot</a></div><div class="ttdeci">static function SavePlot(in fig)</div><div class="ttdoc">SavePlot saves a figure plot.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

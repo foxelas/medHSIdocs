@@ -118,39 +118,46 @@ $(function() {
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    %h5disp(currentFile);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    %h5info(currentFile);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    spectralData = <span class="keywordtype">double</span>(h5read(currentFile, &#39;/SpectralImage&#39;));</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    wavelengths = h5read(currentFile, &#39;/Wavelengths&#39;);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    imageX = h5read(currentFile, &#39;/MeasurementImages/Tristimulus_X&#39;);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    imageY = h5read(currentFile, &#39;/MeasurementImages/Tristimulus_Y&#39;);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    imageZ = h5read(currentFile, &#39;/MeasurementImages/Tristimulus_Z&#39;);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    imageXYZ = cat(3, imageX, imageY, imageZ);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    save(saveFilename, &#39;spectralData&#39;, &#39;imageXYZ&#39;, &#39;wavelengths&#39;, &#39;-v7.3&#39;);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>else</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    load(saveFilename, &#39;spectralData&#39;, &#39;imageXYZ&#39;, &#39;wavelengths&#39;);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>end</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>end</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    if exist(currentFile) &gt; 0</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        spectralData = <span class="keywordtype">double</span>(h5read(currentFile, &#39;/SpectralImage&#39;));</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        wavelengths = h5read(currentFile, &#39;/Wavelengths&#39;);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        imageX = h5read(currentFile, &#39;/MeasurementImages/Tristimulus_X&#39;);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        imageY = h5read(currentFile, &#39;/MeasurementImages/Tristimulus_Y&#39;);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        imageZ = h5read(currentFile, &#39;/MeasurementImages/Tristimulus_Z&#39;);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        imageXYZ = cat(3, imageX, imageY, imageZ);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    else</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        spectralData = [];</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        imageXYZ = [];</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        wavelengths = [];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        fprintf(&#39;File does not exist.\nDirectory %s\n&#39;, currentFile);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    end</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_load_h5_data_8m.html#adaee8649705470f34ce8426505323f2b">   58</a></span>function currentFile = <a class="code hl_function" href="_load_h5_data_8m.html#adaee8649705470f34ce8426505323f2b">AdjustFilename</a>(filename)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>inDir = fullfile(<a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;dataDir&#39;), <a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;dataFolderName&#39;));</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>% filenameParts = strsplit(filename, &#39;_&#39;);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>% dataDate = filenameParts{1};</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>% <span class="keywordflow">if</span> ~contains(inDir, dataDate)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>%     filenameParts = strsplit(inDir, <span class="stringliteral">&#39;\\saitama&#39;</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>%     ending = filenameParts{2};</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>%     filenameParts = strsplit(ending, <span class="charliteral">&#39;_&#39;</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>%     oldDate = filenameParts{1};</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>%     inDir = strrep(inDir, oldDate, dataDate);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>% end</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>currentFile = fullfile(inDir, filename);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordflow">if</span> ~contains(currentFile, <span class="stringliteral">&#39;.h5&#39;</span>)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    currentFile = strcat(currentFile, &#39;.h5&#39;);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>end</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>end</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    save(saveFilename, &#39;spectralData&#39;, &#39;imageXYZ&#39;, &#39;wavelengths&#39;, &#39;-v7.3&#39;);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>else</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    load(saveFilename, &#39;spectralData&#39;, &#39;imageXYZ&#39;, &#39;wavelengths&#39;);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>end</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>end</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="_load_h5_data_8m.html#adaee8649705470f34ce8426505323f2b">   65</a></span>function currentFile = <a class="code hl_function" href="_load_h5_data_8m.html#adaee8649705470f34ce8426505323f2b">AdjustFilename</a>(filename)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>inDir = fullfile(<a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;dataDir&#39;), <a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;dataFolderName&#39;));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>% filenameParts = strsplit(filename, &#39;_&#39;);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>% dataDate = filenameParts{1};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>% <span class="keywordflow">if</span> ~contains(inDir, dataDate)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>%     filenameParts = strsplit(inDir, <span class="stringliteral">&#39;\\saitama&#39;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>%     ending = filenameParts{2};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>%     filenameParts = strsplit(ending, <span class="charliteral">&#39;_&#39;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>%     oldDate = filenameParts{1};</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>%     inDir = strrep(inDir, oldDate, dataDate);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>% end</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>currentFile = fullfile(inDir, filename);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keywordflow">if</span> ~contains(currentFile, <span class="stringliteral">&#39;.h5&#39;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    currentFile = strcat(currentFile, &#39;.h5&#39;);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>end</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>end</div>
 <div class="ttc" id="a_load_h5_data_8m_html_a60f4a3dc714bb57650dc5aae454b29b6"><div class="ttname"><a href="_load_h5_data_8m.html#a60f4a3dc714bb57650dc5aae454b29b6">LoadH5Data</a></div><div class="ttdeci">function LoadH5Data(in filename)</div><div class="ttdoc">LoadH5Data loads the hyperspectral image from an .h5 file.</div></div>
 <div class="ttc" id="a_load_h5_data_8m_html_adaee8649705470f34ce8426505323f2b"><div class="ttname"><a href="_load_h5_data_8m.html#adaee8649705470f34ce8426505323f2b">AdjustFilename</a></div><div class="ttdeci">function AdjustFilename(in filename)</div><div class="ttdoc">LoadH5Data loads the hyperspectral image from an .h5 file.</div></div>
 <div class="ttc" id="aclasscommon_utility_html"><div class="ttname"><a href="classcommon_utility.html">commonUtility</a></div><div class="ttdoc">commonUtility is a class that handles common utilities.</div><div class="ttdef"><b>Definition:</b> <a href="common_utility_8m_source.html#l00005">commonUtility.m:5</a></div></div>

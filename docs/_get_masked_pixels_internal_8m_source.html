@@ -79,47 +79,62 @@ $(function() {
 <a href="_get_masked_pixels_internal_8m.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>% ======================================================================</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>%&gt; @brief <a class="code hl_function" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a> gets all spectral values included in a mask.</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>%&gt;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>%&gt; If the mask is missing, a manually selected mask is assigned by</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>%&gt; a polygon selection prompt.</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>%&gt;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>%&gt; @b Usage</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>%&gt; If the input is a cell array, <a class="code hl_function" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a> is applied on each element of the cell array.</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>%&gt;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>%&gt; If the mask is missing, a manually selected mask is assigned by</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>%&gt; a polygon selection prompt.</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>%&gt;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>%&gt; @code</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>%&gt; hsIm = <a class="code hl_function" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a>(I, mask);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>%&gt; <span class="keyword">@end</span>code</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>%&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>%&gt; @param I [numeric array] | A 3D array of hyperspectral Data</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>%&gt; @param inMask [numeric array] | A target mask</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>%&gt;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>%&gt; @retval maskedPixels [numeric array] | A 2D array of pixel</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>%&gt; spectra aligned vertically. One row is one pixel<span class="stringliteral">&#39;s spectrum</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="stringliteral">% ======================================================================</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">   19</a></span><span class="stringliteral">function [maskedPixels] = GetMaskedPixelsInternal(I, mask)</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="stringliteral">% GetMaskedPixelsInternal gets all spectral values included in a mask.</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="stringliteral">%</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="stringliteral">% If the mask is missing, a manually selected mask is assigned by</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="stringliteral">% a polygon selection prompt.</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="stringliteral">%</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="stringliteral">% @b Usage</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral">%</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="stringliteral">% @code</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="stringliteral">% hsIm = GetMaskedPixelsInternal(I, mask);</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="stringliteral">% @endcode</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>%&gt; @b Usage</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>%&gt;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>%&gt; @code</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>%&gt; hsIm = <a class="code hl_function" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a>(I, mask);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>%&gt; <span class="keyword">@end</span>code</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>%&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>%&gt; @param I [numeric array or cell array] | A 3D array of hyperspectral Data</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>%&gt; @param inMask [numeric array] | A target mask</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>%&gt;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>%&gt; @retval maskedPixels [numeric array or cell array] | A 2D array of pixel</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>%&gt; spectra aligned vertically. One row is one pixel<span class="stringliteral">&#39;s spectrum</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="stringliteral">% ======================================================================</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">   21</a></span><span class="stringliteral">function [maskedPixels] = GetMaskedPixelsInternal(I, mask)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="stringliteral">% GetMaskedPixelsInternal gets all spectral values included in a mask.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="stringliteral">%</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="stringliteral">% If the input is a cell array, GetMaskedPixelsInternal is applied on each element of the cell array.</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="stringliteral">%</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral">% If the mask is missing, a manually selected mask is assigned by</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="stringliteral">% a polygon selection prompt.</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="stringliteral">%</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="stringliteral">% @b Usage</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="stringliteral">%</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="stringliteral">% @param I [numeric array] | A 3D array of hyperspectral Data</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="stringliteral">% @param inMask [numeric array] | A target mask</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="stringliteral">%</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="stringliteral">% @retval maskedPixels [numeric array] | A 2D array of pixel</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="stringliteral">% spectra aligned vertically. One row is one pixel&#39;</span>s spectrum</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordflow">if</span> ~islogical(mask)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    mask = logical(mask);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>end</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>[m, n, w] = size(I);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>IFlat = reshape(I, [m * n, w]);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>maskFlat = reshape(mask, [m * n, 1]);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>maskedPixels = IFlat(maskFlat, :);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>end</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="stringliteral">% @code</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="stringliteral">% hsIm = GetMaskedPixelsInternal(I, mask);</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="stringliteral">% @endcode</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="stringliteral">%</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="stringliteral">% @param I [numeric array or cell array] | A 3D array of hyperspectral Data</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="stringliteral">% @param inMask [numeric array] | A target mask</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="stringliteral">%</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="stringliteral">% @retval maskedPixels [numeric array or cell array] | A 2D array of pixel</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="stringliteral">% spectra aligned vertically. One row is one pixel&#39;</span>s spectrum</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordflow">if</span> ~islogical(mask)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    mask = logical(mask);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>end</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordflow">if</span> iscell(I)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    imgs = I;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    n = numel(imgs);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    maskedPixels = cell(n, 1);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">for</span> i = 1:n</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        I = imgs{i};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        maskedPixels{i} = <a class="code hl_function" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a>(I, mask);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    end</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordflow">else</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    [m, n, w] = size(I);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    IFlat = reshape(I, [m * n, w]);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    maskFlat = reshape(mask, [m * n, 1]);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    maskedPixels = IFlat(maskFlat, :);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>end</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>end</div>
 <div class="ttc" id="a_get_masked_pixels_internal_8m_html_ab54a3ed3d2b3d1e6709351c63eceddef"><div class="ttname"><a href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a></div><div class="ttdeci">function GetMaskedPixelsInternal(in I, in mask)</div><div class="ttdoc">GetMaskedPixelsInternal gets all spectral values included in a mask.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

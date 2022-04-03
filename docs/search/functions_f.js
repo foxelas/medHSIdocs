@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['query_0',['Query',['../classdatabase_utility.html#a26584b3c629f9c5e11589b264fc90862',1,'databaseUtility']]]
+  ['pair_0',['Pair',['../classplots.html#a31e799f7b7e05c7714cea394b6833239',1,'plots']]],
+  ['plotaveragespectrum_1',['PlotAverageSpectrum',['../_plot_average_spectrum_8m.html#a12f1bc618581fdae91a7ea1cd2b9fefb',1,'PlotAverageSpectrum.m']]],
+  ['plotbandstatistics_2',['PlotBandStatistics',['../_plot_band_statistics_8m.html#acd71a5875d470534d6f4af436042e5c0',1,'PlotBandStatistics.m']]],
+  ['plotcomponents_3',['PlotComponents',['../_plot_components_8m.html#abcc23fcf1c163de547a337cd5b0004b2',1,'PlotComponents.m']]],
+  ['ploteigenvectors_4',['PlotEigenvectors',['../_plot_eigenvectors_8m.html#a6205c89848fc73a5212c13f23da7b864',1,'PlotEigenvectors.m']]],
+  ['plotmontagefoldercontents_5',['PlotMontageFolderContents',['../_plot_montage_folder_contents_8m.html#a2eed1dad9d8644a772448b5a1b48a157',1,'PlotMontageFolderContents.m']]],
+  ['plotnormalizationcheck_6',['PlotNormalizationCheck',['../_plot_normalization_check_8m.html#a8a96a59401741f0bbcc49af36da7ad7d',1,'PlotNormalizationCheck.m']]],
+  ['plotoverlay_7',['PlotOverlay',['../_plot_overlay_8m.html#afcacdfbe593d61f554b7ed40365962bc',1,'PlotOverlay.m']]],
+  ['plotsolaxspectra_8',['PlotSolaxSpectra',['../_get_solax_spectra_8m.html#a8feab7963cde419cf60ad06044636092',1,'GetSolaxSpectra.m']]],
+  ['plotspectra_9',['PlotSpectra',['../_plot_spectra_8m.html#ae23516ffbbf654a460b5a5913ee2108e',1,'PlotSpectra.m']]],
+  ['plotsuperpixels_10',['PlotSuperpixels',['../_plot_superpixels_8m.html#a8d13b31c6ddd582858c99dab93b7dbab',1,'PlotSuperpixels.m']]],
+  ['plottwoaxes_11',['plotTwoAxes',['../t20220121___dimred_8m.html#a2f539defa3bf4c23028671c9c326913f',1,'t20220121_Dimred.m']]],
+  ['plus_12',['Plus',['../classhsi.html#aa9fe322aba57a60e132f998f9c8b9de8',1,'hsi']]],
+  ['predict_13',['Predict',['../classtrain_utility.html#a60dcc4fb00e8a9b12d5fbc6a7e88633b',1,'trainUtility']]],
+  ['preparedataset_14',['PrepareDataset',['../classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1',1,'hsiUtility']]],
+  ['prepareparams_15',['PrepareParams',['../_get_display_image_internal_8m.html#a8a48c91422d4219e303cad0cb73c17d6',1,'GetDisplayImageInternal.m']]],
+  ['preparereferencelibrary_16',['PrepareReferenceLibrary',['../classhsi_utility.html#a38a46d4e980e817be78b62dfddebc66b',1,'hsiUtility']]],
+  ['preprocess_17',['Preprocess',['../classhsi.html#aecb71389caa590834751390e1b5701f8',1,'hsi::Preprocess()'],['../classtrain_utility.html#a3678f667bba08f8b159189f15cf45227',1,'trainUtility::Preprocess()']]],
+  ['preprocessing_18',['Preprocessing',['../_preprocessing_8m.html#a561d2579ff9f332a4154c9a03d3b0676',1,'Preprocessing.m']]],
+  ['preprocessinternal_19',['PreprocessInternal',['../_preprocess_internal_8m.html#a002762dff05d99cab0dcac3c06f9abca',1,'PreprocessInternal.m']]]
 ];

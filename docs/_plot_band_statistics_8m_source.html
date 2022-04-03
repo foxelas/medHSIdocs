@@ -77,63 +77,70 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_plot_band_statistics_8m.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>%======================================================================</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>%&gt; @brief <a class="code hl_function" href="_plot_band_statistics_8m.html#a4e37b9a8bbb5f548d0d5cbefe361f23c">PlotBandStatistics</a> <a class="code hl_class" href="classplots.html">plots</a> statistics among spectral bands.</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>%&gt; @brief <a class="code hl_function" href="_plot_band_statistics_8m.html#acd71a5875d470534d6f4af436042e5c0">PlotBandStatistics</a> <a class="code hl_class" href="classplots.html">plots</a> statistics among spectral bands.</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>%&gt;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>%&gt; @b Usage</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>%&gt;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>%&gt; @code</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>%&gt; [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a753f1bd1c8d4c00f559b71b9ffe26281">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;correlation&#39;</span>);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>%&gt; [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a63a2836209e8d3340f8f1d57fad091bf">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;correlation&#39;</span>);</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>%&gt;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>%&gt; [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a753f1bd1c8d4c00f559b71b9ffe26281">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;covariance&#39;</span>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>%&gt; [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a63a2836209e8d3340f8f1d57fad091bf">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;covariance&#39;</span>);</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>%&gt; <span class="keyword">@end</span>code</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>%&gt;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>%&gt; @param fig [int] | The figure handle</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>%&gt; @param inVectors [numeric array] | The input vectors</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>%&gt; @param statistic [char] | The statistic name</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>%&gt;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>%&gt; @retval imCorr [numeric array] | The statistics values</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>%======================================================================</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_plot_band_statistics_8m.html#a4e37b9a8bbb5f548d0d5cbefe361f23c">   18</a></span>function [imCorr] = <a class="code hl_function" href="_plot_band_statistics_8m.html#a4e37b9a8bbb5f548d0d5cbefe361f23c">PlotBandStatistics</a>(inVectors, statistic, fig)</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>% <a class="code hl_function" href="_plot_band_statistics_8m.html#a4e37b9a8bbb5f548d0d5cbefe361f23c">PlotBandStatistics</a> <a class="code hl_class" href="classplots.html">plots</a> statistics among spectral bands.</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>%</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>% @b Usage</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>%</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>% @code</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>% [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a753f1bd1c8d4c00f559b71b9ffe26281">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;correlation&#39;</span>);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>%</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>% [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a753f1bd1c8d4c00f559b71b9ffe26281">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;covariance&#39;</span>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>% <span class="keyword">@end</span>code</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>%</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>% @param fig [int] | The figure handle</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>%&gt; @param inVectors [numeric array] | The input vectors</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>%&gt; @param statistic [char] | The statistic name</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>%&gt; @param figTitle [char] | The figure title</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>%&gt; @param fig [int] | The figure handle</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>%&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>%&gt; @retval imCorr [numeric array] | The statistics values</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>%======================================================================</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_plot_band_statistics_8m.html#acd71a5875d470534d6f4af436042e5c0">   19</a></span>function [imCorr] = <a class="code hl_function" href="_plot_band_statistics_8m.html#acd71a5875d470534d6f4af436042e5c0">PlotBandStatistics</a>(inVectors, statistic, figTitle, fig)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>% <a class="code hl_function" href="_plot_band_statistics_8m.html#acd71a5875d470534d6f4af436042e5c0">PlotBandStatistics</a> <a class="code hl_class" href="classplots.html">plots</a> statistics among spectral bands.</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>%</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>% @b Usage</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>%</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>% @code</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>% [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a63a2836209e8d3340f8f1d57fad091bf">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;correlation&#39;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>%</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>% [imCorr] = <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a63a2836209e8d3340f8f1d57fad091bf">BandStatistics</a>(fig, inVectors, <span class="stringliteral">&#39;covariance&#39;</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>% <span class="keyword">@end</span>code</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>%</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>% @param inVectors [numeric array] | The input vectors</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>% @param statistic [char] | The statistic name</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>%</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>% @retval imCorr [numeric array] | The statistics values</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordflow">if</span> strcmpi(statistic, <span class="stringliteral">&#39;correlation&#39;</span>)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    imCorr = corr(inVectors);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    figTitle = &#39;Correlation among bands&#39;;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>elseif strcmpi(statistic, &#39;covariance&#39;)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    imCorr = cov(inVectors);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    figTitle = &#39;Covariance among bands&#39;;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>else</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    error(&#39;Unsupported statistic&#39;);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>end</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>figure(fig);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>imagesc(imCorr);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>set(gca, &#39;XTick&#39;, 1:50:311, &#39;XTickLabel&#39;, [1:50:311]+420-1)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>set(gca, &#39;YTick&#39;, 1:50:311, &#39;YTickLabel&#39;, [1:50:311]+420-1)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>title(figTitle);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>c = colorbar;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="_save_plot_8m.html#ad8eefd91644bcb7dab71c712c905a091">SavePlot</a>(fig);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>end</div>
-<div class="ttc" id="a_plot_band_statistics_8m_html_a4e37b9a8bbb5f548d0d5cbefe361f23c"><div class="ttname"><a href="_plot_band_statistics_8m.html#a4e37b9a8bbb5f548d0d5cbefe361f23c">PlotBandStatistics</a></div><div class="ttdeci">function PlotBandStatistics(in inVectors, in statistic, in fig)</div><div class="ttdoc">PlotBandStatistics plots statistics among spectral bands.</div></div>
-<div class="ttc" id="a_save_plot_8m_html_ad8eefd91644bcb7dab71c712c905a091"><div class="ttname"><a href="_save_plot_8m.html#ad8eefd91644bcb7dab71c712c905a091">SavePlot</a></div><div class="ttdeci">function SavePlot(in fig)</div></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>% @param figTitle [char] | The figure title</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>% @param fig [int] | The figure handle</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>%</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>% @retval imCorr [numeric array] | The statistics values</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordflow">if</span> strcmpi(statistic, <span class="stringliteral">&#39;correlation&#39;</span>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    imCorr = corr(inVectors);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    if isempty(figTitle)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        figTitle = &#39;Correlation among bands&#39;;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    end</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>elseif strcmpi(statistic, &#39;covariance&#39;)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    imCorr = cov(inVectors);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    if isempty(figTitle)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        figTitle = &#39;Covariance among bands&#39;;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    end</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>else</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    error(&#39;Unsupported statistic&#39;);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>end</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>figure(fig);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>imagesc(imCorr);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>set(gca, &#39;XTick&#39;, 1:50:311, &#39;XTickLabel&#39;, [1:50:311]+420-1)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>set(gca, &#39;YTick&#39;, 1:50:311, &#39;YTickLabel&#39;, [1:50:311]+420-1)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>title(figTitle);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>c = colorbar;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>title(figTtitle)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="_save_plot_8m.html#ad8eefd91644bcb7dab71c712c905a091">SavePlot</a>(fig);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>end</div>
+<div class="ttc" id="a_plot_band_statistics_8m_html_acd71a5875d470534d6f4af436042e5c0"><div class="ttname"><a href="_plot_band_statistics_8m.html#acd71a5875d470534d6f4af436042e5c0">PlotBandStatistics</a></div><div class="ttdeci">function PlotBandStatistics(in inVectors, in statistic, in figTitle, in fig)</div><div class="ttdoc">PlotBandStatistics plots statistics among spectral bands.</div></div>
+<div class="ttc" id="a_save_plot_8m_html_ad8eefd91644bcb7dab71c712c905a091"><div class="ttname"><a href="_save_plot_8m.html#ad8eefd91644bcb7dab71c712c905a091">SavePlot</a></div><div class="ttdeci">function SavePlot(in fig)</div><div class="ttdoc">SavePlot saves a figure.</div></div>
 <div class="ttc" id="aclassplots_html"><div class="ttname"><a href="classplots.html">plots</a></div><div class="ttdoc">plots is a class that holds all functions for figure plotting.</div><div class="ttdef"><b>Definition:</b> <a href="plots_8m_source.html#l00005">plots.m:5</a></div></div>
-<div class="ttc" id="aclassplots_html_a753f1bd1c8d4c00f559b71b9ffe26281"><div class="ttname"><a href="classplots.html#a753f1bd1c8d4c00f559b71b9ffe26281">plots::BandStatistics</a></div><div class="ttdeci">static function BandStatistics(in fig, in varargin)</div><div class="ttdoc">BandStatistics plots statistics among spectral bands.</div></div>
+<div class="ttc" id="aclassplots_html_a63a2836209e8d3340f8f1d57fad091bf"><div class="ttname"><a href="classplots.html#a63a2836209e8d3340f8f1d57fad091bf">plots::BandStatistics</a></div><div class="ttdeci">static function BandStatistics(in fig, in plotPath, in varargin)</div><div class="ttdoc">BandStatistics plots statistics among spectral bands.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

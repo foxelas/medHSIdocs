@@ -10,5 +10,6 @@ var searchData=
   ['plots_2em_7',['plots.m',['../plots_8m.html',1,'']]],
   ['plotspectra_2em_8',['PlotSpectra.m',['../_plot_spectra_8m.html',1,'']]],
   ['plotsuperpixels_2em_9',['PlotSuperpixels.m',['../_plot_superpixels_8m.html',1,'']]],
-  ['preprocessing_2em_10',['Preprocessing.m',['../_preprocessing_8m.html',1,'']]]
+  ['preprocessing_2em_10',['Preprocessing.m',['../_preprocessing_8m.html',1,'']]],
+  ['preprocessinternal_2em_11',['PreprocessInternal.m',['../_preprocess_internal_8m.html',1,'']]]
 ];

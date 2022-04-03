@@ -81,15 +81,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab582633bd29c4b297177cec6648c193e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e">ReadDataset</a> (in dataset, in condition, in readForeground)</td></tr>
-<tr class="memdesc:ab582633bd29c4b297177cec6648c193e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ReadDataset reads the dataset.  <a href="_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e">More...</a><br /></td></tr>
-<tr class="separator:ab582633bd29c4b297177cec6648c193e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ffc6320060e44f3e7bb94c15274272"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a> (in dataset, in contentConditions, in readForeground, in targetConditions)</td></tr>
+<tr class="memdesc:a93ffc6320060e44f3e7bb94c15274272"><td class="mdescLeft">&#160;</td><td class="mdescRight">ReadDataset reads the dataset.  <a href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">More...</a><br /></td></tr>
+<tr class="separator:a93ffc6320060e44f3e7bb94c15274272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff17d9487f1ed195862034e65631de73"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_read_dataset_8m.html#aff17d9487f1ed195862034e65631de73">StrrepAll</a> (in inname, in isLegacy)</td></tr>
 <tr class="separator:aff17d9487f1ed195862034e65631de73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab582633bd29c4b297177cec6648c193e" name="ab582633bd29c4b297177cec6648c193e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab582633bd29c4b297177cec6648c193e">&#9670;&nbsp;</a></span>ReadDataset()</h2>
+<a id="a93ffc6320060e44f3e7bb94c15274272" name="a93ffc6320060e44f3e7bb94c15274272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ffc6320060e44f3e7bb94c15274272">&#9670;&nbsp;</a></span>ReadDataset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,13 +104,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>condition</em>, </td>
+          <td class="paramname"><em>contentConditions</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>readForeground</em>&#160;</td>
+          <td class="paramname"><em>readForeground</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>targetConditions</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -123,16 +129,20 @@ Functions</h2></td></tr>
 <p>ReadDataset reads the dataset. </p>
 <p >ReadDataset reads a group of hsi data according to condition, prepares .mat files for the raw spectral data, applies preprocessing and returns montage previews of the results. It also prepares labels, when available.</p>
 <p >Data samples are saved in .mat files so that one contains a 'spectralData' (class hsi) and another contains a 'labelInfo' (class <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a>) variable. The save location is config::[matDir]\[dataset]\*.mat. Snapshot images are saved in config::[outputDir]\[snapshotsFolderName]\[dataset]\.</p>
+<p >If it fails during writing in config.mat, consider running MATLAB as administrator. Alternatively, in Windows 10 go to Settings &gt; Update &amp; Security &gt; Windows Security &gt; Virus and Threat protection &gt; Manage Ransomware Protection &gt; Allow an app through controlled folder access &gt; Add Matlab.</p>
 <p ><b>Usage</b> </p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e">ReadDataset</a>(<span class="stringliteral">&#39;handsDataset&#39;</span>,{<span class="stringliteral">&#39;hand&#39;</span>, <span class="keyword">false</span>});</div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a>(<span class="stringliteral">&#39;handsDataset&#39;</span>,{<span class="stringliteral">&#39;hand&#39;</span>, <span class="keyword">false</span>});</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e">ReadDataset</a>(<span class="stringliteral">&#39;pslData&#39;</span>, {<span class="stringliteral">&#39;tissue&#39;</span>, <span class="keyword">true</span>});</div>
-<div class="ttc" id="a_read_dataset_8m_html_ab582633bd29c4b297177cec6648c193e"><div class="ttname"><a href="_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e">ReadDataset</a></div><div class="ttdeci">function ReadDataset(in dataset, in condition, in readForeground)</div><div class="ttdoc">ReadDataset reads the dataset.</div></div>
+<div class="line"><a class="code hl_function" href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a>(<span class="stringliteral">&#39;pslData&#39;</span>, {<span class="stringliteral">&#39;tissue&#39;</span>, <span class="keyword">true</span>});</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a>(<span class="stringliteral">&#39;pslData&#39;</span>, {<span class="stringliteral">&#39;tissue&#39;</span>, <span class="keyword">true</span>}, <span class="keyword">true</span>, {<span class="stringliteral">&#39;raw&#39;</span>, <span class="keyword">false</span>});</div>
+<div class="ttc" id="a_read_dataset_8m_html_a93ffc6320060e44f3e7bb94c15274272"><div class="ttname"><a href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a></div><div class="ttdeci">function ReadDataset(in dataset, in contentConditions, in readForeground, in targetConditions)</div><div class="ttdoc">ReadDataset reads the dataset.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dataset</td><td>[char] | The dataset </td></tr>
-    <tr><td class="paramname">condition</td><td>[cell array] | The conditions for reading files </td></tr>
+    <tr><td class="paramname">contentConditions</td><td>[cell array] | The content conditions for reading files </td></tr>
     <tr><td class="paramname">readForeground</td><td>[boolean] | Optional: Flag to read the foreground mask for an hsi instance. Default: true </td></tr>
+    <tr><td class="paramname">targetConditions</td><td>[cell array] | Optional: The target conditions for reading files. Default: none </td></tr>
   </table>
   </dd>
 </dl>

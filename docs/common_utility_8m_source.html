@@ -198,7 +198,7 @@ $(function() {
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                case &#39;referenceLib&#39;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    fullPath = <a class="code hl_class" href="classconfig.html">config</a>.DirMake(<a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;matDir&#39;), ...</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                        strcat(<a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;database&#39;), <a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;referenceLibraryName&#39;)), ...</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                        fullfile(<a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;dataset&#39;), <a class="code hl_class" href="classconfig.html">config</a>.GetSetting(&#39;referenceLibraryName&#39;)), ...</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                        filename);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                case &#39;h5&#39;</div>
@@ -263,7 +263,7 @@ $(function() {
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            fdir = dir(strrep(<a class="code hl_class" href="classcommon_utility.html">commonUtility</a>.GetFilename(&#39;dataset&#39;), &#39;.mat&#39;, &#39;\*.mat&#39;));</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            if numel(fdir) &lt; 1</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                error(&#39;You should first read the dataset. Use <a class="code hl_class" href="classhsi_utility.html">hsiUtility</a>.<a class="code hl_function" href="_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e">ReadDataset</a>().&#39;);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                error(&#39;You should first read the dataset. Use <a class="code hl_class" href="classhsi_utility.html">hsiUtility</a>.<a class="code hl_function" href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a>().&#39;);</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            else</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                datanames = {fdir.name};</div>
@@ -392,97 +392,108 @@ $(function() {
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            errVal = sqrt(((measured - reconstructed) * (measured - reconstructed)<span class="stringliteral">&#39;)/N);</span></div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="stringliteral">        end</span></div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="stringliteral">        % ======================================================================</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="stringliteral">        %&gt; @brief Evaluations returns performance metrics for classification tasks</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="stringliteral">        %&gt; Returns accuracy, sensitivity and specificity metrics.</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="stringliteral">        %&gt; @b Usage</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="stringliteral">        %&gt; @code</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="stringliteral">        %&gt; [accuracy, sensitivity, specificity] = commonUtility.Evaluations(actual, predicted);</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="stringliteral">        %&gt; @endcode</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="stringliteral">        %&gt; @param actual [vector] | The actual values</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="stringliteral">        %&gt; @param predicted [vector] | The predicted values</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="stringliteral">        function jac = Jaccard(predLabel, realLabel)         </span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="stringliteral">            if ismatrix(predLabel) || ismatrix(realLabel)</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="stringliteral">                predLabel = predLabel(:);</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="stringliteral">                realLabel = realLabel(:);</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="stringliteral">            end</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="stringliteral">            </span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="stringliteral">            predLabel = logical(predLabel);</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="stringliteral">            realLabel = logical(realLabel);</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="classcommon_utility.html#ad8699a79976cd8701cf2fdba192a0e3f">  325</a></span><span class="stringliteral">            </span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="stringliteral">            jac = jaccard(predLabel, realLabel);</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="stringliteral">        end </span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="stringliteral">        % ======================================================================</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="stringliteral">        %&gt; @brief Evaluations returns performance metrics for classification tasks</span></div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="stringliteral">        %&gt; @retval accuracy [numeric] | The model accuracy</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="stringliteral">        %&gt; @retval sensitivity [numeric] | The model sensitivity</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="stringliteral">        %&gt; @retval specificity [numeric] | The model specificity</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="stringliteral">        % ======================================================================</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="stringliteral">        function [accuracy, sensitivity, specificity] = Evaluations(actual, predicted)</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="stringliteral">            % Evaluations returns performance metrics for classification tasks</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="stringliteral">            % Returns accuracy, sensitivity and specificity metrics.</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="stringliteral">            % @b Usage</span></div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="stringliteral">            % @code</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="classcommon_utility.html#ac2a9744a2d63756d0b8cef58e65e5f10">  343</a></span><span class="stringliteral">            % [accuracy, sensitivity, specificity] = commonUtility.Evaluations(actual, predicted);</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="stringliteral">            % @endcode</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="stringliteral">            % @param actual [vector] | The actual values</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="stringliteral">            % @param predicted [vector] | The predicted values</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="stringliteral">        %&gt; Returns accuracy, sensitivity and specificity metrics.</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="stringliteral">        %&gt; @b Usage</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="stringliteral">        %&gt; @code</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="stringliteral">        %&gt; [accuracy, sensitivity, specificity] = commonUtility.Evaluations(actual, predicted);</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="stringliteral">        %&gt; @endcode</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="stringliteral">        %&gt; @param actual [vector] | The actual values</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="stringliteral">        %&gt; @param predicted [vector] | The predicted values</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="stringliteral">        %&gt; @retval accuracy [numeric] | The model accuracy</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="stringliteral">        %&gt; @retval sensitivity [numeric] | The model sensitivity</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="stringliteral">        %&gt; @retval specificity [numeric] | The model specificity</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="stringliteral">        % ======================================================================</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="stringliteral">        function [accuracy, sensitivity, specificity] = Evaluations(actual, predicted)</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="stringliteral">            % Evaluations returns performance metrics for classification tasks</span></div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="stringliteral">            % @retval accuracy [numeric] | The model accuracy</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="stringliteral">            % @retval sensitivity [numeric] | The model sensitivity</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="stringliteral">            % @retval specificity [numeric] | The model specificity</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="stringliteral">            if ~isnumeric(actual) &amp;&amp; isnumeric(predicted)</span></div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="stringliteral">                actual = double(actual);</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="stringliteral">            end</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="stringliteral">            cmat = confusionmat(actual, predicted);</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="stringliteral">            accuracy = (cmat(1, 1) + cmat(2, 2)) / length(actual);</span></div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="stringliteral">            sensitivity = cmat(2, 2) / (cmat(2, 1) + cmat(2, 2));</span></div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="stringliteral">            specificity = cmat(1, 1) / (cmat(1, 1) + cmat(1, 2));</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="stringliteral">        end</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="stringliteral">        % ======================================================================</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="stringliteral">        %&gt; @brief Sam returns the Spectral Angle Mapper value</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="stringliteral">        %&gt; Compares the similarity between two curves. The higher the value, the</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="stringliteral">        %&gt; more similar the curves.</span></div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="stringliteral">        %&gt; @b Usage</span></div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="stringliteral">        %&gt; @code</span></div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="stringliteral">        %&gt; simVal = commonUtility.Sam(target, reference);</span></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="stringliteral">        %&gt; @endcode</span></div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="stringliteral">        %&gt; @param target [vector] | The vector of the targer curve</span></div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="stringliteral">        %&gt; @param reference [vector] | The vector of the reference curve</span></div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="stringliteral">        %&gt;</span></div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="stringliteral">        %&gt; @retval simVal [numeric] | The coefficient value</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="stringliteral">        % ======================================================================</span></div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="stringliteral">        function simVal = Sam(target, reference)</span></div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="stringliteral">            % Sam returns the Spectral Angle Mapper value</span></div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="stringliteral">            % Compares the similarity between two curves. The higher the value, the</span></div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="stringliteral">            % more similar the curves.</span></div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="stringliteral">            % @b Usage</span></div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="stringliteral">            % @code</span></div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno"><a class="line" href="classcommon_utility.html#a0fdc2dc54eff29c37f9b96e80d92f23e">  388</a></span><span class="stringliteral">            % simVal = commonUtility.Sam(target, reference);</span></div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="stringliteral">            % @endcode</span></div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="stringliteral">            % @param target [vector] | The vector of the targer curve</span></div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="stringliteral">            % @param reference [vector] | The vector of the reference curve</span></div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="stringliteral">            %</span></div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="stringliteral">            % @retval simVal [numeric] | The coefficient value</span></div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="stringliteral">            if size(target, 1) == size(reference, 1)</span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="stringliteral">                simVal = sam(target, reference);</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="stringliteral">            elseif size(target, 1) == size(reference, 2) || size(target, 2) == size(reference, 1)</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="stringliteral">                simVal = sam(target, reference&#39;</span>);</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                error(<span class="stringliteral">&#39;Incorrect dimensions between spectral curves.&#39;</span>);</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            end</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        end</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    end</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>end</div>
-<div class="ttc" id="a_read_dataset_8m_html_ab582633bd29c4b297177cec6648c193e"><div class="ttname"><a href="_read_dataset_8m.html#ab582633bd29c4b297177cec6648c193e">ReadDataset</a></div><div class="ttdeci">function ReadDataset(in dataset, in condition, in readForeground)</div><div class="ttdoc">ReadDataset reads the dataset.</div></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="stringliteral">            % Returns accuracy, sensitivity and specificity metrics.</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="stringliteral">            % @b Usage</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="stringliteral">            % @code</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="stringliteral">            % [accuracy, sensitivity, specificity] = commonUtility.Evaluations(actual, predicted);</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="classcommon_utility.html#ac2a9744a2d63756d0b8cef58e65e5f10">  355</a></span><span class="stringliteral">            % @endcode</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="stringliteral">            % @param actual [vector] | The actual values</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="stringliteral">            % @param predicted [vector] | The predicted values</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="stringliteral">            % @retval accuracy [numeric] | The model accuracy</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="stringliteral">            % @retval sensitivity [numeric] | The model sensitivity</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="stringliteral">            % @retval specificity [numeric] | The model specificity</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="stringliteral">            if ~isnumeric(actual) &amp;&amp; isnumeric(predicted)</span></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="stringliteral">                actual = double(actual);</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="stringliteral">            end</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="stringliteral">            cmat = confusionmat(actual, predicted);</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="stringliteral">            accuracy = (cmat(1, 1) + cmat(2, 2)) / length(actual);</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="stringliteral">            sensitivity = cmat(2, 2) / (cmat(2, 1) + cmat(2, 2));</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="stringliteral">            specificity = cmat(1, 1) / (cmat(1, 1) + cmat(1, 2));</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="stringliteral">        end</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="stringliteral">        % ======================================================================</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="stringliteral">        %&gt; @brief Sam returns the Spectral Angle Mapper value</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="stringliteral">        %&gt; Compares the similarity between two curves. The higher the value, the</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="stringliteral">        %&gt; more similar the curves.</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="stringliteral">        %&gt; @b Usage</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="stringliteral">        %&gt; @code</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="stringliteral">        %&gt; simVal = commonUtility.Sam(target, reference);</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="stringliteral">        %&gt; @endcode</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="stringliteral">        %&gt; @param target [vector] | The vector of the targer curve</span></div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="stringliteral">        %&gt; @param reference [vector] | The vector of the reference curve</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="stringliteral">        %&gt;</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="stringliteral">        %&gt; @retval simVal [numeric] | The coefficient value</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="stringliteral">        % ======================================================================</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="stringliteral">        function simVal = Sam(target, reference)</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="stringliteral">            % Sam returns the Spectral Angle Mapper value</span></div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="stringliteral">            % Compares the similarity between two curves. The higher the value, the</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="stringliteral">            % more similar the curves.</span></div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="stringliteral">            % @b Usage</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="stringliteral">            % @code</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="stringliteral">            % simVal = commonUtility.Sam(target, reference);</span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno"><a class="line" href="classcommon_utility.html#a0fdc2dc54eff29c37f9b96e80d92f23e">  400</a></span><span class="stringliteral">            % @endcode</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="stringliteral">            % @param target [vector] | The vector of the targer curve</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span><span class="stringliteral">            % @param reference [vector] | The vector of the reference curve</span></div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="stringliteral">            %</span></div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="stringliteral">            % @retval simVal [numeric] | The coefficient value</span></div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="stringliteral">            if size(target, 1) == size(reference, 1)</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span><span class="stringliteral">                simVal = sam(target, reference);</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span><span class="stringliteral">            elseif size(target, 1) == size(reference, 2) || size(target, 2) == size(reference, 1)</span></div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span><span class="stringliteral">                simVal = sam(target, reference&#39;</span>);</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                error(<span class="stringliteral">&#39;Incorrect dimensions between spectral curves.&#39;</span>);</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>            end</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        end</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    end</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>end</div>
+<div class="ttc" id="a_read_dataset_8m_html_a93ffc6320060e44f3e7bb94c15274272"><div class="ttname"><a href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a></div><div class="ttdeci">function ReadDataset(in dataset, in contentConditions, in readForeground, in targetConditions)</div><div class="ttdoc">ReadDataset reads the dataset.</div></div>
 <div class="ttc" id="aclasscommon_utility_html"><div class="ttname"><a href="classcommon_utility.html">commonUtility</a></div><div class="ttdoc">commonUtility is a class that handles common utilities.</div><div class="ttdef"><b>Definition:</b> <a href="common_utility_8m_source.html#l00005">commonUtility.m:5</a></div></div>
 <div class="ttc" id="aclasscommon_utility_html_a0c739aa5e17f1b7af584c0916636c1ee"><div class="ttname"><a href="classcommon_utility.html#a0c739aa5e17f1b7af584c0916636c1ee">commonUtility::DatasetInfo</a></div><div class="ttdeci">static function DatasetInfo(in bySample)</div><div class="ttdoc">DatasetInfo returns datanames and targetIDs in the current dataset.</div></div>
 <div class="ttc" id="aclasscommon_utility_html_a0fdc2dc54eff29c37f9b96e80d92f23e"><div class="ttname"><a href="classcommon_utility.html#a0fdc2dc54eff29c37f9b96e80d92f23e">commonUtility::Sam</a></div><div class="ttdeci">static function Sam(in target, in reference)</div><div class="ttdoc">Sam returns the Spectral Angle Mapper value.</div></div>
@@ -492,6 +503,7 @@ $(function() {
 <div class="ttc" id="aclasscommon_utility_html_ac2a9744a2d63756d0b8cef58e65e5f10"><div class="ttname"><a href="classcommon_utility.html#ac2a9744a2d63756d0b8cef58e65e5f10">commonUtility::Evaluations</a></div><div class="ttdeci">static function Evaluations(in actual, in predicted)</div><div class="ttdoc">Evaluations returns performance metrics for classification tasks.</div></div>
 <div class="ttc" id="aclasscommon_utility_html_aceb777662166945561593a110a5843f8"><div class="ttname"><a href="classcommon_utility.html#aceb777662166945561593a110a5843f8">commonUtility::GoodnessOfFit</a></div><div class="ttdeci">static function GoodnessOfFit(in reconstructed, in measured)</div><div class="ttdoc">GoodnessOfFit returns coodness of fit coefficient.</div></div>
 <div class="ttc" id="aclasscommon_utility_html_acf8489565fe408de90f3d58c6158fef9"><div class="ttname"><a href="classcommon_utility.html#acf8489565fe408de90f3d58c6158fef9">commonUtility::GetBoundingBoxMask</a></div><div class="ttdeci">static function GetBoundingBoxMask(in corners)</div><div class="ttdoc">GetBoundingBoxMask returns the mask corner indexes for a bounding box.</div></div>
+<div class="ttc" id="aclasscommon_utility_html_ad8699a79976cd8701cf2fdba192a0e3f"><div class="ttname"><a href="classcommon_utility.html#ad8699a79976cd8701cf2fdba192a0e3f">commonUtility::Jaccard</a></div><div class="ttdeci">static function Jaccard(in predLabel, in realLabel)</div></div>
 <div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> <a href="config_8m_source.html#l00009">config.m:9</a></div></div>
 <div class="ttc" id="aclassconfig_html_a06d1be5d4a7532a5be35136c787c1a56"><div class="ttname"><a href="classconfig.html#a06d1be5d4a7532a5be35136c787c1a56">config::GetSetting</a></div><div class="ttdeci">static function GetSetting(in parameter)</div><div class="ttdoc">GetSetting gets a setting value from the config structure.</div></div>
 <div class="ttc" id="aclasshsi_utility_html"><div class="ttname"><a href="classhsi_utility.html">hsiUtility</a></div><div class="ttdoc">hsiUtility is a class that holds all utility static functions that handle hsi objects.</div><div class="ttdef"><b>Definition:</b> <a href="hsi_utility_8m_source.html#l00009">hsiUtility.m:9</a></div></div>

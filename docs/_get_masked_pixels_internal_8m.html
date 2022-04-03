@@ -113,20 +113,21 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>GetMaskedPixelsInternal gets all spectral values included in a mask. </p>
+<p >If the input is a cell array, GetMaskedPixelsInternal is applied on each element of the cell array.</p>
 <p >If the mask is missing, a manually selected mask is assigned by a polygon selection prompt.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">hsIm = <a class="code hl_function" href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a>(I, mask);</div>
 <div class="ttc" id="a_get_masked_pixels_internal_8m_html_ab54a3ed3d2b3d1e6709351c63eceddef"><div class="ttname"><a href="_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef">GetMaskedPixelsInternal</a></div><div class="ttdeci">function GetMaskedPixelsInternal(in I, in mask)</div><div class="ttdoc">GetMaskedPixelsInternal gets all spectral values included in a mask.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">I</td><td>[numeric array] | A 3D array of hyperspectral Data </td></tr>
+    <tr><td class="paramname">I</td><td>[numeric array or cell array] | A 3D array of hyperspectral Data </td></tr>
     <tr><td class="paramname">inMask</td><td>[numeric array] | A target mask</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">maskedPixels</td><td>[numeric array] | A 2D array of pixel spectra aligned vertically. One row is one pixel's spectrum </td></tr>
+    <tr><td class="paramname">maskedPixels</td><td>[numeric array or cell array] | A 2D array of pixel spectra aligned vertically. One row is one pixel's spectrum </td></tr>
   </table>
   </dd>
 </dl>

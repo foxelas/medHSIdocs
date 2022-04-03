@@ -81,13 +81,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5a0c2b7e43ddf6b17cf3464c223f91be"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be">DimredInternal</a> (in X, in method, in q, in mask)</td></tr>
-<tr class="memdesc:a5a0c2b7e43ddf6b17cf3464c223f91be"><td class="mdescLeft">&#160;</td><td class="mdescRight">DimredInternal reduces the dimensions of the hyperspectral image.  <a href="_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be">More...</a><br /></td></tr>
-<tr class="separator:a5a0c2b7e43ddf6b17cf3464c223f91be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8d833259e28a3840b5d621a8458a9b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_dimred_internal_8m.html#aaa8d833259e28a3840b5d621a8458a9b">DimredInternal</a> (in X, in method, in q, in mask, in varargin)</td></tr>
+<tr class="memdesc:aaa8d833259e28a3840b5d621a8458a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">DimredInternal reduces the dimensions of the hyperspectral image.  <a href="_dimred_internal_8m.html#aaa8d833259e28a3840b5d621a8458a9b">More...</a><br /></td></tr>
+<tr class="separator:aaa8d833259e28a3840b5d621a8458a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5a0c2b7e43ddf6b17cf3464c223f91be" name="a5a0c2b7e43ddf6b17cf3464c223f91be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a0c2b7e43ddf6b17cf3464c223f91be">&#9670;&nbsp;</a></span>DimredInternal()</h2>
+<a id="aaa8d833259e28a3840b5d621a8458a9b" name="aaa8d833259e28a3840b5d621a8458a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8d833259e28a3840b5d621a8458a9b">&#9670;&nbsp;</a></span>DimredInternal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -114,7 +114,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>mask</em>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>varargin</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -125,22 +131,23 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>DimredInternal reduces the dimensions of the hyperspectral image. </p>
-<p >Currently PCA, RICA, SuperPCA, LDA, QDA are available. For more details check <code>function</code> Dimred.</p>
+<p >Currently PCA, ICA (FastICA), RICA, SuperPCA, MSuperPCA, LDA, QDA are available. For more details check <code>function</code> Dimred.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">q = 10;</div>
-<div class="line">[coeff, scores, latent, explained, objective] = <a class="code hl_function" href="_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be">DimredInternal</a>(hsIm.Value,</div>
+<div class="line">[coeff, scores, latent, explained, objective] = <a class="code hl_function" href="_dimred_internal_8m.html#aaa8d833259e28a3840b5d621a8458a9b">DimredInternal</a>(hsIm.Value,</div>
 <div class="line">method, q, hsIm.FgMask);</div>
 <div class="line"> </div>
-<div class="line">[coeff, scores, latent, explained, ~] = <a class="code hl_function" href="_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be">DimredInternal</a>(hsIm.Value, <span class="stringliteral">&#39;pca&#39;</span>, 10);</div>
+<div class="line">[coeff, scores, latent, explained, ~] = <a class="code hl_function" href="_dimred_internal_8m.html#aaa8d833259e28a3840b5d621a8458a9b">DimredInternal</a>(hsIm.Value, <span class="stringliteral">&#39;pca&#39;</span>, 10);</div>
 <div class="line"> </div>
-<div class="line">[coeff, scores, ~, ~, objective] = <a class="code hl_function" href="_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be">DimredInternal</a>(hsIm.Value, <span class="stringliteral">&#39;rica&#39;</span>, 40);</div>
-<div class="ttc" id="a_dimred_internal_8m_html_a5a0c2b7e43ddf6b17cf3464c223f91be"><div class="ttname"><a href="_dimred_internal_8m.html#a5a0c2b7e43ddf6b17cf3464c223f91be">DimredInternal</a></div><div class="ttdeci">function DimredInternal(in X, in method, in q, in mask)</div><div class="ttdoc">DimredInternal reduces the dimensions of the hyperspectral image.</div></div>
+<div class="line">[coeff, scores, ~, ~, objective] = <a class="code hl_function" href="_dimred_internal_8m.html#aaa8d833259e28a3840b5d621a8458a9b">DimredInternal</a>(hsIm.Value, <span class="stringliteral">&#39;rica&#39;</span>, 40);</div>
+<div class="ttc" id="a_dimred_internal_8m_html_aaa8d833259e28a3840b5d621a8458a9b"><div class="ttname"><a href="_dimred_internal_8m.html#aaa8d833259e28a3840b5d621a8458a9b">DimredInternal</a></div><div class="ttdeci">function DimredInternal(in X, in method, in q, in mask, in varargin)</div><div class="ttdoc">DimredInternal reduces the dimensions of the hyperspectral image.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">X</td><td>[numeric array] | The input data as a matrix with MxN observations and Z columns </td></tr>
     <tr><td class="paramname">method</td><td>[string] | The method for dimension reduction </td></tr>
     <tr><td class="paramname">q</td><td>[int] | The number of components to be retained </td></tr>
-    <tr><td class="paramname">mask</td><td>[numerical array] | A 2x2 logical array marking pixels to be used in PCA calculation</td></tr>
+    <tr><td class="paramname">mask</td><td>[numerical array] | A 2x2 logical array marking pixels to be used in PCA calculation </td></tr>
+    <tr><td class="paramname">varargin</td><td>[cell array] | Optional additional arguments for methods that require them</td></tr>
   </table>
   </dd>
 </dl>

@@ -84,6 +84,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1bb8c2a28e270c0623ab809d1aa7862b"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhsi_utility.html#a1bb8c2a28e270c0623ab809d1aa7862b">LoadHsiAndLabel</a> (in targetID)</td></tr>
 <tr class="memdesc:a1bb8c2a28e270c0623ab809d1aa7862b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadHsiAndLabel loads both hsi and <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a> objects.  <a href="classhsi_utility.html#a1bb8c2a28e270c0623ab809d1aa7862b">More...</a><br /></td></tr>
 <tr class="separator:a1bb8c2a28e270c0623ab809d1aa7862b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5073d9f81f120d0ddce5e70fa23a293"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhsi_utility.html#aa5073d9f81f120d0ddce5e70fa23a293">LoadDataset</a> (in dataset)</td></tr>
+<tr class="memdesc:aa5073d9f81f120d0ddce5e70fa23a293"><td class="mdescLeft">&#160;</td><td class="mdescRight">LoadDataset loads both hsi and <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a> objects in the dataset.  <a href="classhsi_utility.html#aa5073d9f81f120d0ddce5e70fa23a293">More...</a><br /></td></tr>
+<tr class="separator:aa5073d9f81f120d0ddce5e70fa23a293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6a2ac88ad3209e2aa3140bf7cbe34bb"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhsi_utility.html#ac6a2ac88ad3209e2aa3140bf7cbe34bb">GetWavelengths</a> (in m, in option)</td></tr>
 <tr class="memdesc:ac6a2ac88ad3209e2aa3140bf7cbe34bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetWavelengths returns the wavelengths of the hyperspectral image.  <a href="classhsi_utility.html#ac6a2ac88ad3209e2aa3140bf7cbe34bb">More...</a><br /></td></tr>
 <tr class="separator:ac6a2ac88ad3209e2aa3140bf7cbe34bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +249,51 @@ Static Public Member Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">x</td><td>[numeric array] | An array of wavelengths or wavelength indexes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa5073d9f81f120d0ddce5e70fa23a293" name="aa5073d9f81f120d0ddce5e70fa23a293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5073d9f81f120d0ddce5e70fa23a293">&#9670;&nbsp;</a></span>LoadDataset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static function LoadDataset </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>dataset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>LoadDataset loads both hsi and <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a> objects in the dataset. </p>
+<p >The hsi and <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a> objects should have been initialized beforehand with <a class="el" href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1" title="ReadDataset reads the dataset.">hsiUtility.PrepareDataset()</a>.</p>
+<p ><b>Usage</b> </p>
+<div class="fragment"><div class="line">[hsiList, labelInfoList] = <a class="code hl_class" href="classhsi_utility.html">hsiUtility</a>.<a class="code hl_function" href="classhsi_utility.html#aa5073d9f81f120d0ddce5e70fa23a293">LoadDataset</a>();</div>
+<div class="ttc" id="aclasshsi_utility_html_aa5073d9f81f120d0ddce5e70fa23a293"><div class="ttname"><a href="classhsi_utility.html#aa5073d9f81f120d0ddce5e70fa23a293">hsiUtility::LoadDataset</a></div><div class="ttdeci">static function LoadDataset(in dataset)</div><div class="ttdoc">LoadDataset loads both hsi and hsiInfo objects in the dataset.</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataset</td><td>[char] | Optional: The target datset. Default: config::['dataset'].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">hsiList</td><td>[cell array] | The cell array of hsi objects </td></tr>
+    <tr><td class="paramname">labelInfoList</td><td>[cell array] | The cell array of <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a> objects </td></tr>
   </table>
   </dd>
 </dl>

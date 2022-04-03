@@ -1,12 +1,19 @@
 var searchData=
 [
-  ['bandstatistics_0',['BandStatistics',['../classplots.html#a753f1bd1c8d4c00f559b71b9ffe26281',1,'plots']]],
+  ['bandstatistics_0',['BandStatistics',['../classplots.html#a63a2836209e8d3340f8f1d57fad091bf',1,'plots']]],
   ['basics_5fdimred_1',['Basics_Dimred',['../_basics___dimred_8m.html#a6362823d0d587a643d81405f759402fa',1,'Basics_Dimred.m']]],
   ['basics_5finit_2',['Basics_Init',['../_basics___init_8m.html#af8b383cafad6d5559ea09dcb5623657e',1,'Basics_Init.m']]],
-  ['basics_5fkmeans_3',['Basics_Kmeans',['../_basics___kmeans_8m.html#afc393261206c0a67579b81f17d9baa14',1,'Basics_Kmeans.m']]],
+  ['basics_5fmakedataset_3',['Basics_MakeDataset',['../_basics___make_dataset_8m.html#af669d6f6ac73c1122119d2a35d8185e6',1,'Basics_MakeDataset.m']]],
   ['basics_5fprintsamplehsi_4',['Basics_PrintSampleHSI',['../_basics___print_sample_h_s_i_8m.html#a2629e74a2c232b1a8ff0cf897cca35df',1,'Basics_PrintSampleHSI.m']]],
-  ['basics_5fselfsupervised_5',['Basics_SelfSupervised',['../_basics___self_supervised_8m.html#a4a18d7da207f3807a8717ac988736710',1,'Basics_SelfSupervised.m']]],
+  ['basics_5frotateandflip_5',['Basics_RotateAndFlip',['../_basics___rotate_and_flip_8m.html#abd8694ae3a345cb4a11ee981a8a504a5',1,'Basics_RotateAndFlip.m']]],
   ['basics_5fsplittrain_6',['Basics_SplitTrain',['../_basics___split_train_8m.html#a083b8ed6427f29a485777b178947af3c',1,'Basics_SplitTrain.m']]],
   ['basics_5fsummaryfigs_7',['Basics_SummaryFigs',['../_basics___summary_figs_8m.html#a8044b59e8a189262a0c72cfae15fffa4',1,'Basics_SummaryFigs.m']]],
-  ['byleon2020_8',['ByLeon2020',['../_by_leon2020_8m.html#a9329db3b57e51b8cce89ecf86f5def37',1,'ByLeon2020.m']]]
+  ['by_5fkmeans_8',['By_Kmeans',['../classsegment.html#a9b8693447536884a60ef2f6f4e3cc09a',1,'segment']]],
+  ['byica_9',['ByICA',['../classsegment.html#aa9aaaa05da257d10917dcd7182dd1dc4',1,'segment']]],
+  ['byleon2020_10',['ByLeon2020',['../_by_leon2020_8m.html#a9329db3b57e51b8cce89ecf86f5def37',1,'ByLeon2020.m']]],
+  ['bymsuperpca_11',['ByMSuperPCA',['../classsegment.html#a11d0f4482b08f5ef585b1a64023ecd84',1,'segment']]],
+  ['bypca_12',['ByPCA',['../classsegment.html#a5fabd9cfb9ecb2b818ec93a27b01e766',1,'segment']]],
+  ['byrica_13',['ByRICA',['../classsegment.html#a0cf0df9d6c511efec29a9aa920733fad',1,'segment']]],
+  ['bysam_14',['BySAM',['../classsegment.html#aad96b20d839fbdbed194ac0ea36b1433',1,'segment']]],
+  ['bysuperpca_15',['BySuperPCA',['../classsegment.html#a172cd365b5b91da511e864a60c101d2b',1,'segment']]]
 ];

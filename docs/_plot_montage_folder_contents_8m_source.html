@@ -164,9 +164,9 @@ $(function() {
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        imageList = cell(numel(targetIDs), 1);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    end</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    c = 1;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> i = 3:imageNum</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">if</span> (hasTargetType &amp; find(targetIDs == str2double(fileList(i).name))) | ~hasTargetType</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            img = imread(fullfile(fileList(i).folder, fileList(i).name, strcat(target, <span class="stringliteral">&#39;.jpg&#39;</span>)));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> i = 3:imageNum + 2</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        if (hasTargetType &amp; find(targetIDs == str2double(fileList(i).name))) | ~hasTargetType</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            img = imread(fullfile(fileList(i).folder, fileList(i).name, strcat(target, &#39;.png&#39;)));</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            imageList{c} = imresize(img, [numrows, numcols]);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            c = c + 1;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        end</div>
@@ -191,7 +191,7 @@ $(function() {
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    if imageNum &gt; imageLimit</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        imageNum = imageLimit;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    end</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    imageList = cell(numel(imageNum), 1);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    imageList = cell(imageNum, 1);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    for i = 1:imageNum</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        img = imread(fullfile(fileList(i).folder, fileList(i).name));</div>
@@ -202,27 +202,27 @@ $(function() {
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>% imageList = imageList(1:end-2);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>r = ceil(numel(imageList)/4);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>montage(imageList, <span class="stringliteral">&#39;Size&#39;</span>, [r, 4]);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keywordflow">if</span> ~isempty(figTitle)</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    title(strrep(figTitle, <span class="charliteral">&#39;_&#39;</span>, <span class="charliteral">&#39; &#39;</span>));</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>end</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>%save in parent dir</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>(<span class="stringliteral">&#39;plotName&#39;</span>, fullfile(pathstr, strcat(lower(saveName), <span class="stringliteral">&#39;.jpg&#39;</span>)));</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#abcbd660b7d9200886d40ccc51e282a91">SavePlot</a>(fig);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keywordflow">if</span> numel(imageList) &gt; 0</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    r = ceil(numel(imageList)/4);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    montage(imageList, <span class="stringliteral">&#39;Size&#39;</span>, [r, 4]);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> ~isempty(figTitle)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        title(strrep(figTitle, <span class="charliteral">&#39;_&#39;</span>, <span class="charliteral">&#39; &#39;</span>));</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    end</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    %save in parent dir</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a3d9acca8512bca7e375a0750ff47e3fc">SavePlot</a>(fig, fullfile(pathstr, strcat(lower(saveName), <span class="stringliteral">&#39;.png&#39;</span>)));</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>end</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>end</div>
 <div class="ttc" id="a_plot_montage_folder_contents_8m_html_a2eed1dad9d8644a772448b5a1b48a157"><div class="ttname"><a href="_plot_montage_folder_contents_8m.html#a2eed1dad9d8644a772448b5a1b48a157">PlotMontageFolderContents</a></div><div class="ttdeci">function PlotMontageFolderContents(in path, in criteria, in figTitle, in standardDim, in imageLimit, in fig)</div><div class="ttdoc">PlotMontageFolderContents plots contents of a folder as a montage.</div></div>
 <div class="ttc" id="aclasscommon_utility_html"><div class="ttname"><a href="classcommon_utility.html">commonUtility</a></div><div class="ttdoc">commonUtility is a class that handles common utilities.</div><div class="ttdef"><b>Definition:</b> <a href="common_utility_8m_source.html#l00005">commonUtility.m:5</a></div></div>
 <div class="ttc" id="aclasscommon_utility_html_aaa6f353aab21eaedd8244533c48a411e"><div class="ttname"><a href="classcommon_utility.html#aaa6f353aab21eaedd8244533c48a411e">commonUtility::GetFilename</a></div><div class="ttdeci">static function GetFilename(in directoryType, in filename, in extension)</div><div class="ttdoc">GetFilename returns the the directories for saved data.</div></div>
 <div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> <a href="config_8m_source.html#l00009">config.m:9</a></div></div>
 <div class="ttc" id="aclassconfig_html_a06d1be5d4a7532a5be35136c787c1a56"><div class="ttname"><a href="classconfig.html#a06d1be5d4a7532a5be35136c787c1a56">config::GetSetting</a></div><div class="ttdeci">static function GetSetting(in parameter)</div><div class="ttdoc">GetSetting gets a setting value from the config structure.</div></div>
-<div class="ttc" id="aclassconfig_html_a1450029ed6a15647ac90d8a9002d9572"><div class="ttname"><a href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">config::SetSetting</a></div><div class="ttdeci">static function SetSetting(in parameter, in value)</div><div class="ttdoc">SetSetting sets a value in the config structure.</div></div>
 <div class="ttc" id="aclassdatabase_utility_html"><div class="ttname"><a href="classdatabase_utility.html">databaseUtility</a></div><div class="ttdoc">databaseUtility is a class that handles interactions with the database file.</div><div class="ttdef"><b>Definition:</b> <a href="database_utility_8m_source.html#l00009">databaseUtility.m:9</a></div></div>
 <div class="ttc" id="aclassdatabase_utility_html_a9bffa9711867d55f94f76581983f70d2"><div class="ttname"><a href="classdatabase_utility.html#a9bffa9711867d55f94f76581983f70d2">databaseUtility::GetTargetIndexes</a></div><div class="ttdeci">static function GetTargetIndexes(in content, in target)</div><div class="ttdoc">GetTargetIndexes returns the target indexes based on content and target conditions.</div></div>
 <div class="ttc" id="aclassplots_html"><div class="ttname"><a href="classplots.html">plots</a></div><div class="ttdoc">plots is a class that holds all functions for figure plotting.</div><div class="ttdef"><b>Definition:</b> <a href="plots_8m_source.html#l00005">plots.m:5</a></div></div>
 <div class="ttc" id="aclassplots_html_a28469bf1f6039903c6c5a754ff014465"><div class="ttname"><a href="classplots.html#a28469bf1f6039903c6c5a754ff014465">plots::MontageFolderContents</a></div><div class="ttdeci">static function MontageFolderContents(in fig, in varargin)</div><div class="ttdoc">MontageFolderContents plots contents of a folder as a montage.</div></div>
-<div class="ttc" id="aclassplots_html_abcbd660b7d9200886d40ccc51e282a91"><div class="ttname"><a href="classplots.html#abcbd660b7d9200886d40ccc51e282a91">plots::SavePlot</a></div><div class="ttdeci">static function SavePlot(in fig)</div><div class="ttdoc">SavePlot saves a figure plot.</div></div>
+<div class="ttc" id="aclassplots_html_a3d9acca8512bca7e375a0750ff47e3fc"><div class="ttname"><a href="classplots.html#a3d9acca8512bca7e375a0750ff47e3fc">plots::SavePlot</a></div><div class="ttdeci">static function SavePlot(in fig, in plotPath)</div><div class="ttdoc">SavePlot saves a figure plot.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

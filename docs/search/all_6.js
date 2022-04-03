@@ -31,7 +31,7 @@ var searchData=
   ['getmaskedpixels_28',['GetMaskedPixels',['../classhsi.html#a93faaf3ce02d3988b6d495b001fa706c',1,'hsi']]],
   ['getmaskedpixelsinternal_29',['GetMaskedPixelsInternal',['../_get_masked_pixels_internal_8m.html#ab54a3ed3d2b3d1e6709351c63eceddef',1,'GetMaskedPixelsInternal.m']]],
   ['getmaskedpixelsinternal_2em_30',['GetMaskedPixelsInternal.m',['../_get_masked_pixels_internal_8m.html',1,'']]],
-  ['getmontagetcollection_31',['GetMontagetCollection',['../_basics___kmeans_8m.html#afc3f30da5cd3ea2a5225a591d9dbc459',1,'GetMontagetCollection(in target):&#160;Basics_Kmeans.m'],['../_basics___self_supervised_8m.html#afc3f30da5cd3ea2a5225a591d9dbc459',1,'GetMontagetCollection(in target):&#160;Basics_SelfSupervised.m']]],
+  ['getmontagetcollection_31',['GetMontagetCollection',['../classplots.html#a3ce655f4b20f9970c6e4c4e2ebdee9b0',1,'plots']]],
   ['getoptions_32',['GetOptions',['../classsegment.html#ae62cd8c56721dd5266ec98eae21fdb5a',1,'segment']]],
   ['getreferencelibrary_33',['GetReferenceLibrary',['../classhsi_utility.html#ae22f06bef9465e5225ea0b68cd88c17a',1,'hsiUtility']]],
   ['getrunbasedir_34',['GetRunBaseDir',['../classconfig.html#a03290621c1868816ccb33b0f0ac439f2',1,'config']]],

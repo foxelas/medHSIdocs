@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['max_0',['Max',['../classhsi.html#a88c4656430ae01339017b27f1b7f8e7a',1,'hsi']]],
-  ['minus_1',['Minus',['../classhsi.html#a991e1b98d86e67a78c06f92f8faa6ddd',1,'hsi']]],
-  ['montage_2',['Montage',['../classplots.html#ae0af7792e259cd90df4043068a4951bf',1,'plots']]],
-  ['montagecmap_3',['MontageCmap',['../classplots.html#a0b4a116c50642ebee969e9df3489d494',1,'plots']]],
-  ['montagefoldercontents_4',['MontageFolderContents',['../classplots.html#a28469bf1f6039903c6c5a754ff014465',1,'plots']]],
-  ['morphologicalops_5',['MorphologicalOps',['../classsegment.html#a5d189e1b28eec9545f201e6bdaca9256',1,'segment']]],
-  ['multiscalesuperpca_6',['MultiscaleSuperPCA',['../classhsi.html#a8ed87497bff209af042a1100b29b5297',1,'hsi']]],
-  ['multiscalesuperpixelanalysis_7',['MultiscaleSuperpixelAnalysis',['../_multiscale_superpixel_analysis_8m.html#a0fa11d46db63d3d6e303681ebe174f70',1,'MultiscaleSuperpixelAnalysis.m']]]
+  ['load_0',['Load',['../classhsi.html#ab4aabfeb16e94c997cd2153af731ee41',1,'hsi']]],
+  ['loaddataset_1',['LoadDataset',['../classhsi_utility.html#aa5073d9f81f120d0ddce5e70fa23a293',1,'hsiUtility']]],
+  ['loadh5data_2',['LoadH5Data',['../_load_h5_data_8m.html#a60f4a3dc714bb57650dc5aae454b29b6',1,'LoadH5Data.m']]],
+  ['loadhsiandlabel_3',['LoadHsiAndLabel',['../classhsi_utility.html#a1bb8c2a28e270c0623ab809d1aa7862b',1,'hsiUtility']]],
+  ['loadhsireference_4',['LoadHSIReference',['../classhsi_utility.html#aa7e99c886a5e9791ea9a74f843d54fe5',1,'hsiUtility']]],
+  ['loadhsireferenceinternal_5',['LoadHSIReferenceInternal',['../_load_h_s_i_reference_internal_8m.html#adf2704d2577113d784f09e4c6b2c4c7a',1,'LoadHSIReferenceInternal.m']]],
+  ['loadraw_6',['LoadRaw',['../classhsi_utility.html#ac23da506cbad781848029a1397a64d35',1,'hsiUtility']]]
 ];

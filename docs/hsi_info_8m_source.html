@@ -321,98 +321,89 @@ $(function() {
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            close all;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            targetID = hsIm.ID;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            maskdir = fullfile(config.GetSetting(&#39;dataDir&#39;), config.GetSetting(&#39;labelsFolderName&#39;), hsIm.TissueType);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            dirList = dir(fullfile(maskdir, &#39;*.jpg&#39;));</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            if ~isempty(dirList)</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                labelFilenames = cellfun(@(x) strsplit(x, &#39;_&#39;), {dirList.name}&#39;, &#39;un&#39;, 0);</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                labelFilenames = cellfun(@(x) x(1), labelFilenames, &#39;un&#39;, 0);</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                labelFilenames = arrayfun(@(x) x{1}, labelFilenames);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                idx = find(contains(labelFilenames, hsIm.SampleID), 1);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            else</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                idx = [];</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            end</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            if ~isempty(idx)</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                imBase = hsIm.GetDisplayImage();</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                imLab = imread(fullfile(maskdir, dirList(idx).name));</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                fgMask = hsIm.FgMask;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                labelMask = im2gray(imLab) &gt; 127;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                labelMask = imfill(labelMask, &#39;holes&#39;);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                %     se = strel(&#39;disk&#39;,3);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                %     labelMask = imclose(labelMask, se);</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                figure(1);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                imshow(fgMask);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                figure(2);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                imshow(labelMask);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                labelMask = labelMask &amp; fgMask;</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                c = imoverlay(imBase, labelMask, &#39;c&#39;);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            filename = fullfile(config.GetSetting(&#39;dataDir&#39;), config.GetSetting(&#39;labelsFolderName&#39;), hsIm.TissueType, strcat(targetID, &#39;.png&#39;)); </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            if exist(filename, &#39;file&#39;) == 2</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                imBase = hsIm.GetDisplayImage();</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                imLab = double(imread(filename));</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                fgMask = hsIm.FgMask;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                labelMask = logical(imfill(imLab, &#39;holes&#39;));</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                %     se = strel(&#39;disk&#39;,3);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                %     labelMask = imclose(labelMask, se);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                labelsFolder = <a class="code hl_class" href="classcommon_utility.html">commonUtility</a>.GetFilename(&#39;output&#39;, fullfile(config.GetSetting(&#39;labelsFolderName&#39;), strcat(targetID)), &#39;&#39;);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                <a class="code hl_class" href="classplots.html">plots</a>.Show(1, labelsFolder, labelMask);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                if size(labelMask) ~= size(fgMask)</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                    labelMaskOld = labelMask;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                    labelMask = zeros(size(fgMask));</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                    if abs(size(labelMaskOld,1) - size(labelMask,1) ) &gt; 2 || abs(size(labelMaskOld,2) - size(labelMask,2) ) &gt; 2</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                        fprintf(&#39;The image and label matrixes differ too much in size. Please check ID: % and sample %s.\n&#39;, hsIm.ID, hsIm.SampleID);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    end </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                    </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                    if (size(labelMaskOld,1) &gt; size(labelMask,1) ) || (size(labelMaskOld,2) &gt; size(labelMask,2) ) </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                        labelMask = labelMaskOld(1:size(labelMask,1), 1:size(labelMask,2));</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                    else</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                        labelMask(1:size(labelMaskOld,1), 1:size(labelMaskOld,2)) = labelMaskOld;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                    end</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                end</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                labelMask = labelMask &amp; fgMask;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                labelsAppliedFolder = <a class="code hl_class" href="classcommon_utility.html">commonUtility</a>.GetFilename(&#39;output&#39;, fullfile(config.GetSetting(&#39;labelsAppliedFolderName&#39;), strcat(targetID)), &#39;&#39;);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                <a class="code hl_class" href="classplots.html">plots</a>.Overlay(2, labelsAppliedFolder, imBase, labelMask);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                figure(3);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                imshow(c);</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                labelsFolder = commonUtility.GetFilename(&#39;output&#39;, fullfile(config.GetSetting(&#39;labelsFolderName&#39;), strcat(targetID)), &#39;&#39;);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                config.SetSetting(&#39;plotName&#39;, labelsFolder);</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                plots.SavePlot(2);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                labelMask = uint8(labelMask);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            else</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                fprintf(&#39;Missing label image for TargetID: %s and SampleID: %s. Assigning empty value. \n&#39;, targetID, hsIm.SampleID);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                labelMask = [];</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            end</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                labelsAppliedFolder = commonUtility.GetFilename(&#39;output&#39;, fullfile(config.GetSetting(&#39;labelsAppliedFolderName&#39;), strcat(targetID)), &#39;&#39;);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                config.SetSetting(&#39;plotName&#39;, labelsAppliedFolder);</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                plots.SavePlot(3);</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                labelMask = uint8(labelMask);</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            else</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                fprintf(&#39;Missing label image for TargetID: %s and SampleID: %s. Assigning empty value. \n&#39;, targetID, hsIm.SampleID);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                labelMask = [];</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            end</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        end</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        % ======================================================================</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        %&gt; @brief ReadDiagnosis reads diagnosis information from an excel file.</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        %&gt;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        %&gt; Diagnostic data should be saved in config::[importDir]\\[database]+[diseaseInfoTableName].</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        %&gt;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        %&gt; @b Usage</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        %&gt;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        %&gt; @code</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        %&gt; labelInfo = hsiInfo.ReadDiagnosis(&#39;001&#39;);</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        %&gt; @endcode</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        %&gt;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        %&gt; @param sampleID [char] | The sampleID of the target sample</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        %</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        %&gt; @retval diagnosis [char] | The diagnosis string</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        % ======================================================================</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        function [diagnosis] = ReadDiagnosis(sampleId)</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            % ReadDiagnosis reads diagnosis information from an excel file.</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            %</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            % Diagnostic data should be saved in config::[importDir]\\[database]+[diseaseInfoTableName].</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            %</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            % @b Usage</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            %</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            % @code</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            % labelInfo = hsiInfo.ReadDiagnosis(&#39;001&#39;);</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            % @endcode</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            %</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="classhsi_info.html#a0b4286091d7b9b1da1b3f550a4a12e25">  322</a></span>            % @param sampleID [char] | The sampleID of the target sample</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            %</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            % @retval diagnosis [char] | The diagnosis string</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            diagnosis = &#39;&#39;;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            dataTable = databaseUtility.GetDiagnosisTable();</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            if ~isempty(dataTable)</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                id = find(strcmp(dataTable.SampleID, sampleId), 1);</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                if ~isempty(id)</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                    diagnosis = dataTable{id, &#39;Diagnosis&#39;}{1, 1};</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                end</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            end</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        end</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    end</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>end</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        end</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        % ======================================================================</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        %&gt; @brief ReadDiagnosis reads diagnosis information from an excel file.</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        %&gt;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        %&gt; Diagnostic data should be saved in <a class="code hl_class" href="classconfig.html">config</a>::[importDir]\\[database]+[diseaseInfoTableName].</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        %&gt;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        %&gt; @b Usage</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        %&gt;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        %&gt; @code</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        %&gt; labelInfo = <a class="code hl_class" href="classhsi_info.html">hsiInfo</a>.ReadDiagnosis(&#39;001&#39;);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        %&gt; @endcode</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        %&gt;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        %&gt; @param sampleID [char] | The sampleID of the target sample</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        %</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        %&gt; @retval diagnosis [char] | The diagnosis string</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        % ======================================================================</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        function [diagnosis] = ReadDiagnosis(sampleId)</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            % ReadDiagnosis reads diagnosis information from an excel file.</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            %</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            % Diagnostic data should be saved in <a class="code hl_class" href="classconfig.html">config</a>::[importDir]\\[database]+[diseaseInfoTableName].</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            %</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            % @b Usage</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            %</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            % @code</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            % labelInfo = <a class="code hl_class" href="classhsi_info.html">hsiInfo</a>.ReadDiagnosis(&#39;001&#39;);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            % @endcode</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            %</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="classhsi_info.html#a0b4286091d7b9b1da1b3f550a4a12e25">  311</a></span>            % @param sampleID [char] | The sampleID of the target sample</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            %</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            % @retval diagnosis [char] | The diagnosis string</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            diagnosis = &#39;&#39;;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            dataTable = <a class="code hl_class" href="classdatabase_utility.html">databaseUtility</a>.GetDiagnosisTable();</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            if ~isempty(dataTable)</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                id = find(strcmp(dataTable.SampleID, sampleId), 1);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                if ~isempty(id)</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                    diagnosis = dataTable{id, <span class="stringliteral">&#39;Diagnosis&#39;</span>}{1, 1};</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                end</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            end</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        end</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    end</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>end</div>
+<div class="ttc" id="aclasscommon_utility_html"><div class="ttname"><a href="classcommon_utility.html">commonUtility</a></div><div class="ttdoc">commonUtility is a class that handles common utilities.</div><div class="ttdef"><b>Definition:</b> <a href="common_utility_8m_source.html#l00005">commonUtility.m:5</a></div></div>
 <div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> <a href="config_8m_source.html#l00009">config.m:9</a></div></div>
+<div class="ttc" id="aclassdatabase_utility_html"><div class="ttname"><a href="classdatabase_utility.html">databaseUtility</a></div><div class="ttdoc">databaseUtility is a class that handles interactions with the database file.</div><div class="ttdef"><b>Definition:</b> <a href="database_utility_8m_source.html#l00009">databaseUtility.m:9</a></div></div>
 <div class="ttc" id="aclasshsi_html"><div class="ttname"><a href="classhsi.html">hsi</a></div><div class="ttdoc">hsi is a class that holds the hyperspectral image.</div><div class="ttdef"><b>Definition:</b> <a href="hsi_8m_source.html#l00008">hsi.m:8</a></div></div>
 <div class="ttc" id="aclasshsi_info_html"><div class="ttname"><a href="classhsi_info.html">hsiInfo</a></div><div class="ttdoc">hsiInfo is a class that holds tumor labels and diagnosis information.</div><div class="ttdef"><b>Definition:</b> <a href="hsi_info_8m_source.html#l00008">hsiInfo.m:8</a></div></div>
 <div class="ttc" id="aclasshsi_info_html_a0b4286091d7b9b1da1b3f550a4a12e25"><div class="ttname"><a href="classhsi_info.html#a0b4286091d7b9b1da1b3f550a4a12e25">hsiInfo::ReadDiagnosis</a></div><div class="ttdeci">static function ReadDiagnosis(in sampleId)</div><div class="ttdoc">ReadDiagnosis reads diagnosis information from an excel file.</div></div>
@@ -425,6 +416,7 @@ $(function() {
 <div class="ttc" id="aclasshsi_info_html_add15a5856ba1607d4e9ca3cae3a0db09"><div class="ttname"><a href="classhsi_info.html#add15a5856ba1607d4e9ca3cae3a0db09">hsiInfo::Diagnosis</a></div><div class="ttdeci">Property Diagnosis</div><div class="ttdoc">A string that shows the.</div><div class="ttdef"><b>Definition:</b> <a href="hsi_info_8m_source.html#l00022">hsiInfo.m:22</a></div></div>
 <div class="ttc" id="aclasshsi_info_html_af122e43a01f07b0548b9343b20a14518"><div class="ttname"><a href="classhsi_info.html#af122e43a01f07b0548b9343b20a14518">hsiInfo::ReadLabel</a></div><div class="ttdeci">static function ReadLabel(in targetID)</div><div class="ttdoc">ReadLabel reads label information from a label image.</div></div>
 <div class="ttc" id="aclasshsi_info_html_afe6fe108de808e42b0b1a4178d7f3254"><div class="ttname"><a href="classhsi_info.html#afe6fe108de808e42b0b1a4178d7f3254">hsiInfo::ReadHsiInfoFromHsi</a></div><div class="ttdeci">static function ReadHsiInfoFromHsi(in hsIm)</div><div class="ttdoc">ReadHsiInfo reads label information and prepares an instance of class hsiInfo.</div></div>
+<div class="ttc" id="aclassplots_html"><div class="ttname"><a href="classplots.html">plots</a></div><div class="ttdoc">plots is a class that holds all functions for figure plotting.</div><div class="ttdef"><b>Definition:</b> <a href="plots_8m_source.html#l00005">plots.m:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

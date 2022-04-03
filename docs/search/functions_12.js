@@ -1,9 +1,21 @@
 var searchData=
 [
-  ['temp_5fpreparelabelimages_0',['Temp_PrepareLabelImages',['../_temp___prepare_label_images_8m.html#adf5dfe2d1f49109dc7162eb40e695f22',1,'Temp_PrepareLabelImages.m']]],
-  ['tocolumn_1',['ToColumn',['../classhsi.html#ae6ad95ee85c97190093cb737ef146ed3',1,'hsi']]],
-  ['toeach_2',['ToEach',['../classapply.html#a96564887b63f8a59b9a6942157b6b018',1,'apply']]],
-  ['transform_3',['Transform',['../classhsi.html#a83bc554b63a812774acceedc9b85517f',1,'hsi']]],
-  ['transformandsave_4',['TransformAndSave',['../_augment_internal_8m.html#af0eb5b15b0ae7dfd5d00ccfa1ab0ab69',1,'AugmentInternal.m']]],
-  ['transformspcafun_5',['transformSPCAFun',['../_basics___dimred_8m.html#a7493e6a8abef4384864404bade830661',1,'Basics_Dimred.m']]]
+  ['sam_0',['Sam',['../classcommon_utility.html#a0fdc2dc54eff29c37f9b96e80d92f23e',1,'commonUtility']]],
+  ['samanalysis_1',['SAMAnalysis',['../_s_a_m_analysis_8m.html#a46e59bd55feb44350d082290b03ff4ad',1,'SAMAnalysis.m']]],
+  ['samscore_2',['SAMscore',['../classhsi.html#a05aee1d95409971882a6a12b4d6099e7',1,'hsi']]],
+  ['saveplot_3',['SavePlot',['../classplots.html#a3d9acca8512bca7e375a0750ff47e3fc',1,'plots::SavePlot()'],['../_save_plot_8m.html#ad8eefd91644bcb7dab71c712c905a091',1,'SavePlot():&#160;SavePlot.m']]],
+  ['selectdatabasesamples_4',['SelectDatabaseSamples',['../classdatabase_utility.html#a97b8f0240dd934ab33915d5956abbd53',1,'databaseUtility']]],
+  ['setopt_5',['SetOpt',['../classconfig.html#aa4e92ed3acfb80ed68936be4798ef79c',1,'config::SetOpt()'],['../_set_opt_8m.html#a66e9ad230ebac5932ffd9772db741a18',1,'SetOpt():&#160;SetOpt.m']]],
+  ['setsetting_6',['SetSetting',['../classconfig.html#a1450029ed6a15647ac90d8a9002d9572',1,'config']]],
+  ['show_7',['Show',['../classplots.html#a94a11f85344ce30f6151a22df5620864',1,'plots']]],
+  ['spectra_8',['Spectra',['../classplots.html#ad1cb0a8e45f109cc4526147d5020102a',1,'plots']]],
+  ['splitdataset_9',['SplitDataset',['../classtrain_utility.html#a3177040dd729ce85ee4c119216998bff',1,'trainUtility']]],
+  ['splitdatasetinternal_10',['SplitDatasetInternal',['../_split_dataset_internal_8m.html#a7a65cc5d699ecabbf731f91f1c3d9cfa',1,'SplitDatasetInternal.m']]],
+  ['stackmultiscale_11',['StackMultiscale',['../classtrain_utility.html#adb5ab507c8a9ce175b7ca2d3f9976faa',1,'trainUtility']]],
+  ['strrepall_12',['StrrepAll',['../_read_dataset_8m.html#aff17d9487f1ed195862034e65631de73',1,'ReadDataset.m']]],
+  ['subimagemontage_13',['SubimageMontage',['../classhsi.html#a24df9c4208ee74c854b4ced5b8ec72fa',1,'hsi']]],
+  ['superpca_14',['SuperPCA',['../classhsi.html#ae2beb667192fd5ea2451430fb42731a4',1,'hsi']]],
+  ['superpixelanalysis_15',['SuperpixelAnalysis',['../_superpixel_analysis_8m.html#a64224cab4e177c57576b698df58d6aeb',1,'SuperpixelAnalysis.m']]],
+  ['superpixels_16',['Superpixels',['../classplots.html#a4fbf93e29f595300f53ae158aa74592a',1,'plots']]],
+  ['svm_17',['SVM',['../classtrain_utility.html#a0fa975de937373b293a44226c9ac18eb',1,'trainUtility']]]
 ];

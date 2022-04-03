@@ -1,32 +1,4 @@
 var searchData=
 [
-  ['plotaveragespectrum_0',['PlotAverageSpectrum',['../_plot_average_spectrum_8m.html#a12f1bc618581fdae91a7ea1cd2b9fefb',1,'PlotAverageSpectrum.m']]],
-  ['plotaveragespectrum_2em_1',['PlotAverageSpectrum.m',['../_plot_average_spectrum_8m.html',1,'']]],
-  ['plotbandstatistics_2',['PlotBandStatistics',['../_plot_band_statistics_8m.html#a4e37b9a8bbb5f548d0d5cbefe361f23c',1,'PlotBandStatistics.m']]],
-  ['plotbandstatistics_2em_3',['PlotBandStatistics.m',['../_plot_band_statistics_8m.html',1,'']]],
-  ['plotcomponents_4',['PlotComponents',['../_plot_components_8m.html#a96e194637438b683e66d7c4a682634dc',1,'PlotComponents.m']]],
-  ['plotcomponents_2em_5',['PlotComponents.m',['../_plot_components_8m.html',1,'']]],
-  ['ploteigenvectors_6',['PlotEigenvectors',['../_plot_eigenvectors_8m.html#acf04959821117da7b2eade3d08badc9f',1,'PlotEigenvectors.m']]],
-  ['ploteigenvectors_2em_7',['PlotEigenvectors.m',['../_plot_eigenvectors_8m.html',1,'']]],
-  ['plotmontagefoldercontents_8',['PlotMontageFolderContents',['../_plot_montage_folder_contents_8m.html#a2eed1dad9d8644a772448b5a1b48a157',1,'PlotMontageFolderContents.m']]],
-  ['plotmontagefoldercontents_2em_9',['PlotMontageFolderContents.m',['../_plot_montage_folder_contents_8m.html',1,'']]],
-  ['plotnormalizationcheck_10',['PlotNormalizationCheck',['../_plot_normalization_check_8m.html#a8a96a59401741f0bbcc49af36da7ad7d',1,'PlotNormalizationCheck.m']]],
-  ['plotnormalizationcheck_2em_11',['PlotNormalizationCheck.m',['../_plot_normalization_check_8m.html',1,'']]],
-  ['plotoverlay_12',['PlotOverlay',['../_plot_overlay_8m.html#afcacdfbe593d61f554b7ed40365962bc',1,'PlotOverlay.m']]],
-  ['plotoverlay_2em_13',['PlotOverlay.m',['../_plot_overlay_8m.html',1,'']]],
-  ['plots_14',['plots',['../classplots.html',1,'']]],
-  ['plots_2em_15',['plots.m',['../plots_8m.html',1,'']]],
-  ['plotsolaxspectra_16',['PlotSolaxSpectra',['../_get_solax_spectra_8m.html#a8feab7963cde419cf60ad06044636092',1,'GetSolaxSpectra.m']]],
-  ['plotspectra_17',['PlotSpectra',['../_plot_spectra_8m.html#ae23516ffbbf654a460b5a5913ee2108e',1,'PlotSpectra.m']]],
-  ['plotspectra_2em_18',['PlotSpectra.m',['../_plot_spectra_8m.html',1,'']]],
-  ['plotsuperpixels_19',['PlotSuperpixels',['../_plot_superpixels_8m.html#a8d13b31c6ddd582858c99dab93b7dbab',1,'PlotSuperpixels.m']]],
-  ['plotsuperpixels_2em_20',['PlotSuperpixels.m',['../_plot_superpixels_8m.html',1,'']]],
-  ['plottwoaxes_21',['plotTwoAxes',['../t20220121___dimred_8m.html#a2f539defa3bf4c23028671c9c326913f',1,'t20220121_Dimred.m']]],
-  ['plus_22',['Plus',['../classhsi.html#aa9fe322aba57a60e132f998f9c8b9de8',1,'hsi']]],
-  ['preparedataset_23',['PrepareDataset',['../classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1',1,'hsiUtility']]],
-  ['prepareparams_24',['PrepareParams',['../_get_display_image_internal_8m.html#a8a48c91422d4219e303cad0cb73c17d6',1,'GetDisplayImageInternal.m']]],
-  ['preparereferencelibrary_25',['PrepareReferenceLibrary',['../classhsi_utility.html#a38a46d4e980e817be78b62dfddebc66b',1,'hsiUtility']]],
-  ['preprocess_26',['Preprocess',['../classhsi.html#aecb71389caa590834751390e1b5701f8',1,'hsi']]],
-  ['preprocessing_27',['Preprocessing',['../_preprocessing_8m.html#a561d2579ff9f332a4154c9a03d3b0676',1,'Preprocessing.m']]],
-  ['preprocessing_2em_28',['Preprocessing.m',['../_preprocessing_8m.html',1,'']]]
+  ['overlay_0',['Overlay',['../classplots.html#abb4a8de375f5228c49a56ece2d891392',1,'plots']]]
 ];
