@@ -84,6 +84,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0586ee3d9ea8aefba31b01420ad2f670"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrain_utility.html#a0586ee3d9ea8aefba31b01420ad2f670">Augment</a> (in varargin)</td></tr>
 <tr class="memdesc:a0586ee3d9ea8aefba31b01420ad2f670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Augment applies augmentation on the dataset.  <a href="classtrain_utility.html#a0586ee3d9ea8aefba31b01420ad2f670">More...</a><br /></td></tr>
 <tr class="separator:a0586ee3d9ea8aefba31b01420ad2f670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b80dbf75635c6622d588657a43ef39"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrain_utility.html#ad8b80dbf75635c6622d588657a43ef39">Resize</a> (in varargin)</td></tr>
+<tr class="memdesc:ad8b80dbf75635c6622d588657a43ef39"><td class="mdescLeft">&#160;</td><td class="mdescRight">ResizeInternal applies resizing on the dataset.  <a href="classtrain_utility.html#ad8b80dbf75635c6622d588657a43ef39">More...</a><br /></td></tr>
+<tr class="separator:ad8b80dbf75635c6622d588657a43ef39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3678f667bba08f8b159189f15cf45227"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrain_utility.html#a3678f667bba08f8b159189f15cf45227">Preprocess</a> (in hsiList, in labelInfos, in varargin)</td></tr>
 <tr class="memdesc:a3678f667bba08f8b159189f15cf45227"><td class="mdescLeft">&#160;</td><td class="mdescRight">PreprocessInternal transforms the dataset into images or pixels as preparation for training.  <a href="classtrain_utility.html#a3678f667bba08f8b159189f15cf45227">More...</a><br /></td></tr>
 <tr class="separator:a3678f667bba08f8b159189f15cf45227"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,21 +152,23 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Augment applies augmentation on the dataset. </p>
-<p >The base dataset should be already saved before running augmentation.</p>
+<p >The base dataset should be already saved before running augmentation. For details check <code>AugmentInternal</code> .</p>
 <p >'set1': applies vertical and horizontal flipping. 'set2': applies random rotation.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">baseDataset = <span class="stringliteral">&#39;pslData&#39;</span>;</div>
 <div class="line"><a class="code hl_class" href="classhsi_utility.html">hsiUtility</a>.<a class="code hl_function" href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1">PrepareDataset</a>(baseDataset, {<span class="stringliteral">&#39;tissue&#39;</span>, <span class="keyword">true</span>});</div>
+<div class="line"> </div>
 <div class="line">augType = <span class="stringliteral">&#39;set1&#39;</span>;</div>
 <div class="line">augmentedDataset = <span class="stringliteral">&#39;pslDataAug&#39;</span>;</div>
-<div class="line"><a class="code hl_function" href="_augment_internal_8m.html#a78be7e7eab64a24bc19ee56f78d7fef8">AugmentInternal</a>(baseDataset, augmentedDataset, augType);</div>
-<div class="ttc" id="a_augment_internal_8m_html_a78be7e7eab64a24bc19ee56f78d7fef8"><div class="ttname"><a href="_augment_internal_8m.html#a78be7e7eab64a24bc19ee56f78d7fef8">AugmentInternal</a></div><div class="ttdeci">function AugmentInternal(in baseDataset, in augmentedDataset, in augType)</div><div class="ttdoc">AugmentInternal applies augmentation on the dataset.</div></div>
+<div class="line"><a class="code hl_class" href="classtrain_utility.html">trainUtility</a>.<a class="code hl_function" href="classtrain_utility.html#a0586ee3d9ea8aefba31b01420ad2f670">Augment</a>(baseDataset, augmentedDataset, augType);</div>
 <div class="ttc" id="aclasshsi_utility_html"><div class="ttname"><a href="classhsi_utility.html">hsiUtility</a></div><div class="ttdoc">hsiUtility is a class that holds all utility static functions that handle hsi objects.</div><div class="ttdef"><b>Definition:</b> hsiUtility.m:9</div></div>
 <div class="ttc" id="aclasshsi_utility_html_a682a0948281f0c712db7ba065f1022b1"><div class="ttname"><a href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1">hsiUtility::PrepareDataset</a></div><div class="ttdeci">static function PrepareDataset(in varargin)</div><div class="ttdoc">ReadDataset reads the dataset.</div></div>
+<div class="ttc" id="aclasstrain_utility_html"><div class="ttname"><a href="classtrain_utility.html">trainUtility</a></div><div class="ttdoc">trainUtility is a class that handles training of hyperspectral data.</div><div class="ttdef"><b>Definition:</b> trainUtility.m:5</div></div>
+<div class="ttc" id="aclasstrain_utility_html_a0586ee3d9ea8aefba31b01420ad2f670"><div class="ttname"><a href="classtrain_utility.html#a0586ee3d9ea8aefba31b01420ad2f670">trainUtility::Augment</a></div><div class="ttdeci">static function Augment(in varargin)</div><div class="ttdoc">Augment applies augmentation on the dataset.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">baseDataset</td><td>[char] | The base dataset </td></tr>
-    <tr><td class="paramname">augmentedDataset</td><td>[char] | The augmented dataset </td></tr>
+    <tr><td class="paramname">targetDataset</td><td>[char] | The target dataset </td></tr>
     <tr><td class="paramname">augType</td><td>[char] | Optional: The augmentation type ('set1' or 'set2'). Default: 'set1' </td></tr>
   </table>
   </dd>
@@ -198,7 +203,6 @@ Static Public Member Functions</h2></td></tr>
 <p>Cell2Mat concatenates the contents of a cell array of values to a matrix. </p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">[matArr] = <a class="code hl_class" href="classtrain_utility.html">trainUtility</a>.<a class="code hl_function" href="classtrain_utility.html#ae193e696741b7097072a99fd021a2adf">Cell2Mat</a>(cellArr);</div>
-<div class="ttc" id="aclasstrain_utility_html"><div class="ttname"><a href="classtrain_utility.html">trainUtility</a></div><div class="ttdoc">trainUtility is a class that handles training of hyperspectral data.</div><div class="ttdef"><b>Definition:</b> trainUtility.m:5</div></div>
 <div class="ttc" id="aclasstrain_utility_html_ae193e696741b7097072a99fd021a2adf"><div class="ttname"><a href="classtrain_utility.html#ae193e696741b7097072a99fd021a2adf">trainUtility::Cell2Mat</a></div><div class="ttdeci">static function Cell2Mat(in cellArr)</div><div class="ttdoc">Cell2Mat concatenates the contents of a cell array of values to a matrix.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -486,6 +490,61 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">sRGBs</td><td>[cell array] | The array of sRGBs for the data </td></tr>
     <tr><td class="paramname">fgMasks</td><td>[cell array] | The foreground masks of sRGBs for the data </td></tr>
     <tr><td class="paramname">labelImgs</td><td>[cell array] | The label masks for the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8b80dbf75635c6622d588657a43ef39" name="ad8b80dbf75635c6622d588657a43ef39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b80dbf75635c6622d588657a43ef39">&#9670;&nbsp;</a></span>Resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static function Resize </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>varargin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ResizeInternal applies resizing on the dataset. </p>
+<p >The base dataset should be already saved with <code><a class="el" href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1" title="ReadDataset reads the dataset.">hsiUtility.PrepareDataset</a></code> before running ResizeInternal.</p>
+<p >If all arguments are not provided, they are fetched from the config file. Target settings are: config::[HasResizeOptions], config::[ImageDimension] and config::[SplitToPatches].</p>
+<p >For details check <code>ResizeInternal</code> .</p>
+<p ><b>Usage</b> </p>
+<div class="fragment"><div class="line">baseDataset = <span class="stringliteral">&#39;pslData&#39;</span>;</div>
+<div class="line"><a class="code hl_class" href="classhsi_utility.html">hsiUtility</a>.<a class="code hl_function" href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1">PrepareDataset</a>(baseDataset, {<span class="stringliteral">&#39;tissue&#39;</span>, <span class="keyword">true</span>});</div>
+<div class="line"><a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>(<span class="stringliteral">&#39;HasResizeOptions&#39;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>(<span class="stringliteral">&#39;ImageDimension&#39;</span>, 512);</div>
+<div class="line"><a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>(<span class="stringliteral">&#39;SplitToPatches&#39;</span>, <span class="keyword">false</span>);</div>
+<div class="line">resizedDataset = <span class="stringliteral">&#39;psl512&#39;</span>;</div>
+<div class="line"><a class="code hl_class" href="classtrain_utility.html">trainUtility</a>.<a class="code hl_function" href="classtrain_utility.html#ad8b80dbf75635c6622d588657a43ef39">Resize</a>(baseDataset, resizedDataset);</div>
+<div class="line"> </div>
+<div class="line">resizedDataset = <span class="stringliteral">&#39;psl-patches&#39;</span>;</div>
+<div class="line"><a class="code hl_class" href="classtrain_utility.html">trainUtility</a>.<a class="code hl_function" href="classtrain_utility.html#ad8b80dbf75635c6622d588657a43ef39">Resize</a>(baseDataset, resizedDataset, <span class="keyword">true</span>, 32, <span class="keyword">true</span>);</div>
+<div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> config.m:9</div></div>
+<div class="ttc" id="aclassconfig_html_a1450029ed6a15647ac90d8a9002d9572"><div class="ttname"><a href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">config::SetSetting</a></div><div class="ttdeci">static function SetSetting(in parameter, in value)</div><div class="ttdoc">SetSetting sets a value in the config structure.</div></div>
+<div class="ttc" id="aclasstrain_utility_html_ad8b80dbf75635c6622d588657a43ef39"><div class="ttname"><a href="classtrain_utility.html#ad8b80dbf75635c6622d588657a43ef39">trainUtility::Resize</a></div><div class="ttdeci">static function Resize(in varargin)</div><div class="ttdoc">ResizeInternal applies resizing on the dataset.</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseDataset</td><td>[char] | The base dataset </td></tr>
+    <tr><td class="paramname">targetDataset</td><td>[char] | The target dataset </td></tr>
+    <tr><td class="paramname">hasResizeOptions</td><td>[logical] | Optional: Flag to enable resizing. Default: config:[HasResizeOptions]. </td></tr>
+    <tr><td class="paramname">imageDimension</td><td>[int] | Optional: The target image size. Default: config:[ImageDimension]. </td></tr>
+    <tr><td class="paramname">splitToPatches</td><td>[logical] | Optional: Flag to enable split to patches. Default: config:[SplitToPatches]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1027,7 +1086,7 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Need to set config::[saveFolder] for image output.</p>
+<p>Need to set config::[SaveFolder] for image output.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">[valTrain, valTest] = <a class="code hl_class" href="classtrain_utility.html">trainUtility</a>.<a class="code hl_function" href="classtrain_utility.html#a8ed0f6182b21afea934a27bf42abfe2c">ValidateTest2</a>(trainData, testData, cvp, method, q);</div>
 <div class="line"> </div>

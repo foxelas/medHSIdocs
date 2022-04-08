@@ -110,7 +110,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="classdatabase_utility.html" title="databaseUtility is a class that handles interactions with the database file.">databaseUtility</a> is a class that handles interactions with the database file. </p>
-<p >The database files are saved in config::[importDir]\. Currently only .xlsx format is supported. </p>
+<p >The database files are saved in config::[ImportDir]\. Currently only .xlsx format is supported. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aed9527508431b84120833016008f5f59" name="aed9527508431b84120833016008f5f59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed9527508431b84120833016008f5f59">&#9670;&nbsp;</a></span>GetCondition()</h2>
@@ -162,7 +162,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>GetDataTable gets the database table. </p>
-<p >The table is recovered from config::[importDir]\[database]\[dataInfoTableName] file and sheet 'capturedData'.</p>
+<p >The table is recovered from config::[ImportDir]\[Database]\[DataInfoTableName] file and sheet 'capturedData'.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">dataTable = <a class="code hl_class" href="classdatabase_utility.html">databaseUtility</a>.<a class="code hl_function" href="classdatabase_utility.html#af53fb643be3cce1a977405d669e32dd9">GetDataTable</a>();</div>
 <div class="ttc" id="aclassdatabase_utility_html"><div class="ttname"><a href="classdatabase_utility.html">databaseUtility</a></div><div class="ttdoc">databaseUtility is a class that handles interactions with the database file.</div><div class="ttdef"><b>Definition:</b> databaseUtility.m:9</div></div>
@@ -241,7 +241,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>GetDiagnosisTable gets the database table. </p>
-<p >The table is recovered from config::[importDir]\[database]\[diagnosisInfoTableName] file and sheet 'Sheet1'.</p>
+<p >The table is recovered from config::[ImportDir]\[Database]\[DiagnosisInfoTableName] file and sheet 'Sheet1'.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">dataTable = <a class="code hl_class" href="classdatabase_utility.html">databaseUtility</a>.<a class="code hl_function" href="classdatabase_utility.html#aabd3bb42296b96b50794ba69c30d4e3f">GetDiagnosisTable</a>();</div>
 <div class="ttc" id="aclassdatabase_utility_html_aabd3bb42296b96b50794ba69c30d4e3f"><div class="ttname"><a href="classdatabase_utility.html#aabd3bb42296b96b50794ba69c30d4e3f">databaseUtility::GetDiagnosisTable</a></div><div class="ttdeci">static function GetDiagnosisTable()</div><div class="ttdoc">GetDiagnosisTable gets the database table.</div></div>
@@ -495,7 +495,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Query returns a query result from the database. </p>
-<p >The table is recovered from config::[importDir]\[database]\[dataInfoTableName] file and sheet 'capturedData'.</p>
+<p >The table is recovered from config::[ImportDir]\[Database]\[DataInfoTableName] file and sheet 'capturedData'.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">[filenames, tableIds, outRows] = <a class="code hl_class" href="classdatabase_utility.html">databaseUtility</a>.<a class="code hl_function" href="classdatabase_utility.html#a26584b3c629f9c5e11589b264fc90862">Query</a>(content, sampleId, captureDate, <span class="keywordtype">id</span>, integrationTime, target, configuration);</div>
 <div class="ttc" id="aclassdatabase_utility_html_a26584b3c629f9c5e11589b264fc90862"><div class="ttname"><a href="classdatabase_utility.html#a26584b3c629f9c5e11589b264fc90862">databaseUtility::Query</a></div><div class="ttdeci">static function Query(in content, in sampleId, in captureDate, in id, in integrationTime, in target, in configuration)</div><div class="ttdoc">Query returns a query result from the database.</div></div>

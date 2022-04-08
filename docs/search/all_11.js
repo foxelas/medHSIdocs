@@ -18,8 +18,12 @@ var searchData=
   ['referencelibrary_15',['ReferenceLibrary',['../classplots.html#ac0fb59474398ca03e42b1407b96702d8',1,'plots']]],
   ['removebackgroundinternal_16',['RemoveBackgroundInternal',['../_remove_background_internal_8m.html#a82ff1f83d3ddbed50d3324bf85a31ece',1,'RemoveBackgroundInternal.m']]],
   ['removebackgroundinternal_2em_17',['RemoveBackgroundInternal.m',['../_remove_background_internal_8m.html',1,'']]],
-  ['rmse_18',['Rmse',['../classcommon_utility.html#a4cc90930911ecaeea65e3406b758a9d0',1,'commonUtility']]],
-  ['rowfunc_19',['RowFunc',['../classapply.html#a38f3e3bb1d2c681cd4a45dcf5a1ecb39',1,'apply']]],
-  ['runkfoldvalidation_20',['RunKfoldValidation',['../classtrain_utility.html#a2b5c7fff16cdbb1492cc0360fd35eca8',1,'trainUtility']]],
-  ['runsvm_21',['RunSVM',['../classtrain_utility.html#a57a3c7a053601fd87b8e08a825e5e60e',1,'trainUtility']]]
+  ['resize_18',['Resize',['../classhsi_utility.html#ad825840ad0f1391522dfedebd909beb8',1,'hsiUtility::Resize()'],['../classtrain_utility.html#ad8b80dbf75635c6622d588657a43ef39',1,'trainUtility::Resize()']]],
+  ['resizearray_19',['ResizeArray',['../classhsi_utility.html#a7eb71fd2f1ea14cf156f4dc796c2f4ef',1,'hsiUtility']]],
+  ['resizeinternal_20',['ResizeInternal',['../_resize_internal_8m.html#aea1cabcfa0deb34a1565b521e26ceeb7',1,'ResizeInternal.m']]],
+  ['resizeinternal_2em_21',['ResizeInternal.m',['../_resize_internal_8m.html',1,'']]],
+  ['rmse_22',['Rmse',['../classcommon_utility.html#a4cc90930911ecaeea65e3406b758a9d0',1,'commonUtility']]],
+  ['rowfunc_23',['RowFunc',['../classapply.html#a38f3e3bb1d2c681cd4a45dcf5a1ecb39',1,'apply']]],
+  ['runkfoldvalidation_24',['RunKfoldValidation',['../classtrain_utility.html#a2b5c7fff16cdbb1492cc0360fd35eca8',1,'trainUtility']]],
+  ['runsvm_25',['RunSVM',['../classtrain_utility.html#a57a3c7a053601fd87b8e08a825e5e60e',1,'trainUtility']]]
 ];

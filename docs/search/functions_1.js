@@ -3,7 +3,7 @@ var searchData=
   ['bandstatistics_0',['BandStatistics',['../classplots.html#a63a2836209e8d3340f8f1d57fad091bf',1,'plots']]],
   ['basics_5fdimred_1',['Basics_Dimred',['../_basics___dimred_8m.html#a6362823d0d587a643d81405f759402fa',1,'Basics_Dimred.m']]],
   ['basics_5finit_2',['Basics_Init',['../_basics___init_8m.html#af8b383cafad6d5559ea09dcb5623657e',1,'Basics_Init.m']]],
-  ['basics_5fmakedataset_3',['Basics_MakeDataset',['../_basics___make_dataset_8m.html#af669d6f6ac73c1122119d2a35d8185e6',1,'Basics_MakeDataset.m']]],
+  ['basics_5fmakedataset_3',['Basics_MakeDataset',['../_basics___make_dataset_8m.html#ab004e51b15ff97361c268fed4f6df075',1,'Basics_MakeDataset.m']]],
   ['basics_5fprintsamplehsi_4',['Basics_PrintSampleHSI',['../_basics___print_sample_h_s_i_8m.html#a2629e74a2c232b1a8ff0cf897cca35df',1,'Basics_PrintSampleHSI.m']]],
   ['basics_5frotateandflip_5',['Basics_RotateAndFlip',['../_basics___rotate_and_flip_8m.html#abd8694ae3a345cb4a11ee981a8a504a5',1,'Basics_RotateAndFlip.m']]],
   ['basics_5fsplittrain_6',['Basics_SplitTrain',['../_basics___split_train_8m.html#a083b8ed6427f29a485777b178947af3c',1,'Basics_SplitTrain.m']]],

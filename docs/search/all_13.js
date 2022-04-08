@@ -9,5 +9,6 @@ var searchData=
   ['trainutility_2em_6',['trainUtility.m',['../train_utility_8m.html',1,'']]],
   ['transform_7',['Transform',['../classhsi.html#a83bc554b63a812774acceedc9b85517f',1,'hsi']]],
   ['transformandsave_8',['TransformAndSave',['../_augment_internal_8m.html#af0eb5b15b0ae7dfd5d00ccfa1ab0ab69',1,'AugmentInternal.m']]],
-  ['transformspcafun_9',['transformSPCAFun',['../_basics___dimred_8m.html#a7493e6a8abef4384864404bade830661',1,'Basics_Dimred.m']]]
+  ['transformspcafun_9',['transformSPCAFun',['../_basics___dimred_8m.html#a7493e6a8abef4384864404bade830661',1,'Basics_Dimred.m']]],
+  ['type_10',['Type',['../classhsi_info.html#a9e18ff61ae8f32d16e5d3ea09cd0d0c3',1,'hsiInfo']]]
 ];

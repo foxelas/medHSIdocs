@@ -81,12 +81,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af669d6f6ac73c1122119d2a35d8185e6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_basics___make_dataset_8m.html#af669d6f6ac73c1122119d2a35d8185e6">Basics_MakeDataset</a> (in baseDataset)</td></tr>
-<tr class="separator:af669d6f6ac73c1122119d2a35d8185e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab004e51b15ff97361c268fed4f6df075"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_basics___make_dataset_8m.html#ab004e51b15ff97361c268fed4f6df075">Basics_MakeDataset</a> (in targetDataset)</td></tr>
+<tr class="memdesc:ab004e51b15ff97361c268fed4f6df075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basics_MakeDataset prepares the target dataset.  <a href="_basics___make_dataset_8m.html#ab004e51b15ff97361c268fed4f6df075">More...</a><br /></td></tr>
+<tr class="separator:ab004e51b15ff97361c268fed4f6df075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af669d6f6ac73c1122119d2a35d8185e6" name="af669d6f6ac73c1122119d2a35d8185e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af669d6f6ac73c1122119d2a35d8185e6">&#9670;&nbsp;</a></span>Basics_MakeDataset()</h2>
+<a id="ab004e51b15ff97361c268fed4f6df075" name="ab004e51b15ff97361c268fed4f6df075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab004e51b15ff97361c268fed4f6df075">&#9670;&nbsp;</a></span>Basics_MakeDataset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -95,11 +96,24 @@ Functions</h2></td></tr>
           <td class="memname">function Basics_MakeDataset </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>baseDataset</em></td><td>)</td>
+          <td class="paramname"><em>targetDataset</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Basics_MakeDataset prepares the target dataset. </p>
+<p >You can choose among: -Core: the entire dataset -Augmented: the augmented dataset (based on base dataset) -Raw: the raw dataset -Fix: the fix dataset -512: the resized 512x512 dataset (based on base dataset) -l32: the 32x32 patch dataset (based on base dataset) Currently the base dataset is 'pslRaw'</p>
+<p ><b>Usage</b> </p>
+<div class="fragment"><div class="line"><a class="code hl_function" href="_basics___make_dataset_8m.html#ab004e51b15ff97361c268fed4f6df075">Basics_MakeDataset</a>(<span class="stringliteral">&#39;Augmented&#39;</span>);</div>
+<div class="line">%Returns dataset <span class="stringliteral">&#39;pslRawAugmented&#39;</span></div>
+<div class="ttc" id="a_basics___make_dataset_8m_html_ab004e51b15ff97361c268fed4f6df075"><div class="ttname"><a href="_basics___make_dataset_8m.html#ab004e51b15ff97361c268fed4f6df075">Basics_MakeDataset</a></div><div class="ttdeci">function Basics_MakeDataset(in targetDataset)</div><div class="ttdoc">Basics_MakeDataset prepares the target dataset.</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetDataset</td><td>[char] | Optional: The target dataset. Default: 'Core'. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

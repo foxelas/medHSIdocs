@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pair_0',['Pair',['../classplots.html#a31e799f7b7e05c7714cea394b6833239',1,'plots']]],
-  ['plotaveragespectrum_1',['PlotAverageSpectrum',['../_plot_average_spectrum_8m.html#a12f1bc618581fdae91a7ea1cd2b9fefb',1,'PlotAverageSpectrum.m']]],
+  ['plotaveragespectrum_1',['PlotAverageSpectrum',['../_plot_average_spectrum_8m.html#a222e9808953218ac6f247f38d2290b6f',1,'PlotAverageSpectrum.m']]],
   ['plotbandstatistics_2',['PlotBandStatistics',['../_plot_band_statistics_8m.html#acd71a5875d470534d6f4af436042e5c0',1,'PlotBandStatistics.m']]],
   ['plotcomponents_3',['PlotComponents',['../_plot_components_8m.html#abcc23fcf1c163de547a337cd5b0004b2',1,'PlotComponents.m']]],
   ['ploteigenvectors_4',['PlotEigenvectors',['../_plot_eigenvectors_8m.html#a6205c89848fc73a5212c13f23da7b864',1,'PlotEigenvectors.m']]],

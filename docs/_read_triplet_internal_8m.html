@@ -119,8 +119,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ReadTripletInternal reads and saves the three hyperspectral images. </p>
-<p >The hyperspectral data are saved in .h5 format. The raw, white and black (if exist) images are read one-by-one for the same target. Each HSI is saved in config::[matDir]\[database]\[tripletsName]\*_xxx.mat, where xxx is either '_target', '_white' or '_black'.</p>
-<p >To chose a mask for uni spectrum normalization, set config::['useCustomMask']</p>
+<p >The hyperspectral data are saved in .h5 format. The raw, white and black (if exist) images are read one-by-one for the same target. Each HSI is saved in config::[MatDir]\[Database]\[TripletsName]\*_xxx.mat, where xxx is either '_target', '_white' or '_black'.</p>
+<p >To chose a mask for uni spectrum normalization, set config::['UseCustomMask']</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">content = <span class="stringliteral">&#39;tissue&#39;</span>;</div>
 <div class="line">target = <span class="stringliteral">&#39;001_raw&#39;</span>;</div>

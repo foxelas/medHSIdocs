@@ -96,7 +96,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A utility class for applying functions to different data samples. </p>
-<p >Functions using apply are applied on the currently selected dataset, unless mentioned otherwise. The dataset name is recovered from <a class="el" href="classconfig.html#a06d1be5d4a7532a5be35136c787c1a56" title="GetSetting gets a setting value from the config structure.">config.GetSetting</a>('dataset'). </p>
+<p >Functions using apply are applied on the currently selected dataset, unless mentioned otherwise. The dataset name is recovered from <a class="el" href="classconfig.html#a06d1be5d4a7532a5be35136c787c1a56" title="GetSetting gets a setting value from the config structure.">config.GetSetting</a>('Dataset'). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad42507c60d96f4319e844b977bf6521c" name="ad42507c60d96f4319e844b977bf6521c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad42507c60d96f4319e844b977bf6521c">&#9670;&nbsp;</a></span>DisableFigures()</h2>
@@ -306,7 +306,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ToEach applies a function on each of the data samples in the dataset. </p>
-<p >The target function should have arguments in the format of (hsIm, , ...), where hsIm is an instance of class 'hsi'. The targetID is saved for figure saving purposes in config::'fileName'.</p>
+<p >The target function should have arguments in the format of (hsIm, , ...), where hsIm is an instance of class 'hsi'. The targetID is saved for figure saving purposes in config::[FileName].</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classapply.html">apply</a>.<a class="code hl_function" href="classapply.html#a96564887b63f8a59b9a6942157b6b018">ToEach</a>(@<a class="code hl_function" href="_custom_kmeans_8m.html#a96cf2b5862cdf909d11d8e05004dfa5d">CustomKmeans</a>, 5);</div>
 <div class="ttc" id="a_custom_kmeans_8m_html_a96cf2b5862cdf909d11d8e05004dfa5d"><div class="ttname"><a href="_custom_kmeans_8m.html#a96cf2b5862cdf909d11d8e05004dfa5d">CustomKmeans</a></div><div class="ttdeci">function CustomKmeans(in hsIm, in labelInfo, in clusterNum)</div><div class="ttdoc">CustomKmeans applies kmeans clustering to an hsi and visualizes the result.</div></div>

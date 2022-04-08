@@ -5,7 +5,7 @@ var searchData=
   ['basics_5fdimred_2em_2',['Basics_Dimred.m',['../_basics___dimred_8m.html',1,'']]],
   ['basics_5finit_3',['Basics_Init',['../_basics___init_8m.html#af8b383cafad6d5559ea09dcb5623657e',1,'Basics_Init.m']]],
   ['basics_5finit_2em_4',['Basics_Init.m',['../_basics___init_8m.html',1,'']]],
-  ['basics_5fmakedataset_5',['Basics_MakeDataset',['../_basics___make_dataset_8m.html#af669d6f6ac73c1122119d2a35d8185e6',1,'Basics_MakeDataset.m']]],
+  ['basics_5fmakedataset_5',['Basics_MakeDataset',['../_basics___make_dataset_8m.html#ab004e51b15ff97361c268fed4f6df075',1,'Basics_MakeDataset.m']]],
   ['basics_5fmakedataset_2em_6',['Basics_MakeDataset.m',['../_basics___make_dataset_8m.html',1,'']]],
   ['basics_5fprintsamplehsi_7',['Basics_PrintSampleHSI',['../_basics___print_sample_h_s_i_8m.html#a2629e74a2c232b1a8ff0cf897cca35df',1,'Basics_PrintSampleHSI.m']]],
   ['basics_5fprintsamplehsi_2em_8',['Basics_PrintSampleHSI.m',['../_basics___print_sample_h_s_i_8m.html',1,'']]],

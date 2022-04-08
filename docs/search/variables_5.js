@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tissuetype_0',['TissueType',['../classhsi.html#aea7fcf472b96b68105b1e5ff8a5c742e',1,'hsi']]]
+  ['multiclasslabels_0',['MultiClassLabels',['../classhsi_info.html#a337992a0b5b29023b07ee3156b736ed8',1,'hsiInfo']]]
 ];

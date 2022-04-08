@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sampleid_0',['SampleID',['../classhsi.html#ac12448cc71f62496683face38e8cf8c0',1,'hsi::SampleID()'],['../classhsi_info.html#ac12448cc71f62496683face38e8cf8c0',1,'hsiInfo::SampleID()']]]
+  ['labels_0',['Labels',['../classhsi_info.html#aa3c9d24ccb561162e10e818b1977c13e',1,'hsiInfo']]]
 ];

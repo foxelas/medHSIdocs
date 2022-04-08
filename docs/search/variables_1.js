@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fgmask_0',['FgMask',['../classhsi.html#aba925beecc76ef61dd5452cb0d9a5f55',1,'hsi']]]
+  ['diagnosis_0',['Diagnosis',['../classhsi_info.html#add15a5856ba1607d4e9ca3cae3a0db09',1,'hsiInfo']]]
 ];

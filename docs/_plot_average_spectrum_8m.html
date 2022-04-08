@@ -81,13 +81,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a12f1bc618581fdae91a7ea1cd2b9fefb"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plot_average_spectrum_8m.html#a12f1bc618581fdae91a7ea1cd2b9fefb">PlotAverageSpectrum</a> (in hsIm, in figTitle, in fig)</td></tr>
-<tr class="memdesc:a12f1bc618581fdae91a7ea1cd2b9fefb"><td class="mdescLeft">&#160;</td><td class="mdescRight">PlotAverageSpectrum plots average spectra using a promt for custom mask selection.  <a href="_plot_average_spectrum_8m.html#a12f1bc618581fdae91a7ea1cd2b9fefb">More...</a><br /></td></tr>
-<tr class="separator:a12f1bc618581fdae91a7ea1cd2b9fefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222e9808953218ac6f247f38d2290b6f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plot_average_spectrum_8m.html#a222e9808953218ac6f247f38d2290b6f">PlotAverageSpectrum</a> (in hsIm, in hsImInfo, in fig)</td></tr>
+<tr class="memdesc:a222e9808953218ac6f247f38d2290b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PlotAverageSpectrum plots average spectra using a promt for custom mask selection.  <a href="_plot_average_spectrum_8m.html#a222e9808953218ac6f247f38d2290b6f">More...</a><br /></td></tr>
+<tr class="separator:a222e9808953218ac6f247f38d2290b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a12f1bc618581fdae91a7ea1cd2b9fefb" name="a12f1bc618581fdae91a7ea1cd2b9fefb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f1bc618581fdae91a7ea1cd2b9fefb">&#9670;&nbsp;</a></span>PlotAverageSpectrum()</h2>
+<a id="a222e9808953218ac6f247f38d2290b6f" name="a222e9808953218ac6f247f38d2290b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a222e9808953218ac6f247f38d2290b6f">&#9670;&nbsp;</a></span>PlotAverageSpectrum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -102,7 +102,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>figTitle</em>, </td>
+          <td class="paramname"><em>hsImInfo</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -119,9 +119,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>PlotAverageSpectrum plots average spectra using a promt for custom mask selection. </p>
-<p >Need to set config::'saveFolder' for saving purposes.</p>
+<p >Need to set config::[SaveFolder] for saving purposes.</p>
 <p ><b>Usage</b> </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>(<span class="stringliteral">&#39;saveFolder&#39;</span>, <span class="stringliteral">&#39;Spectra-Example&#39;</span>);</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classconfig.html">config</a>.<a class="code hl_function" href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">SetSetting</a>([SaveFolder], <span class="stringliteral">&#39;Spectra-Example&#39;</span>);</div>
 <div class="line"><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a1fc8cd5a10a49d2f703cfd2959df7347">AverageSpectrum</a>(fig, hsIm, figTitle);</div>
 <div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that holds the run configuration.</div><div class="ttdef"><b>Definition:</b> config.m:9</div></div>
 <div class="ttc" id="aclassconfig_html_a1450029ed6a15647ac90d8a9002d9572"><div class="ttname"><a href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">config::SetSetting</a></div><div class="ttdeci">static function SetSetting(in parameter, in value)</div><div class="ttdoc">SetSetting sets a value in the config structure.</div></div>

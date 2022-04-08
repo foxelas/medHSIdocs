@@ -128,7 +128,7 @@ Functions</h2></td></tr>
 
 <p>ReadDataset reads the dataset. </p>
 <p >ReadDataset reads a group of hsi data according to condition, prepares .mat files for the raw spectral data, applies preprocessing and returns montage previews of the results. It also prepares labels, when available.</p>
-<p >Data samples are saved in .mat files so that one contains a 'spectralData' (class hsi) and another contains a 'labelInfo' (class <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a>) variable. The save location is config::[matDir]\[dataset]\*.mat. Snapshot images are saved in config::[outputDir]\[snapshotsFolderName]\[dataset]\.</p>
+<p >Data samples are saved in .mat files so that one contains a 'spectralData' (class hsi) and another contains a 'labelInfo' (class <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a>) variable. The save location is config::[Matdir]\[Dataset]\*.mat. Snapshot images are saved in config::[OutputDir]\[SnapshotsFolderName]\[Dataset]\.</p>
 <p >If it fails during writing in config.mat, consider running MATLAB as administrator. Alternatively, in Windows 10 go to Settings &gt; Update &amp; Security &gt; Windows Security &gt; Virus and Threat protection &gt; Manage Ransomware Protection &gt; Allow an app through controlled folder access &gt; Add Matlab.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_function" href="_read_dataset_8m.html#a93ffc6320060e44f3e7bb94c15274272">ReadDataset</a>(<span class="stringliteral">&#39;handsDataset&#39;</span>,{<span class="stringliteral">&#39;hand&#39;</span>, <span class="keyword">false</span>});</div>
@@ -141,8 +141,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">dataset</td><td>[char] | The dataset </td></tr>
     <tr><td class="paramname">contentConditions</td><td>[cell array] | The content conditions for reading files </td></tr>
-    <tr><td class="paramname">readForeground</td><td>[boolean] | Optional: Flag to read the foreground mask for an hsi instance. Default: true </td></tr>
-    <tr><td class="paramname">targetConditions</td><td>[cell array] | Optional: The target conditions for reading files. Default: none </td></tr>
+    <tr><td class="paramname">readForeground</td><td>[boolean] | Optional: Flag to read the foreground mask for an hsi instance. Default: true. </td></tr>
+    <tr><td class="paramname">targetConditions</td><td>[cell array] | Optional: The target conditions for reading files. Default: none. </td></tr>
   </table>
   </dd>
 </dl>

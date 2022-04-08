@@ -267,7 +267,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>AverageSpectrum plots average spectra using a promt for custom mask selection. </p>
-<p >Need to set config::'saveFolder' for saving purposes. For more details check <code>function</code> PlotAverageSpectrum .</p>
+<p >Need to set config[SaveFolder] for saving purposes. For more details check <code>function</code> PlotAverageSpectrum .</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a1fc8cd5a10a49d2f703cfd2959df7347">AverageSpectrum</a>(fig, <span class="stringliteral">&#39;\temp\folder\name.jpg&#39;</span>, hsIm, figTitle);</div>
 <div class="ttc" id="aclassplots_html_a1fc8cd5a10a49d2f703cfd2959df7347"><div class="ttname"><a href="classplots.html#a1fc8cd5a10a49d2f703cfd2959df7347">plots::AverageSpectrum</a></div><div class="ttdeci">static function AverageSpectrum(in fig, in plotPath, in varargin)</div><div class="ttdoc">AverageSpectrum plots average spectra using a promt for custom mask selection.</div></div>
@@ -372,7 +372,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ChromophoreAbsorption plots the skin chromophore absorption functions. </p>
-<p >Information is saved in config::[importDir]\*.csv. Required .csv files:</p><ul>
+<p >Information is saved in config::[ImportDir]\*.csv. Required .csv files:</p><ul>
 <li>'pheomelanin_absroption.csv'</li>
 <li>'eumelanin_absroption.csv'</li>
 <li>'hb_absorption_spectra_prahl.csv' Values by Scott Prahl (<a href="https://omlc.org/spectra/">https://omlc.org/spectra/</a>)</li>
@@ -467,7 +467,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ColorMatchingFunctions plots the color matching functions. </p>
-<p >Information is saved in medHSI\config::[paramDir]\displayParam.mat</p>
+<p >Information is saved in medHSI\config::[ParamDir]\displayParam.mat</p>
 <p ><b>Usage</b> <a class="el" href="classplots.html#a999f8674e41dd708b23760808a9529a3" title="ColorMatchingFunctions plots the color matching functions.">plots.ColorMatchingFunctions()</a>;  </p>
 
 </div>
@@ -661,7 +661,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>GetMontagetCollection plots a montage of images with a target filename under different subfolders. </p>
-<p >The base output folder is assumed to be pre-set with config::['saveFolder']. Subfolders are assumed to be named with a sample's TargetID. For more details check <code>function</code> PlotMontageFolderContents .</p>
+<p >The base output folder is assumed to be pre-set with config::[SaveFolder]. Subfolders are assumed to be named with a sample's TargetID. For more details check <code>function</code> PlotMontageFolderContents .</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a3ce655f4b20f9970c6e4c4e2ebdee9b0">GetMontagetCollection</a>(1, <span class="stringliteral">&#39;eigenvectors&#39;</span>);</div>
 <div class="ttc" id="aclassplots_html_a3ce655f4b20f9970c6e4c4e2ebdee9b0"><div class="ttname"><a href="classplots.html#a3ce655f4b20f9970c6e4c4e2ebdee9b0">plots::GetMontagetCollection</a></div><div class="ttdeci">static function GetMontagetCollection(in fig, in target)</div><div class="ttdoc">GetMontagetCollection plots a montage of images with a target filename under different subfolders.</div></div>
@@ -699,7 +699,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Illumination plots the illumination spectrum. </p>
-<p >The name of the illumination source is saved in config::[illuminationSource]. Illumination information is saved in medHSI\config::[paramDir]\displayParam.mat</p>
+<p >The name of the illumination source is saved in config::[IlluminationSource]. Illumination information is saved in medHSI\config::[ParamDir]\displayParam.mat</p>
 <p ><b>Usage</b> <a class="el" href="classplots.html#a9f82675934a0974f7002b91e12c0620c" title="Illumination plots the illumination spectrum.">plots.Illumination()</a>;  </p>
 
 </div>
@@ -994,7 +994,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>NormalizationCheck plots the values recovered after normalization. </p>
-<p >For more details check <code>function</code> PlotNormalizationCheck . The user needs to input a custom mask. Disable in config::[disableReflectranceExtremaPlots].</p>
+<p >For more details check <code>function</code> PlotNormalizationCheck . The user needs to input a custom mask. Disable in config::[DisableReflectranceExtremaPlots].</p>
 <p ><b>Usage</b> plots.NormalizationCheck(fig, plotPath, Iin, Iblack, Iwhite, Inorm); </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1218,7 +1218,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>SavePlot saves a figure plot. </p>
-<p >The plot name should be set beforehand in config::[plotPath].</p>
+<p >The plot name should be set beforehand in config::[PlotPath].</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a3d9acca8512bca7e375a0750ff47e3fc">SavePlot</a>(1);</div>
 <div class="line"><a class="code hl_class" href="classplots.html">plots</a>.<a class="code hl_function" href="classplots.html#a3d9acca8512bca7e375a0750ff47e3fc">SavePlot</a>(1, <span class="stringliteral">&#39;\temp\folder\name.jpg&#39;</span>);</div>
