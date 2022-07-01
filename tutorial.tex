@@ -1,0 +1,170 @@
+\documentclass{foxelas_report}
+\usepackage{blindtext}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\title{Tutorial in MedHSI}
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\maketitle
+
+\section{Introduction}
+
+\par This repository contains code written in two main languages MATLAB and Python. The structure is as follows. 
+
+\begin{description}
+\item [medHSImat] contains the MATLAB code and is mostly used for data preprocessing, machine learning and graph creation.
+\item [medHSIpy] contains the python code and is mostly used for deep learning applications. 
+\item [conf] contains all the configuration parameters to make the code work.
+\item [parameters] contains useful parameters for calculations. 
+\end{description}
+
+\section{Setup and Initialization} 
+\begin{enumerate}
+
+\item Open text file 'medHSI/conf/config.ini' and update it according to your folder structure. Common items that need update on a new machine are: 
+
+\begin{itemize} 
+\item DataDir : the data where .hsm and .h5 files from data collection are saved. 
+
+\item ExecutionDir : the folder where MedHSI is located.
+
+\item ImportDir : the folder where additional import files are located.
+
+\item OutputDir : the folder where output results will be saved. 
+
+\item MatDir : the folder where preprocessed data (.mat files) from the analysis will be saved, the database.
+
+\item ParamDir : delete 
+
+\end{itemize}
+
+\par In this case, 'Database' refers to data collected from the same system, e.g. the calibration system, or the current system in the pathology lab. On the other hand, 'Dataset' refers to a subset of the 'Database', for example 'Dataset = pslRaw' refers only to raw samples excluding fixed samples from the 'psl' Database. 
+
+\par If mat files for a certain dataset are already prepared in MatDir, then you can change 'Dataset' to the target dataset. You don't need to change 'DataDate'. 
+
+
+\item Copy the files from the supplementary material to the respective folders. You can overwrite previous files. 
+
+\begin{itemize}
+\item \textbf{parameters} to folder medHSI/parameters/
+\item \textbf{import} to the folder set in 'ImportDir' of medHSI/conf/config.ini
+\end{itemize}
+
+
+\item Set up MATLAB by installing necessary prerequisite packages. Open MATLAB and naviage to  medHSI/medHSImat/setup/ and follow the instructions in README.md. 
+
+\end{enumerate}
+
+
+\section{medHSImat: for MATLAB}
+
+\subsection{Read a new database}
+\begin{enumerate}
+\item Convert .hsm files to .h5 using the program for the 2D spectroradiometer. Save them as .h5 files in folder '01-Measurements' inside directory conf::'DataDir'. 
+
+\item Read the .h5 files, preprocess and convert to class \textbf{hsi} (\url{https://foxelas.github.io/medHSIdocs/classhsi.html}). The class includes a foreground mask and other information. 
+
+\item Prepare labels using the LABELME tool. Save them as black and white images in folder '02-Labels' inside directory conf::'DataDir'. \\
+\\
+\textbf{How to make labels with labelme: 
+}\begin{itemize}
+\item Check  \url{https://github.com/wkentaro/labelme}. It is a python based tool.
+
+\item To install in anaconda run the following in a conda prompt.\\
+
+\begin{lstlisting}
+# python3
+conda create --name=labelme python=3
+source activate labelme
+# conda install -c conda-forge pyside2
+# conda install pyqt
+# pip install pyqt5  \# pyqt5 can be installed via pip on python3
+pip install labelme
+# or you can install everything by conda command
+# conda install labelme -c conda-forge
+\end{lstlisting}
+
+
+
+* Suggested python version =3.9. 
+
+* You can check the tutorial \url{https://github.com/wkentaro/labelme/tree/main/examples/tutorial}.
+
+* If it fails, check that visual studio c++ is included or that the python version is correct. 
+
+
+\item Open the GUI by running the following \\
+\begin{lstlisting}
+labelme  # just open gui
+\end{lstlisting}
+
+\item From the GUI, open the directory with the images you want to label. Use the tool to draw polygon masks on the images. Each label is saved as a .JSON file in the same folder. 
+
+* In this case the \underline{target directory will be the snapshots in}\\
+\underline{conf::'Output'/XXX/00-Snapshots/},\\ where XXX refers to the target dataset.
+
+\item Use commands: \\
+Make label: 
+\begin{lstlisting}
+labelme 001.jpg -O 001.json 
+\end{lstlisting}
+
+View label: 
+\begin{lstlisting}
+labelme_draw_json 001.json
+\end{lstlisting}
+
+Export label:
+\begin{lstlisting}
+labelme_json_to_dataset 001.json -o 001_json
+\end{lstlisting}
+
+
+\item With anaconda make a for loop to prepare label images out of each .JSON file. The produced results will be saved in subfolders in the same directory as the .JSON files. 
+
+\begin{lstlisting}
+for %a in (150, 157, 160, 163) do labelme_json_to_dataset %a.json -o %a
+\end{lstlisting}
+
+
+
+\end{itemize}
+
+\end{enumerate}
+
+\section{medHSIpy: for python}
+
+%\pagebreak
+%\nocite{*}
+\bibliographystyle{apalike}%{ieeetr}
+\bibliography{references}
+
+\end{document}
