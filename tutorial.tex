@@ -75,12 +75,13 @@
 
 \begin{itemize}
 \item \textbf{parameters} to folder medHSI/parameters/
-\item \textbf{import} to the folder set in 'ImportDir' of medHSI/conf/config.ini
+\item \textbf{import} to the folder set in config::[ImportDir] of medHSI/conf/config.ini
 \end{itemize}
 
 
 \item Set up MATLAB by installing necessary prerequisite packages. Open MATLAB and naviage to  medHSI/medHSImat/setup/ and follow the instructions in README.md. 
 
+\item From here on the term \textbf{config::[XXX]} will refer to setting with name XXX in the config.ini file. 
 \end{enumerate}
 
 
@@ -88,11 +89,31 @@
 
 \subsection{Read a new database}
 \begin{enumerate}
-\item Convert .hsm files to .h5 using the program for the 2D spectroradiometer. Save them as .h5 files in folder '01-Measurements' inside directory conf::'DataDir'. 
+\item Convert .hsm files to .h5 using the program for the 2D spectroradiometer. Save them as .h5 files in folder '01-Measurements' inside directory conf::[DataDir]. 
 
-\item Read the .h5 files, preprocess and convert to class \textbf{hsi} (\url{https://foxelas.github.io/medHSIdocs/classhsi.html}). The class includes a foreground mask and other information. 
 
-\item Prepare labels using the LABELME tool. Save them as black and white images in folder '02-Labels' inside directory conf::'DataDir'. \\
+\item Add relevant information in config::[ImportDir]/ \textbf{pslDBDataInfoTable.xlsx} and \textbf{pslDBDiagnosisInfoTable.xlsx}. You can check pslDBDataInfoTable.xlsx for missing samples or misnamed files with the following. 
+\begin{lstlisting}
+[flag, fileS] = initUtility.CheckImportData();
+\end{lstlisting}
+
+\item Check that the \textbf{Preprocessing.m} function matches your preprocessing scheme. If not, update it. 
+
+
+\item Read the .h5 files, preprocess and convert to class \textbf{hsi} (\url{https://foxelas.github.io/medHSIdocs/classhsi.html}). The class includes a foreground mask and other information. \\
+
+These conditions read all data that in \textbf{pslDBDataInfoTable.xlsx} are set as 'tissue' and as 'raw', so all unfixed tissue samples. A foreground mask is also extracted. 
+
+\begin{lstlisting}
+contentConditions = {'tissue', true};
+readForeground = true;
+targetConditions = {'raw', false};
+hsiUtility.PrepareDataset('pslRaw', contentConditions, readForeground, targetConditions);
+\end{lstlisting}
+
+For more information check \textbf{Tutorial\_ReadDataset.m}. 
+
+\item Prepare labels using the LABELME tool. Save them as black and white images in folder '02-Labels' inside directory config::[DataDir]. \\
 \\
 \textbf{How to make labels with labelme: 
 }\begin{itemize}
@@ -129,7 +150,7 @@ labelme  # just open gui
 \item From the GUI, open the directory with the images you want to label. Use the tool to draw polygon masks on the images. Each label is saved as a .JSON file in the same folder. 
 
 * In this case the \underline{target directory will be the snapshots in}\\
-\underline{conf::'Output'/XXX/00-Snapshots/},\\ where XXX refers to the target dataset.
+\underline{config::[Output]/XXX/00-Snapshots/},\\ where XXX refers to the target dataset.
 
 \item Use commands: \\
 Make label: 
