@@ -1,0 +1,4 @@
+<map id="SuperpixelAnalysis" name="SuperpixelAnalysis">
+<area shape="rect" id="node1" title="SuperpixelAnalysis applies SuperPCA to an hsi and visualizes the result." alt="" coords="241,5,369,32"/>
+<area shape="rect" id="node2" href="$classdimred_utility.html#a20856802f0c35f2acc12f1bc0e0a609f" title="dimredUtility.ApplyAndShow applies a dimension reduction and produces evidence." alt="" coords="5,5,193,32"/>
+</map>

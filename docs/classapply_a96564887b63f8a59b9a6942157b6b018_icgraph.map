@@ -1,0 +1,4 @@
+<map id="ToEach" name="ToEach">
+<area shape="rect" id="node1" title="apply.ToEach applies a function on each of the data samples in the dataset." alt="" coords="241,5,305,32"/>
+<area shape="rect" id="node2" href="$classdimred_utility.html#a20856802f0c35f2acc12f1bc0e0a609f" title="dimredUtility.ApplyAndShow applies a dimension reduction and produces evidence." alt="" coords="5,5,193,32"/>
+</map>

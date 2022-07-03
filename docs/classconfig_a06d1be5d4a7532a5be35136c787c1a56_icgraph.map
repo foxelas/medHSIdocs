@@ -1,4 +1,5 @@
 <map id="GetSetting" name="GetSetting">
-<area shape="rect" id="node1" title="config.HasGPU checkes whether a GPU is available." alt="" coords="208,13,289,39"/>
-<area shape="rect" id="node2" href="$classdatabase_utility.html#a1944d606f84b05f3b11c287b729de53e" title="databaseUtility.SelectDatabaseSamples returns indexes from the database table ignoring incorrect samp..." alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node1" title="config.GetSetting gets a setting value from the config structure." alt="" coords="241,35,323,61"/>
+<area shape="rect" id="node2" href="$classdimred_utility.html#a20856802f0c35f2acc12f1bc0e0a609f" title="dimredUtility.ApplyAndShow applies a dimension reduction and produces evidence." alt="" coords="5,5,193,32"/>
+<area shape="rect" id="node3" href="$classdatabase_utility.html#a1944d606f84b05f3b11c287b729de53e" title="databaseUtility.GetFileConditions returns file conditions according to the input arguments." alt="" coords="22,57,177,98"/>
 </map>

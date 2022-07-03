@@ -9,6 +9,5 @@ var searchData=
   ['formatinternal_6',['FormatInternal',['../_format_internal_8m.html#a12ea627458feaf75a69b5f7929ab42ab',1,'FormatInternal.m']]],
   ['formatinternal_2em_7',['FormatInternal.m',['../_format_internal_8m.html',1,'']]],
   ['frechet_8',['Frechet',['../classcommon_utility.html#ac6a810f134f77b96c50f286d00858f80',1,'commonUtility']]],
-  ['function_9',['function',['../classinit_utility.html#a480f0c85db6bd5dc485fcdc87c635669',1,'initUtility']]],
-  ['functionswithoutsvmoptimization_10',['FunctionsWithoutSVMOptimization',['../classinit_utility.html#af2cddded0438e2f30653bb6acf1e2824',1,'initUtility::FunctionsWithoutSVMOptimization()'],['../classtrain_utility.html#a8e8611c1c9eaba94990212e830e74b67',1,'trainUtility::FunctionsWithoutSVMOptimization()']]]
+  ['functionswithoutsvmoptimization_9',['FunctionsWithoutSVMOptimization',['../classinit_utility.html#af2cddded0438e2f30653bb6acf1e2824',1,'initUtility']]]
 ];

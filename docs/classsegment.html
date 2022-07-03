@@ -84,10 +84,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2e32b2a51869e65fd8fbeb1b1ae9299c"><td class="mdescLeft">&#160;</td><td class="mdescRight">segment.segment.MorphologicalOps applies morphological operators on the segmented labels.  <a href="classsegment.html#a2e32b2a51869e65fd8fbeb1b1ae9299c">More...</a><br /></td></tr>
 <tr class="separator:a2e32b2a51869e65fd8fbeb1b1ae9299c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5fe75f3887dfcc4d02951803b835c5c"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">Apply</a> (in hsiIm, in method, in varargin)</td></tr>
-<tr class="memdesc:ab5fe75f3887dfcc4d02951803b835c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">segment.segment.MorphologicalOps applies morphological operators on the segmented labels.  <a href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">More...</a><br /></td></tr>
+<tr class="memdesc:ab5fe75f3887dfcc4d02951803b835c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">segment.segment.Apply segments an hsi cube according to a method.  <a href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">More...</a><br /></td></tr>
 <tr class="separator:ab5fe75f3887dfcc4d02951803b835c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20856802f0c35f2acc12f1bc0e0a609f"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsegment.html#a20856802f0c35f2acc12f1bc0e0a609f">ApplyAndShow</a> (in method, in varargin)</td></tr>
-<tr class="memdesc:a20856802f0c35f2acc12f1bc0e0a609f"><td class="mdescLeft">&#160;</td><td class="mdescRight">segment.segment.Apply segments an hsi cube according to a method.  <a href="classsegment.html#a20856802f0c35f2acc12f1bc0e0a609f">More...</a><br /></td></tr>
+<tr class="memdesc:a20856802f0c35f2acc12f1bc0e0a609f"><td class="mdescLeft">&#160;</td><td class="mdescRight">segment.segment.ApplyAndShow segments an hsi cube according to a method and shows figures with the results.  <a href="classsegment.html#a20856802f0c35f2acc12f1bc0e0a609f">More...</a><br /></td></tr>
 <tr class="separator:a20856802f0c35f2acc12f1bc0e0a609f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -133,31 +133,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>segment.segment.MorphologicalOps applies morphological operators on the segmented labels. </p>
-<p >This function closes holes in the segmented mask.</p>
-<p ><b>Usage</b> </p>
-<div class="fragment"><div class="line">postMaskPredict = <a class="code hl_class" href="classsegment.html">segment</a>.<a class="code hl_function" href="classsegment.html#a2e32b2a51869e65fd8fbeb1b1ae9299c">MorphologicalOps</a>(maskPredict);</div>
-<div class="ttc" id="aclasssegment_html"><div class="ttname"><a href="classsegment.html">segment</a></div><div class="ttdoc">segment is a class that handles segmentation of hyperspectral data.</div><div class="ttdef"><b>Definition:</b> segment.m:4</div></div>
-<div class="ttc" id="aclasssegment_html_a2e32b2a51869e65fd8fbeb1b1ae9299c"><div class="ttname"><a href="classsegment.html#a2e32b2a51869e65fd8fbeb1b1ae9299c">segment::MorphologicalOps</a></div><div class="ttdeci">static function MorphologicalOps(in maskPredict)</div><div class="ttdoc">segment.segment.MorphologicalOps applies morphological operators on the segmented labels.</div></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">maskPredict</td><td>[numeric array] | The input labels</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">postMaskPredict</td><td>[numeric array] | The output labels</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>segment.segment.Apply segments an hsi cube according to a method.</p>
+<p>segment.segment.Apply segments an hsi cube according to a method. </p>
 <p >For more information refer to <code>SegmentLeon</code>, <code>SegmentSAM</code>, <code>SegmentKmeans</code> and <code>SegmentHypercubeToolbox</code>.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">prediction = <a class="code hl_class" href="classsegment.html">segment</a>.<a class="code hl_function" href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">Apply</a>(hsiIm, <span class="stringliteral">&#39;Leon&#39;</span>);</div>
 <div class="line"> </div>
 <div class="line">prediction = <a class="code hl_class" href="classsegment.html">segment</a>.<a class="code hl_function" href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">Apply</a>(hsiIm, <span class="stringliteral">&#39;SAM&#39;</span>, <span class="stringliteral">&#39;healthy&#39;</span>, 13);</div>
-<div class="ttc" id="aclasssegment_html_ab5fe75f3887dfcc4d02951803b835c5c"><div class="ttname"><a href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">segment::Apply</a></div><div class="ttdeci">static function Apply(in hsiIm, in method, in varargin)</div><div class="ttdoc">segment.segment.MorphologicalOps applies morphological operators on the segmented labels.</div></div>
+<div class="ttc" id="aclasssegment_html"><div class="ttname"><a href="classsegment.html">segment</a></div><div class="ttdoc">segment is a class that handles segmentation of hyperspectral data.</div><div class="ttdef"><b>Definition:</b> segment.m:6</div></div>
+<div class="ttc" id="aclasssegment_html_ab5fe75f3887dfcc4d02951803b835c5c"><div class="ttname"><a href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">segment::Apply</a></div><div class="ttdeci">static function Apply(in hsiIm, in method, in varargin)</div><div class="ttdoc">segment.segment.Apply segments an hsi cube according to a method.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hsIm</td><td>[hsi] | An instance of the hsi class </td></tr>
@@ -209,32 +192,12 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>segment.segment.Apply segments an hsi cube according to a method. </p>
-<p >For more information refer to <code>SegmentLeon</code>, <code>SegmentSAM</code>, <code>SegmentKmeans</code> and <code>SegmentHypercubeToolbox</code>.</p>
-<p ><b>Usage</b> </p>
-<div class="fragment"><div class="line">prediction = <a class="code hl_class" href="classsegment.html">segment</a>.<a class="code hl_function" href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">Apply</a>(hsiIm, <span class="stringliteral">&#39;Leon&#39;</span>);</div>
-<div class="line"> </div>
-<div class="line">prediction = <a class="code hl_class" href="classsegment.html">segment</a>.<a class="code hl_function" href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c">Apply</a>(hsiIm, <span class="stringliteral">&#39;SAM&#39;</span>, <span class="stringliteral">&#39;healthy&#39;</span>, 13);</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hsIm</td><td>[hsi] | An instance of the hsi class </td></tr>
-    <tr><td class="paramname">method</td><td>[char] | The segmentation method. Optional: ['Leon', 'SAM', 'Kmeans', 'HypercubeToolbox']. </td></tr>
-    <tr><td class="paramname">varargin</td><td>[cell array] | The arguments necessary for the target method</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">prediction</td><td>[numeric array] | The predicted labels</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>segment.segment.ApplyAndShow segments an hsi cube according to a method and shows figures with the results.</p>
+<p>segment.segment.ApplyAndShow segments an hsi cube according to a method and shows figures with the results. </p>
 <p >If a label <a class="el" href="classhsi_info.html" title="hsiInfo is a class that holds tumor labels and diagnosis information.">hsiInfo</a> exists, then comparison with labels is performed.</p>
-<p >For more information refer to <code><a class="el" href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c" title="segment.segment.MorphologicalOps applies morphological operators on the segmented labels.">segment.Apply</a></code>.</p>
+<p >For more information refer to <code><a class="el" href="classsegment.html#ab5fe75f3887dfcc4d02951803b835c5c" title="segment.segment.Apply segments an hsi cube according to a method.">segment.Apply</a></code>.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classsegment.html">segment</a>.<a class="code hl_function" href="classsegment.html#a20856802f0c35f2acc12f1bc0e0a609f">ApplyAndShow</a>(<span class="stringliteral">&#39;Leon&#39;</span>);</div>
-<div class="ttc" id="aclasssegment_html_a20856802f0c35f2acc12f1bc0e0a609f"><div class="ttname"><a href="classsegment.html#a20856802f0c35f2acc12f1bc0e0a609f">segment::ApplyAndShow</a></div><div class="ttdeci">static function ApplyAndShow(in method, in varargin)</div><div class="ttdoc">segment.segment.Apply segments an hsi cube according to a method.</div></div>
+<div class="ttc" id="aclasssegment_html_a20856802f0c35f2acc12f1bc0e0a609f"><div class="ttname"><a href="classsegment.html#a20856802f0c35f2acc12f1bc0e0a609f">segment::ApplyAndShow</a></div><div class="ttdeci">static function ApplyAndShow(in method, in varargin)</div><div class="ttdoc">segment.segment.ApplyAndShow segments an hsi cube according to a method and shows figures with the re...</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">method</td><td>[char] | The segmentation method. Optional: ['Leon', 'SAM-library', 'SAM-healthy', 'Kmeans', 'HypercubeToolbox']. </td></tr>
@@ -273,6 +236,7 @@ Static Public Member Functions</h2></td></tr>
 <p >This function closes holes in the segmented mask.</p>
 <p ><b>Usage</b> </p>
 <div class="fragment"><div class="line">postMaskPredict = <a class="code hl_class" href="classsegment.html">segment</a>.<a class="code hl_function" href="classsegment.html#a2e32b2a51869e65fd8fbeb1b1ae9299c">MorphologicalOps</a>(maskPredict);</div>
+<div class="ttc" id="aclasssegment_html_a2e32b2a51869e65fd8fbeb1b1ae9299c"><div class="ttname"><a href="classsegment.html#a2e32b2a51869e65fd8fbeb1b1ae9299c">segment::MorphologicalOps</a></div><div class="ttdeci">static function MorphologicalOps(in maskPredict)</div><div class="ttdoc">segment.segment.MorphologicalOps applies morphological operators on the segmented labels.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">maskPredict</td><td>[numeric array] | The input labels</td></tr>

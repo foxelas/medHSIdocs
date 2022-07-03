@@ -132,7 +132,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>ResizeInternal applies resizing on the dataset. </p>
-<p >The base dataset should be already saved with <code><a class="el" href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1" title="hsiUtility.SaveToH5 saves the data of a set of target ids as a dataset in .hdf5 format.">hsiUtility.PrepareDataset</a></code> before running ResizeInternal.</p>
+<p >The base dataset should be already saved with <code><a class="el" href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1" title="hsiUtility.ReadDataset reads the dataset.">hsiUtility.PrepareDataset</a></code> before running ResizeInternal.</p>
 <p >If all arguments are not provided, they are fetched from the config file. Target settings are: config::[HasResizeOptions], config::[ImageDimension] and config::[SplitToPatches].</p>
 <p >When splitting in patches all black patches are ignored.</p>
 <p ><b>Usage</b> </p>
@@ -144,10 +144,10 @@ Functions</h2></td></tr>
 <div class="line">resizedDataset = <span class="stringliteral">&#39;psl512&#39;</span>;</div>
 <div class="line"><a class="code hl_function" href="_resize_internal_8m.html#aea1cabcfa0deb34a1565b521e26ceeb7">ResizeInternal</a>(baseDataset, resizedDataset);</div>
 <div class="ttc" id="a_resize_internal_8m_html_aea1cabcfa0deb34a1565b521e26ceeb7"><div class="ttname"><a href="_resize_internal_8m.html#aea1cabcfa0deb34a1565b521e26ceeb7">ResizeInternal</a></div><div class="ttdeci">function ResizeInternal(in baseDataset, in targetDataset, in hasResizeOptions, in imageDimension, in splitToPatches)</div><div class="ttdoc">ResizeInternal applies resizing on the dataset.</div></div>
-<div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that handles the run configuration.</div><div class="ttdef"><b>Definition:</b> config.m:9</div></div>
-<div class="ttc" id="aclassconfig_html_a1450029ed6a15647ac90d8a9002d9572"><div class="ttname"><a href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">config::SetSetting</a></div><div class="ttdeci">static function SetSetting(in parameter, in value)</div><div class="ttdoc">config.GetSetting gets a setting value from the config structure.</div></div>
-<div class="ttc" id="aclasshsi_utility_html"><div class="ttname"><a href="classhsi_utility.html">hsiUtility</a></div><div class="ttdoc">hsiUtility is a class that holds all utility static functions that handle hsi objects.</div><div class="ttdef"><b>Definition:</b> hsiUtility.m:9</div></div>
-<div class="ttc" id="aclasshsi_utility_html_a682a0948281f0c712db7ba065f1022b1"><div class="ttname"><a href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1">hsiUtility::PrepareDataset</a></div><div class="ttdeci">static function PrepareDataset(in varargin)</div><div class="ttdoc">hsiUtility.SaveToH5 saves the data of a set of target ids as a dataset in .hdf5 format.</div></div>
+<div class="ttc" id="aclassconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdoc">config is a class that handles the run configuration.</div><div class="ttdef"><b>Definition:</b> config.m:10</div></div>
+<div class="ttc" id="aclassconfig_html_a1450029ed6a15647ac90d8a9002d9572"><div class="ttname"><a href="classconfig.html#a1450029ed6a15647ac90d8a9002d9572">config::SetSetting</a></div><div class="ttdeci">static function SetSetting(in parameter, in value)</div><div class="ttdoc">config.SetSetting sets a value in the config structure.</div></div>
+<div class="ttc" id="aclasshsi_utility_html"><div class="ttname"><a href="classhsi_utility.html">hsiUtility</a></div><div class="ttdoc">hsiUtility is a class that holds all utility static functions that handle hsi objects.</div><div class="ttdef"><b>Definition:</b> hsiUtility.m:10</div></div>
+<div class="ttc" id="aclasshsi_utility_html_a682a0948281f0c712db7ba065f1022b1"><div class="ttname"><a href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1">hsiUtility::PrepareDataset</a></div><div class="ttdeci">static function PrepareDataset(in varargin)</div><div class="ttdoc">hsiUtility.ReadDataset reads the dataset.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">baseDataset</td><td>[char] | The base dataset </td></tr>

@@ -1,0 +1,9 @@
+<map id="ApplyAndShow" name="ApplyAndShow">
+<area shape="rect" id="node1" title="dimredUtility.ApplyAndShow applies a dimension reduction and produces evidence." alt="" coords="5,132,112,159"/>
+<area shape="rect" id="node2" href="$classplots.html#a3ce655f4b20f9970c6e4c4e2ebdee9b0" title="plots.GetMontagetCollection plots a montage of images with a target filename under different subfolde..." alt="" coords="160,5,347,32"/>
+<area shape="rect" id="node3" href="$classconfig.html#a06d1be5d4a7532a5be35136c787c1a56" title="config.GetSetting gets a setting value from the config structure." alt="" coords="191,56,316,83"/>
+<area shape="rect" id="node4" href="$classinit_utility.html#a49d117ef3ff98bf98c8ab3a2942bfb8b" title="initUtility.InitExperiment prepares the initialization settings for according to the experiment and t..." alt="" coords="172,107,335,133"/>
+<area shape="rect" id="node5" href="$_multiscale_superpixel_analysis_8m.html#a0fa11d46db63d3d6e303681ebe174f70" title="MultiscaleSuperpixelAnalysis applies Multiscale SuperPCA to an hsi and visualizes the result." alt="" coords="161,157,345,184"/>
+<area shape="rect" id="node6" href="$_superpixel_analysis_8m.html#a64224cab4e177c57576b698df58d6aeb" title="SuperpixelAnalysis applies SuperPCA to an hsi and visualizes the result." alt="" coords="189,208,317,235"/>
+<area shape="rect" id="node7" href="$classapply.html#a96564887b63f8a59b9a6942157b6b018" title="apply.ToEach applies a function on each of the data samples in the dataset." alt="" coords="201,259,305,285"/>
+</map>
