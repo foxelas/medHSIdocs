@@ -62,26 +62,26 @@
 
 \item MatDir : the folder where preprocessed data (.mat files) from the analysis will be saved, the database.
 
-\item ParamDir : delete 
-
 \end{itemize}
 
 \par In this case, 'Database' refers to data collected from the same system, e.g. the calibration system, or the current system in the pathology lab. On the other hand, 'Dataset' refers to a subset of the 'Database', for example 'Dataset = pslRaw' refers only to raw samples excluding fixed samples from the 'psl' Database. 
 
 \par If mat files for a certain dataset are already prepared in MatDir, then you can change 'Dataset' to the target dataset. You don't need to change 'DataDate'. 
 
+\par From here on the term \textbf{config::[XXX]} will refer to setting with name XXX in the config.ini file. 
+
 
 \item Copy the files from the supplementary material to the respective folders. You can overwrite previous files. 
 
 \begin{itemize}
 \item \textbf{parameters} to folder medHSI/parameters/
+
 \item \textbf{import} to the folder set in config::[ImportDir] of medHSI/conf/config.ini
 \end{itemize}
 
 
-\item Set up MATLAB by installing necessary prerequisite packages. Open MATLAB and naviage to  medHSI/medHSImat/setup/ and follow the instructions in README.md. 
+\item Set up MATLAB by installing necessary prerequisite packages. Open MATLAB and naviage to setup-files and follow the instructions in README.md. 
 
-\item From here on the term \textbf{config::[XXX]} will refer to setting with name XXX in the config.ini file. 
 \end{enumerate}
 
 
@@ -114,7 +114,9 @@ hsiUtility.PrepareDataset('pslRaw', contentConditions, readForeground, targetCon
 \end{lstlisting}
 
 
-\item Prepare labels using the LABELME tool. Save them as black and white images in folder '02-Labels' inside directory config::[DataDir]. \\
+\item Option a: Copy labels from the supplementary material to folder '02-Labels'.
+
+\item Option b: Prepare labels using the LABELME tool. Save them as black and white images in folder '02-Labels' inside directory config::[DataDir]. \\
 \\
 \textbf{How to make labels with labelme: 
 }\begin{itemize}
@@ -194,6 +196,8 @@ init.UpdateLabelInfos(dataset);
 %% Load the entire dataset as a list of hsi and hsiInfo classes
 [hsiList, labelInfoList] = hsiUtility.LoadDataset();
 \end{lstlisting}
+\end{itemize}
+
 
 \item You can also export the dataset as an .h5 structure, split it into patches or resize to a standard size with zero padding.
 
@@ -220,7 +224,6 @@ You can also prepare data validation folds (Leave-one-out, K-fold, custom) or ap
 \item For more information check \\
 -\url{setup/demos/Tutorial\_ReadDataset.m}\\
 -\url{setup/demos/Tutorial\_ProcessHSI.m}
-\end{itemize}
 
 \end{enumerate}
 
