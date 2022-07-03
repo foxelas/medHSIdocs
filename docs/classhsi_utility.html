@@ -101,9 +101,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a83997543aab9f7d921f49a258750a939"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhsi_utility.html#a83997543aab9f7d921f49a258750a939">ExportH5Dataset</a> (in fileName, in targetIDs)</td></tr>
 <tr class="memdesc:a83997543aab9f7d921f49a258750a939"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhsi_utility.html#a83997543aab9f7d921f49a258750a939" title="hsiUtility.ExportH5Dataset exports the entire selected dataset in .hdf5 format.">hsiUtility.ExportH5Dataset</a> exports the entire selected dataset in .hdf5 format.  <a href="classhsi_utility.html#a83997543aab9f7d921f49a258750a939">More...</a><br /></td></tr>
 <tr class="separator:a83997543aab9f7d921f49a258750a939"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd1c99db6a90feab1c763831235c8e8"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhsi_utility.html#a4dd1c99db6a90feab1c763831235c8e8">SaveToH5Internal</a> (in targetIDs, in saveName)</td></tr>
-<tr class="memdesc:a4dd1c99db6a90feab1c763831235c8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">hsiUtility.SaveToH5 saves the data of a set of target ids as a dataset in .hdf5 format.  <a href="classhsi_utility.html#a4dd1c99db6a90feab1c763831235c8e8">More...</a><br /></td></tr>
-<tr class="separator:a4dd1c99db6a90feab1c763831235c8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb647be2db97c6469ad301d780083b9"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhsi_utility.html#acfb647be2db97c6469ad301d780083b9">SaveToH5</a> (in targetIDs, in saveName)</td></tr>
+<tr class="memdesc:acfb647be2db97c6469ad301d780083b9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhsi_utility.html#acfb647be2db97c6469ad301d780083b9" title="hsiUtility.SaveToH5 saves the data of a set of target ids as a dataset in .hdf5 format.">hsiUtility.SaveToH5</a> saves the data of a set of target ids as a dataset in .hdf5 format.  <a href="classhsi_utility.html#acfb647be2db97c6469ad301d780083b9">More...</a><br /></td></tr>
+<tr class="separator:acfb647be2db97c6469ad301d780083b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a682a0948281f0c712db7ba065f1022b1"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1">PrepareDataset</a> (in varargin)</td></tr>
 <tr class="memdesc:a682a0948281f0c712db7ba065f1022b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">hsiUtility.ReadDataset reads the dataset.  <a href="classhsi_utility.html#a682a0948281f0c712db7ba065f1022b1">More...</a><br /></td></tr>
 <tr class="separator:a682a0948281f0c712db7ba065f1022b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -888,8 +888,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4dd1c99db6a90feab1c763831235c8e8" name="a4dd1c99db6a90feab1c763831235c8e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dd1c99db6a90feab1c763831235c8e8">&#9670;&nbsp;</a></span>SaveToH5Internal()</h2>
+<a id="acfb647be2db97c6469ad301d780083b9" name="acfb647be2db97c6469ad301d780083b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb647be2db97c6469ad301d780083b9">&#9670;&nbsp;</a></span>SaveToH5()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -898,7 +898,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static function SaveToH5Internal </td>
+          <td class="memname">static function SaveToH5 </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>targetIDs</em>, </td>
@@ -922,7 +922,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>hsiUtility.SaveToH5 saves the data of a set of target ids as a dataset in .hdf5 format. </p>
+<p><a class="el" href="classhsi_utility.html#acfb647be2db97c6469ad301d780083b9" title="hsiUtility.SaveToH5 saves the data of a set of target ids as a dataset in .hdf5 format.">hsiUtility.SaveToH5</a> saves the data of a set of target ids as a dataset in .hdf5 format. </p>
 <p >This function aggregates all small .mat files in a large .hdf5 dataset. The dataset is assumed from config::[MatDir]\config::[Dataset]\*.mat.</p>
 <p >If the data is not instances of the hsi class, then only the hsi cube values are saved.</p>
 <p ><b>Usage</b> </p>
@@ -930,9 +930,10 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">[~, targetIDs] = <a class="code hl_class" href="classcommon_utility.html">commonUtility</a>.<a class="code hl_function" href="classcommon_utility.html#a0c739aa5e17f1b7af584c0916636c1ee">DatasetInfo</a>();</div>
 <div class="line">targetIDs = targetIDs(contains(targetIDs, <span class="stringliteral">&#39;15&#39;</span>));</div>
 <div class="line">saveName = <span class="stringliteral">&#39;150_set.h5&#39;</span>;</div>
-<div class="line"><a class="code hl_class" href="classhsi_utility.html">hsiUtility</a>.SaveToH5(targetIDs, saveName);</div>
+<div class="line"><a class="code hl_class" href="classhsi_utility.html">hsiUtility</a>.<a class="code hl_function" href="classhsi_utility.html#acfb647be2db97c6469ad301d780083b9">SaveToH5</a>(targetIDs, saveName);</div>
 <div class="ttc" id="aclasscommon_utility_html"><div class="ttname"><a href="classcommon_utility.html">commonUtility</a></div><div class="ttdoc">commonUtility is a class that handles common utilities.</div><div class="ttdef"><b>Definition:</b> commonUtility.m:6</div></div>
 <div class="ttc" id="aclasscommon_utility_html_a0c739aa5e17f1b7af584c0916636c1ee"><div class="ttname"><a href="classcommon_utility.html#a0c739aa5e17f1b7af584c0916636c1ee">commonUtility::DatasetInfo</a></div><div class="ttdeci">static function DatasetInfo(in bySample)</div><div class="ttdoc">commonUtility.DatasetInfo returns datanames and targetIDs in the current dataset.</div></div>
+<div class="ttc" id="aclasshsi_utility_html_acfb647be2db97c6469ad301d780083b9"><div class="ttname"><a href="classhsi_utility.html#acfb647be2db97c6469ad301d780083b9">hsiUtility::SaveToH5</a></div><div class="ttdeci">static function SaveToH5(in targetIDs, in saveName)</div><div class="ttdoc">hsiUtility.SaveToH5 saves the data of a set of target ids as a dataset in .hdf5 format.</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">targetIDs</td><td>[cell array] | The target IDs of target hsi cubes. </td></tr>
