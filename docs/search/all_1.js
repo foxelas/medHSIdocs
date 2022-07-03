@@ -1,28 +1,5 @@
 var searchData=
 [
   ['bandstatistics_0',['BandStatistics',['../classplots.html#a63a2836209e8d3340f8f1d57fad091bf',1,'plots']]],
-  ['basics_5fdimred_1',['Basics_Dimred',['../_basics___dimred_8m.html#a6362823d0d587a643d81405f759402fa',1,'Basics_Dimred.m']]],
-  ['basics_5fdimred_2em_2',['Basics_Dimred.m',['../_basics___dimred_8m.html',1,'']]],
-  ['basics_5finit_3',['Basics_Init',['../_basics___init_8m.html#af8b383cafad6d5559ea09dcb5623657e',1,'Basics_Init.m']]],
-  ['basics_5finit_2em_4',['Basics_Init.m',['../_basics___init_8m.html',1,'']]],
-  ['basics_5fmakedataset_5',['Basics_MakeDataset',['../_basics___make_dataset_8m.html#ab004e51b15ff97361c268fed4f6df075',1,'Basics_MakeDataset.m']]],
-  ['basics_5fmakedataset_2em_6',['Basics_MakeDataset.m',['../_basics___make_dataset_8m.html',1,'']]],
-  ['basics_5fprintsamplehsi_7',['Basics_PrintSampleHSI',['../_basics___print_sample_h_s_i_8m.html#a2629e74a2c232b1a8ff0cf897cca35df',1,'Basics_PrintSampleHSI.m']]],
-  ['basics_5fprintsamplehsi_2em_8',['Basics_PrintSampleHSI.m',['../_basics___print_sample_h_s_i_8m.html',1,'']]],
-  ['basics_5frotateandflip_9',['Basics_RotateAndFlip',['../_basics___rotate_and_flip_8m.html#abd8694ae3a345cb4a11ee981a8a504a5',1,'Basics_RotateAndFlip.m']]],
-  ['basics_5frotateandflip_2em_10',['Basics_RotateAndFlip.m',['../_basics___rotate_and_flip_8m.html',1,'']]],
-  ['basics_5fsplittrain_11',['Basics_SplitTrain',['../_basics___split_train_8m.html#a083b8ed6427f29a485777b178947af3c',1,'Basics_SplitTrain.m']]],
-  ['basics_5fsplittrain_2em_12',['Basics_SplitTrain.m',['../_basics___split_train_8m.html',1,'']]],
-  ['basics_5fsummaryfigs_13',['Basics_SummaryFigs',['../_basics___summary_figs_8m.html#a8044b59e8a189262a0c72cfae15fffa4',1,'Basics_SummaryFigs.m']]],
-  ['basics_5fsummaryfigs_2em_14',['Basics_SummaryFigs.m',['../_basics___summary_figs_8m.html',1,'']]],
-  ['beautify_2em_15',['Beautify.m',['../_beautify_8m.html',1,'']]],
-  ['by_5fkmeans_16',['By_Kmeans',['../classsegment.html#a9b8693447536884a60ef2f6f4e3cc09a',1,'segment']]],
-  ['byica_17',['ByICA',['../classsegment.html#aa9aaaa05da257d10917dcd7182dd1dc4',1,'segment']]],
-  ['byleon2020_18',['ByLeon2020',['../_by_leon2020_8m.html#a9329db3b57e51b8cce89ecf86f5def37',1,'ByLeon2020.m']]],
-  ['byleon2020_2em_19',['ByLeon2020.m',['../_by_leon2020_8m.html',1,'']]],
-  ['bymsuperpca_20',['ByMSuperPCA',['../classsegment.html#a11d0f4482b08f5ef585b1a64023ecd84',1,'segment']]],
-  ['bypca_21',['ByPCA',['../classsegment.html#a5fabd9cfb9ecb2b818ec93a27b01e766',1,'segment']]],
-  ['byrica_22',['ByRICA',['../classsegment.html#a0cf0df9d6c511efec29a9aa920733fad',1,'segment']]],
-  ['bysam_23',['BySAM',['../classsegment.html#aad96b20d839fbdbed194ac0ea36b1433',1,'segment']]],
-  ['bysuperpca_24',['BySuperPCA',['../classsegment.html#a172cd365b5b91da511e864a60c101d2b',1,'segment']]]
+  ['beautify_2em_1',['Beautify.m',['../_beautify_8m.html',1,'']]]
 ];

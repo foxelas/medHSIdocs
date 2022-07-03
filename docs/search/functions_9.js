@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jaccard_0',['Jaccard',['../classcommon_utility.html#ad8699a79976cd8701cf2fdba192a0e3f',1,'commonUtility']]]
+  ['jaccard_0',['Jaccard',['../classcommon_utility.html#a17e63ba5471c6f3c319d6f90b7e111e4',1,'commonUtility']]],
+  ['jacdensity_1',['JacDensity',['../_jac_density_8m.html#a2b17957bfeaefb86dc96b96b3768a2ab',1,'JacDensity.m']]]
 ];

@@ -1,4 +1,0 @@
-<map id="MultiscaleSuperpixelAnalysis" name="MultiscaleSuperpixelAnalysis">
-<area shape="rect" id="node1" title="MultiscaleSuperpixelAnalysis applies Multiscale SuperPCA to an hsi and visualizes the result." alt="" coords="5,29,189,56"/>
-<area shape="rect" id="node2" href="$classapply.html#a96564887b63f8a59b9a6942157b6b018" title="ToEach applies a function on each of the data samples in the dataset." alt="" coords="237,29,341,56"/>
-</map>

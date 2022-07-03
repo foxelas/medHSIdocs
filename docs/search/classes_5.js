@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['segment_0',['segment',['../classsegment.html',1,'']]]
+  ['plots_0',['plots',['../classplots.html',1,'']]]
 ];

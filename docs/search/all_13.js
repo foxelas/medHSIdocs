@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['t20220121_5fdimred_2em_0',['t20220121_Dimred.m',['../t20220121___dimred_8m.html',1,'']]],
-  ['t210910_5freadhands_2em_1',['t210910_ReadHands.m',['../t210910___read_hands_8m.html',1,'']]],
-  ['tissuetype_2',['TissueType',['../classhsi.html#aea7fcf472b96b68105b1e5ff8a5c742e',1,'hsi']]],
-  ['tocolumn_3',['ToColumn',['../classhsi.html#ae6ad95ee85c97190093cb737ef146ed3',1,'hsi']]],
-  ['toeach_4',['ToEach',['../classapply.html#a96564887b63f8a59b9a6942157b6b018',1,'apply']]],
+  ['tissuetype_0',['TissueType',['../classhsi.html#aea7fcf472b96b68105b1e5ff8a5c742e',1,'hsi']]],
+  ['tocolumn_1',['ToColumn',['../classhsi.html#ae6ad95ee85c97190093cb737ef146ed3',1,'hsi']]],
+  ['toeach_2',['ToEach',['../classapply.html#a96564887b63f8a59b9a6942157b6b018',1,'apply']]],
+  ['traintest_3',['TrainTest',['../classtrain_utility.html#ade14db3dd930106e3e1002a1687631ee',1,'trainUtility']]],
+  ['traintestindexes_4',['TrainTestIndexes',['../classtrain_utility.html#a53146b06b82bed251b21446deb11a67d',1,'trainUtility']]],
   ['trainutility_5',['trainUtility',['../classtrain_utility.html',1,'']]],
   ['trainutility_2em_6',['trainUtility.m',['../train_utility_8m.html',1,'']]],
-  ['transform_7',['Transform',['../classhsi.html#a83bc554b63a812774acceedc9b85517f',1,'hsi']]],
+  ['transform_7',['Transform',['../classdimred_utility.html#af162e5593ee60f87ed8177c6f0f27de1',1,'dimredUtility::Transform()'],['../classhsi.html#ae850dbad6a6949f93359c285c1a34fba',1,'hsi::Transform()']]],
   ['transformandsave_8',['TransformAndSave',['../_augment_internal_8m.html#af0eb5b15b0ae7dfd5d00ccfa1ab0ab69',1,'AugmentInternal.m']]],
-  ['transformspcafun_9',['transformSPCAFun',['../_basics___dimred_8m.html#a7493e6a8abef4384864404bade830661',1,'Basics_Dimred.m']]],
-  ['type_10',['Type',['../classhsi_info.html#a9e18ff61ae8f32d16e5d3ea09cd0d0c3',1,'hsiInfo']]]
+  ['tutorial_5fprocesshsi_2em_9',['Tutorial_ProcessHSI.m',['../_tutorial___process_h_s_i_8m.html',1,'']]],
+  ['tutorial_5freaddataset_2em_10',['Tutorial_ReadDataset.m',['../_tutorial___read_dataset_8m.html',1,'']]],
+  ['type_11',['Type',['../classhsi_info.html#a9e18ff61ae8f32d16e5d3ea09cd0d0c3',1,'hsiInfo']]]
 ];

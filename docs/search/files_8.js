@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalizeinternal_2em_0',['NormalizeInternal.m',['../_normalize_internal_8m.html',1,'']]]
+  ['initutility_2em_0',['initUtility.m',['../init_utility_8m.html',1,'']]]
 ];

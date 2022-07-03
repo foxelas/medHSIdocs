@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['m1_5fhands_2em_0',['m1_hands.m',['../m1__hands_8m.html',1,'']]],
-  ['main_2em_1',['Main.m',['../_main_8m.html',1,'']]],
-  ['multiscalesuperpixelanalysis_2em_2',['MultiscaleSuperpixelAnalysis.m',['../_multiscale_superpixel_analysis_8m.html',1,'']]]
+  ['hsi_2em_0',['hsi.m',['../hsi_8m.html',1,'']]],
+  ['hsiinfo_2em_1',['hsiInfo.m',['../hsi_info_8m.html',1,'']]],
+  ['hsiutility_2em_2',['hsiUtility.m',['../hsi_utility_8m.html',1,'']]],
+  ['hypercubetoolboxandshow_2em_3',['HypercubeToolboxAndShow.m',['../_hypercube_toolbox_and_show_8m.html',1,'']]]
 ];

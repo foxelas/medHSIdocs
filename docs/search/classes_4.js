@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plots_0',['plots',['../classplots.html',1,'']]]
+  ['initutility_0',['initUtility',['../classinit_utility.html',1,'']]]
 ];
