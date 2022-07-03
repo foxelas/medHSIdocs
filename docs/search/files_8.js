@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initutility_2em_0',['initUtility.m',['../init_utility_8m.html',1,'']]]
+  ['jacdensity_2em_0',['JacDensity.m',['../_jac_density_8m.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jacdensity_2em_0',['JacDensity.m',['../_jac_density_8m.html',1,'']]]
+  ['kmeansandshow_2em_0',['KmeansAndShow.m',['../_kmeans_and_show_8m.html',1,'']]]
 ];

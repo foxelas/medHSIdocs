@@ -9,7 +9,5 @@ var searchData=
   ['trainutility_2em_6',['trainUtility.m',['../train_utility_8m.html',1,'']]],
   ['transform_7',['Transform',['../classdimred_utility.html#af162e5593ee60f87ed8177c6f0f27de1',1,'dimredUtility::Transform()'],['../classhsi.html#ae850dbad6a6949f93359c285c1a34fba',1,'hsi::Transform()']]],
   ['transformandsave_8',['TransformAndSave',['../_augment_internal_8m.html#af0eb5b15b0ae7dfd5d00ccfa1ab0ab69',1,'AugmentInternal.m']]],
-  ['tutorial_5fprocesshsi_2em_9',['Tutorial_ProcessHSI.m',['../_tutorial___process_h_s_i_8m.html',1,'']]],
-  ['tutorial_5freaddataset_2em_10',['Tutorial_ReadDataset.m',['../_tutorial___read_dataset_8m.html',1,'']]],
-  ['type_11',['Type',['../classhsi_info.html#a9e18ff61ae8f32d16e5d3ea09cd0d0c3',1,'hsiInfo']]]
+  ['type_9',['Type',['../classhsi_info.html#a9e18ff61ae8f32d16e5d3ea09cd0d0c3',1,'hsiInfo']]]
 ];
