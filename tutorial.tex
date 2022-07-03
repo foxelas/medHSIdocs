@@ -94,6 +94,7 @@
 
 \item Add relevant information in config::[ImportDir]/ \textbf{pslDBDataInfoTable.xlsx} and \textbf{pslDBDiagnosisInfoTable.xlsx}. You can check pslDBDataInfoTable.xlsx for missing samples or misnamed files with the following. 
 \begin{lstlisting}
+#MATLAB
 [flag, fileS] = initUtility.CheckImportData();
 \end{lstlisting}
 
@@ -105,13 +106,13 @@
 These conditions read all data that in \textbf{pslDBDataInfoTable.xlsx} are set as 'tissue' and as 'raw', so all unfixed tissue samples. A foreground mask is also extracted. 
 
 \begin{lstlisting}
+#MATLAB
 contentConditions = {'tissue', true};
 readForeground = true;
 targetConditions = {'raw', false};
 hsiUtility.PrepareDataset('pslRaw', contentConditions, readForeground, targetConditions);
 \end{lstlisting}
 
-For more information check \textbf{Tutorial\_ReadDataset.m}. 
 
 \item Prepare labels using the LABELME tool. Save them as black and white images in folder '02-Labels' inside directory config::[DataDir]. \\
 \\
@@ -144,6 +145,7 @@ pip install labelme
 
 \item Open the GUI by running the following \\
 \begin{lstlisting}
+# Prompt
 labelme  # just open gui
 \end{lstlisting}
 
@@ -155,6 +157,7 @@ labelme  # just open gui
 \item Use commands: \\
 Make label: 
 \begin{lstlisting}
+# Prompt
 labelme 001.jpg -O 001.json 
 \end{lstlisting}
 
@@ -165,6 +168,7 @@ labelme_draw_json 001.json
 
 Export label:
 \begin{lstlisting}
+# Prompt
 labelme_json_to_dataset 001.json -o 001_json
 \end{lstlisting}
 
@@ -172,11 +176,50 @@ labelme_json_to_dataset 001.json -o 001_json
 \item With anaconda make a for loop to prepare label images out of each .JSON file. The produced results will be saved in subfolders in the same directory as the .JSON files. 
 
 \begin{lstlisting}
+# Prompt
 for %a in (150, 157, 160, 163) do labelme_json_to_dataset %a.json -o %a
 \end{lstlisting}
 
+\item Update the database .mat files with the new labels.
+
+\begin{lstlisting}
+# MATLAB
+init.UpdateLabelInfos(dataset);
+\end{lstlisting}
+
+\item Now the dataset is ready. You can read it as a list of hsi and hsiInfo classes.
+
+\begin{lstlisting}
+# MATLAB
+%% Load the entire dataset as a list of hsi and hsiInfo classes
+[hsiList, labelInfoList] = hsiUtility.LoadDataset();
+\end{lstlisting}
+
+\item You can also export the dataset as an .h5 structure, split it into patches or resize to a standard size with zero padding.
+
+\begin{lstlisting}
+# MATLAB
+%% Export an .h5 database of all the preprocessed and labeled data
+% After reading, the database is saved in config::[OutputDir]\\config::[Dataset]\\*.h5.
+hsiUtility.ExportH5Dataset();
+
+%% Make subdatasets from the original dataset
+% Make 32x32 patches
+targetDataset = '32';
+initUtility.MakeDataset(targetDataset, dataset);
 
 
+% Make 512x512 padded squares
+targetDataset = '512';
+initUtility.MakeDataset(targetDataset, dataset);
+
+\end{lstlisting}
+
+You can also prepare data validation folds (Leave-one-out, K-fold, custom) or apply functions individually on each image. 
+
+\item For more information check \\
+-\textbf{Tutorial\_ReadDataset.m}\\
+-\textbf{Tutorial\_ProcessHSI.m}
 \end{itemize}
 
 \end{enumerate}
